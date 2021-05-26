@@ -50,12 +50,14 @@ pipeline {
     }
     
     stage('Compile & Unit Tests') {
+		steps{
          dir("microservicio") {
                     echo "------------>Clean Tests<------------"
                     sh 'gradle clean'
                     echo "------------>Tests<------------"
                     sh 'gradle test'
                 }
+				}
     }
 
     stage('Static Code Analysis') {
