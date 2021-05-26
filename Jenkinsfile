@@ -72,8 +72,9 @@ pipeline {
     stage('Build') {
       steps {
         echo "------------>Build<------------"
-        //Construir sin tarea test que se ejecutó previamente
-        sh 'gradle --b ./build.gradle build -x test'
+			dir("java-arquitectura-hexagonal/microservicio") {
+                     sh 'gradle build -x test'
+               }
       }
     }  
   }
