@@ -51,7 +51,7 @@ pipeline {
     
     stage('Compile & Unit Tests') {
 		steps{
-         dir("microservicio") {
+         dir("java-arquitectura-hexagonal/microservicio") {
                     echo "------------>Clean Tests<------------"
                     sh 'gradle clean'
                     echo "------------>Tests<------------"
