@@ -30,7 +30,6 @@ pipeline {
   //Aquí comienzan los “items” del Pipeline
   stages{
     stage('Checkout') {
-      steps{
         steps{
             echo "------------>Checkout<------------"
             checkout([
@@ -42,22 +41,20 @@ pipeline {
             submoduleCfg: [], 
             userRemoteConfigs: [[
             credentialsId: 'GitHub_santiagoduque', 
-            url:'https://github.com/santiagoceiba/cobranzaseibaadn.git'
+            url:'https://github.com/santiagoceiba/cobranzaseibaadn'
             ]]
             ])
         }
 
-      }
+      
     }
     
     stage('Compile & Unit Tests') {
-      steps{
        steps{
         echo "------------>compile & Unit Tests<------------"
         sh 'chmod +x gradlew'
         sh './gradlew --b ./build.gradle test'
         }
-      }
     }
 
     stage('Static Code Analysis') {
