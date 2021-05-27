@@ -3,6 +3,8 @@ jasypt:
       password: ${jasyptpwd:secretkey}
       algorithm: PBEWithMD5AndDES
 
+
+
 server:
    port: 8080
    servlet:
@@ -12,10 +14,13 @@ server:
 
 spring:
    datasource:
-      driver-class-name: 
+      driver-class-name: com.mysql.jdbc.Driver
       type: com.zaxxer.hikari.HikariDataSource
-      jdbcUrl: 
-      username: 
-      password: 
+      jdbcUrl: jdbc:mysql://localhost:3308/cobros?useSSL=false
+      username: admin
+      password: admin
       hikari:
          poolName: pool
+   h2:
+      console:
+         enabled: true

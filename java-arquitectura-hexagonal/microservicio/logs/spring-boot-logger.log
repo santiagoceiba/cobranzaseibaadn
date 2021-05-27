@@ -1,29 +1,37 @@
-2021-05-26 07:31:40,395 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application on SANTIAGO-DUQUE with PID 10256 (started by santiago.duque in D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio)
-2021-05-26 07:31:40,399 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
-2021-05-26 07:31:40,476 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-05-26 07:31:40,476 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-05-26 07:31:41,923 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
-2021-05-26 07:31:41,992 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
-2021-05-26 07:31:41,994 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2021-05-26 07:31:41,994 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2021-05-26 07:31:41,994 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
-2021-05-26 07:31:41,994 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
-2021-05-26 07:31:41,994 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
-2021-05-26 07:31:41,995 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource applicationConfig: [classpath:/application.yaml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
-2021-05-26 07:31:41,995 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
-2021-05-26 07:31:42,024 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
-2021-05-26 07:31:42,065 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-05-26 07:31:42,142 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
-2021-05-26 07:31:42,145 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
-2021-05-26 07:31:42,533 WARN io.undertow.websockets.jsr.Bootstrap [restartedMain] UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2021-05-26 07:31:42,557 INFO io.undertow.servlet.spec.ServletContextImpl [restartedMain] Initializing Spring embedded WebApplicationContext
-2021-05-26 07:31:42,558 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2079 ms
-2021-05-26 07:31:42,760 ERROR com.zaxxer.hikari.HikariConfig [restartedMain] Failed to load driver class  from HikariConfig class classloader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@5e791d7c
-2021-05-26 07:31:42,762 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is java.lang.RuntimeException: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'servletEndpointRegistrar' defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar]: Factory method 'servletEndpointRegistrar' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'healthEndpoint' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Unsatisfied dependency expressed through method 'healthEndpoint' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthIndicatorRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthIndicatorAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.health.HealthIndicatorRegistry]: Factory method 'healthIndicatorRegistry' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'configuracionHealth' defined in file [D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\comun\comun-infraestructura\bin\main\com\ceiba\infraestructura\configuracion\ConfiguracionHealth.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'configuracionHikari': Could not bind properties to 'ConfiguracionHikari' : prefix=spring.datasource, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.datasource' to com.ceiba.infraestructura.configuracion.ConfiguracionHikari$$EnhancerBySpringCGLIB$$d184149e
-2021-05-26 07:31:42,775 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+2021-05-27 07:16:03,640 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application on SANTIAGO-DUQUE with PID 14216 (started by santiago.duque in D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio)
+2021-05-27 07:16:03,644 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-27 07:16:03,724 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-27 07:16:03,725 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-27 07:16:05,159 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-05-27 07:16:05,225 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-05-27 07:16:05,227 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-05-27 07:16:05,227 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-05-27 07:16:05,227 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-05-27 07:16:05,227 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-05-27 07:16:05,228 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-05-27 07:16:05,228 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource applicationConfig: [classpath:/application.yaml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-05-27 07:16:05,228 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-05-27 07:16:05,252 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-05-27 07:16:05,293 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-27 07:16:05,371 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-05-27 07:16:05,374 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-05-27 07:16:05,746 WARN io.undertow.websockets.jsr.Bootstrap [restartedMain] UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-05-27 07:16:05,771 INFO io.undertow.servlet.spec.ServletContextImpl [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-27 07:16:05,771 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2043 ms
+2021-05-27 07:16:05,993 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-05-27 07:16:06,217 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-05-27 07:16:06,493 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-05-27 07:16:06,507 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:mysql://localhost:3308/cobros (MySQL 8.0)
+2021-05-27 07:16:06,566 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.016s)
+2021-05-27 07:16:06,577 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema `cobros`: 13.0
+2021-05-27 07:16:06,578 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `cobros` is up to date. No migration necessary.
+2021-05-27 07:16:06,626 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'comandoControladorCliente' defined in file [D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio\infraestructura\bin\main\com\ceiba\usuario\controlador\ComandoControladorCliente.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'manejadorActualizarCliente' defined in file [D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio\aplicacion\bin\main\com\ceiba\usuario\comando\manejador\ManejadorActualizarCliente.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ceiba.usuario.servicio.ServicioActualizacionCliente' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-05-27 07:16:06,626 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-05-27 07:16:06,630 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-05-27 07:16:06,646 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-05-26 07:31:42,777 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+2021-05-27 07:16:06,870 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
 
 ***************************
 APPLICATION FAILED TO START
@@ -31,14 +39,106 @@ APPLICATION FAILED TO START
 
 Description:
 
-Failed to bind properties under 'spring.datasource' to com.ceiba.infraestructura.configuracion.ConfiguracionHikari$$EnhancerBySpringCGLIB$$d184149e:
+Parameter 1 of constructor in com.ceiba.usuario.comando.manejador.ManejadorActualizarCliente required a bean of type 'com.ceiba.usuario.servicio.ServicioActualizacionCliente' that could not be found.
 
-    Property: spring.datasource.driver-class-name
-    Value: 
-    Origin: "spring.datasource.driver-class-name" from property source "applicationConfig: [classpath:/application.yaml]"
-    Reason: Failed to load driver class  in either of HikariConfig class loader or Thread context classloader
 
 Action:
 
-Update your application's configuration
+Consider defining a bean of type 'com.ceiba.usuario.servicio.ServicioActualizacionCliente' in your configuration.
+
+2021-05-27 07:24:09,588 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application on SANTIAGO-DUQUE with PID 1908 (started by santiago.duque in D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio)
+2021-05-27 07:24:09,592 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-27 07:24:09,675 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-27 07:24:09,675 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-27 07:24:11,037 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-05-27 07:24:11,105 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-05-27 07:24:11,106 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-05-27 07:24:11,106 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-05-27 07:24:11,106 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-05-27 07:24:11,107 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-05-27 07:24:11,107 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-05-27 07:24:11,107 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource applicationConfig: [classpath:/application.yaml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-05-27 07:24:11,107 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-05-27 07:24:11,131 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-05-27 07:24:11,175 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-27 07:24:11,250 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-05-27 07:24:11,252 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-05-27 07:24:11,630 WARN io.undertow.websockets.jsr.Bootstrap [restartedMain] UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-05-27 07:24:11,653 INFO io.undertow.servlet.spec.ServletContextImpl [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-27 07:24:11,653 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1978 ms
+2021-05-27 07:24:11,876 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-05-27 07:24:12,105 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-05-27 07:24:12,383 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-05-27 07:24:12,396 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:mysql://localhost:3308/cobros (MySQL 8.0)
+2021-05-27 07:24:12,459 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.016s)
+2021-05-27 07:24:12,469 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema `cobros`: 13.0
+2021-05-27 07:24:12,470 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `cobros` is up to date. No migration necessary.
+2021-05-27 07:24:12,522 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'comandoControladorCliente' defined in file [D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio\infraestructura\bin\main\com\ceiba\usuario\controlador\ComandoControladorCliente.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'manejadorActualizarCliente' defined in file [D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio\aplicacion\bin\main\com\ceiba\usuario\comando\manejador\ManejadorActualizarCliente.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ceiba.usuario.servicio.ServicioActualizacionCliente' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-05-27 07:24:12,523 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-05-27 07:24:12,527 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-05-27 07:24:12,544 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-27 07:24:12,748 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in com.ceiba.usuario.comando.manejador.ManejadorActualizarCliente required a bean of type 'com.ceiba.usuario.servicio.ServicioActualizacionCliente' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.ceiba.usuario.servicio.ServicioActualizacionCliente' in your configuration.
+
+2021-05-27 07:29:05,037 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application on SANTIAGO-DUQUE with PID 17048 (started by santiago.duque in D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio)
+2021-05-27 07:29:05,041 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-27 07:29:05,118 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-27 07:29:05,118 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-27 07:29:06,741 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-05-27 07:29:06,810 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-05-27 07:29:06,811 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-05-27 07:29:06,811 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-05-27 07:29:06,812 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-05-27 07:29:06,812 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-05-27 07:29:06,812 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-05-27 07:29:06,812 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource applicationConfig: [classpath:/application.yaml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-05-27 07:29:06,812 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-05-27 07:29:06,836 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-05-27 07:29:06,879 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-27 07:29:06,960 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-05-27 07:29:06,964 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-05-27 07:29:07,383 WARN io.undertow.websockets.jsr.Bootstrap [restartedMain] UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-05-27 07:29:07,404 INFO io.undertow.servlet.spec.ServletContextImpl [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-27 07:29:07,404 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2285 ms
+2021-05-27 07:29:07,638 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-05-27 07:29:07,896 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-05-27 07:29:08,186 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-05-27 07:29:08,201 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:mysql://localhost:3308/cobros (MySQL 8.0)
+2021-05-27 07:29:08,278 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.020s)
+2021-05-27 07:29:08,290 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema `cobros`: 13.0
+2021-05-27 07:29:08,291 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `cobros` is up to date. No migration necessary.
+2021-05-27 07:29:08,347 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'comandoControladorCliente' defined in file [D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio\infraestructura\bin\main\com\ceiba\usuario\controlador\ComandoControladorCliente.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'manejadorActualizarCliente' defined in file [D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio\aplicacion\bin\main\com\ceiba\usuario\comando\manejador\ManejadorActualizarCliente.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ceiba.usuario.servicio.ServicioActualizacionCliente' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-05-27 07:29:08,348 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-05-27 07:29:08,352 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-05-27 07:29:08,370 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-27 07:29:08,651 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in com.ceiba.usuario.comando.manejador.ManejadorActualizarCliente required a bean of type 'com.ceiba.usuario.servicio.ServicioActualizacionCliente' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.ceiba.usuario.servicio.ServicioActualizacionCliente' in your configuration.
 
