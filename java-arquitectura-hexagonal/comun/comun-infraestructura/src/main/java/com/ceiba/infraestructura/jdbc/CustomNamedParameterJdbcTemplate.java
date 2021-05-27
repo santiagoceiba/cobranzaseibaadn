@@ -21,6 +21,7 @@ public class CustomNamedParameterJdbcTemplate {
 		this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
 	}
 	
+	
 	public Long crear(Object object,String sql) {
 		MapSqlParameterSource paramSource = crearParametros(object);
 		KeyHolder keyHolder = new GeneratedKeyHolder();

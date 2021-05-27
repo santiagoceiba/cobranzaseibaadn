@@ -40,11 +40,14 @@ public class ComandoUsuario{
 		this.fecha = fecha;
 	}
 	public ComandoUsuario(Long id, String nombre, String clave, LocalDateTime fecha) {
-		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.clave = clave;
 		this.fecha = fecha;
+	}
+	
+	public ComandoUsuario() {
+		
 	}
     
     

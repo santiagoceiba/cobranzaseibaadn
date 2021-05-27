@@ -28,11 +28,20 @@ public class ComandoControladorUsuario {
 		this.manejadorEliminarUsuario = manejadorEliminarUsuario;
 		this.manejadorActualizarUsuario = manejadorActualizarUsuario;
     }
-
-    @PostMapping
+    
+    @GetMapping(value="/prueba")
+    public String prueba() {
+    	return "Hola mundo";
+    }
+    @PostMapping(value="/punto", consumes = "application/json", produces = "application/json")
     @ApiOperation("Crear Usuario")
     public ComandoRespuesta<Long> crear(@RequestBody ComandoUsuario comandoUsuario) {
-        return manejadorCrearUsuario.ejecutar(comandoUsuario);
+       return manejadorCrearUsuario.ejecutar(comandoUsuario);
+    }
+    
+    @PostMapping(value="/pruebaDos")
+    public String prueba(Long id) {
+    	return "Hola mundo postmapping";
     }
 
     @DeleteMapping(value="/{id}")

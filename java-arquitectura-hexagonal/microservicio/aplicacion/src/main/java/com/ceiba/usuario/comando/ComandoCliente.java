@@ -12,7 +12,7 @@ public class ComandoCliente {
 	private Long idCliente;
 	private String nombre;
 	private String cedula;
-	private List<Deuda> listaDeudasCliente;
+
 	
 	
 	
@@ -21,9 +21,10 @@ public class ComandoCliente {
 		this.idCliente = idCliente;
 		this.nombre = nombre;
 		this.cedula = cedula;
-		this.listaDeudasCliente = listaDeudasCliente;
+
 	}
 	
+	public ComandoCliente() {}
 	
 	public Long getIdCliente() {
 		return idCliente;
@@ -42,12 +43,6 @@ public class ComandoCliente {
 	}
 	public void setCedula(String cedula) {
 		this.cedula = cedula;
-	}
-	public List<Deuda> getListaDeudasCliente() {
-		return listaDeudasCliente;
-	}
-	public void setListaDeudasCliente(List<Deuda> listaDeudasCliente) {
-		this.listaDeudasCliente = listaDeudasCliente;
 	}
 	
 	

@@ -2,6 +2,7 @@ package com.ceiba.usuario.controlador;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -35,12 +36,12 @@ public class ComandoControladorCliente {
 		this.manejadorEliminarCliente = manejadorEliminarCliente;
 	}
 	
-    @PostMapping
+    @PostMapping(value="/crear")
     @ApiOperation("Crear Cliente")
     public ComandoRespuesta<Long> crear(@RequestBody ComandoCliente comandoCliente) {
         return manejadorCrearCliente.ejecutar(comandoCliente);
     }
-
+    
     @DeleteMapping(value="/{id}")
 	@ApiOperation("Eliminar Cliente")
 	public void eliminar(@PathVariable Long id) {
