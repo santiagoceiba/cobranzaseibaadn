@@ -2,9 +2,9 @@ package com.ceiba.usuario.modelo.entidad;
 
 
 
-import java.time.LocalDate;
-
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
+
+import java.time.LocalDateTime;
 
 
 
@@ -18,15 +18,15 @@ public class Deuda {
 	
 	private Long idDeuda;
 	private Double monto;
-	private LocalDate fechaInicialDeudaCliente;
+	private LocalDateTime fechaInicialDeudaCliente;
 	private String nombreEntidadDeuda;
 	private String conceptoDeuda;
-	private Cliente idCliente;
+	private Long idCliente;
 	
 	
 	
-	public Deuda(Double monto, LocalDate fechaInicialDeudaCliente, String nombreEntidadDeuda, String conceptoDeuda,
-			Cliente idCliente, Long idDeuda) {
+	public Deuda(Double monto, LocalDateTime fechaInicialDeudaCliente, String nombreEntidadDeuda, String conceptoDeuda,
+			Long idCliente, Long idDeuda) {
 		
 		validarObligatorio(fechaInicialDeudaCliente, SE_DEBE_INGRESAR_FECHA_DEUDA);
 		validarObligatorio(nombreEntidadDeuda, SE_DEBE_INGRESAR_NOMBRE_ENTIDAD_DEUDA);
@@ -61,10 +61,10 @@ public class Deuda {
 	public void setMonto(Double monto) {
 		this.monto = monto;
 	}
-	public LocalDate getFechaInicialDeudaCliente() {
+	public LocalDateTime getFechaInicialDeudaCliente() {
 		return fechaInicialDeudaCliente;
 	}
-	public void setFechaInicialDeudaCliente(LocalDate fechaInicialDeudaCliente) {
+	public void setFechaInicialDeudaCliente(LocalDateTime fechaInicialDeudaCliente) {
 		this.fechaInicialDeudaCliente = fechaInicialDeudaCliente;
 	}
 	public String getNombreEntidadDeuda() {
@@ -79,10 +79,10 @@ public class Deuda {
 	public void setConceptoDeuda(String conceptoDeuda) {
 		this.conceptoDeuda = conceptoDeuda;
 	}
-	public Cliente getIdCliente() {
+	public Long getIdCliente() {
 		return idCliente;
 	}
-	public void setIdCliente(Cliente idCliente) {
+	public void setIdCliente(Long idCliente) {
 		this.idCliente = idCliente;
 	}
 	

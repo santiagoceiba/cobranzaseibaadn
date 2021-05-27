@@ -9,8 +9,8 @@ import com.ceiba.usuario.modelo.entidad.AcuerdoPago;
 public class FabricaAcuerdoPago {
 
 	public AcuerdoPago crear(ComandoAcuerdoPago comandoAcuerdoPago) {
-		return new AcuerdoPago(comandoAcuerdoPago.getFechaAcuerdo(), comandoAcuerdoPago.getMontoCuota(),
+		return new AcuerdoPago(comandoAcuerdoPago.getIdAcuerdoPago(), comandoAcuerdoPago.getFechaAcuerdo(), comandoAcuerdoPago.getMontoCuota(),
 				comandoAcuerdoPago.getCliente(), comandoAcuerdoPago.getDeuda(), comandoAcuerdoPago.getEstado(),
-				comandoAcuerdoPago.getCantidadCuotas());
+				comandoAcuerdoPago.getCantidadCuotas(), comandoAcuerdoPago.getNumeroReferencia());
 	}
 }

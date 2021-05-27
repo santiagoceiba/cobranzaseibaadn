@@ -2,6 +2,9 @@ package com.ceiba.usuario.modelo.entidad;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdoEnum;
 
 
 
@@ -10,29 +13,33 @@ public class AcuerdoPago {
 	private static final String SE_DEBE_INGRESAR_LA_FECHA_ACUERDO = "Se debe ingresar la fecha de acuerdo del pago";
 	private static final String SE_DEBE_INGRESAR_CUOTA = "Se debe ingresar el valor del monto de la cuota";
 	private static final String SE_DEBE_INGRESAR_NOMERO_CUOTAS = "Se debe ingresar el número de cuotas acordadas";
+	private static final String SE_DEBE_INGRESAR_NOMERO_REFERENCIA = "Se debe ingresar el número de referencia de pago";
 
-	
-	private LocalDate fechaAcuerdo;
+	private Long idAcuerdoPago;
+	private LocalDateTime fechaAcuerdo;
 	private Double montoCuota;
-	private Cliente cliente;
-	private Deuda deuda;
-	private Boolean estado;
+	private Long cliente;
+	private Long deuda;
+	private EstadoAcuerdoEnum estado;
 	private Integer cantidadCuotas;
+	private Long numeroReferencia;
 
-	public AcuerdoPago(LocalDate fechaAcuerdo, Double cuota, Cliente cliente, Deuda deuda, Boolean estado,
-			Integer cantidadCuotas) {
+	public AcuerdoPago(Long idAcuerdoPago, LocalDateTime fechaAcuerdo, Double cuota, Long cliente, Long deuda, EstadoAcuerdoEnum estado,
+			Integer cantidadCuotas, Long numeroReferencia) {
 		
 		validarObligatorio(fechaAcuerdo, SE_DEBE_INGRESAR_LA_FECHA_ACUERDO);
 		validarObligatorio(montoCuota, SE_DEBE_INGRESAR_CUOTA);
 		validarObligatorio(cantidadCuotas, SE_DEBE_INGRESAR_NOMERO_CUOTAS);
+		validarObligatorio(numeroReferencia, SE_DEBE_INGRESAR_NOMERO_REFERENCIA);
 		
-		
+		this.idAcuerdoPago = idAcuerdoPago;
 		this.fechaAcuerdo = fechaAcuerdo;
 		this.montoCuota = cuota;
 		this.cliente = cliente;
 		this.deuda = deuda;
 		this.estado = estado;
 		this.cantidadCuotas = cantidadCuotas;
+		this.numeroReferencia = numeroReferencia;
 	}
 
 	public Double getMontoCuota() {
@@ -51,12 +58,21 @@ public class AcuerdoPago {
 		this.cantidadCuotas = cantidadCuotas;
 	}
 
-	public LocalDate getFechaAcuerdo() {
+	public LocalDateTime getFechaAcuerdo() {
 		return fechaAcuerdo;
 	}
 
-	public void setFechaAcuerdo(LocalDate fechaAcuerdo) {
+	public void setFechaAcuerdo(LocalDateTime fechaAcuerdo) {
 		this.fechaAcuerdo = fechaAcuerdo;
+	}
+	
+	
+	public Long getNumeroReferencia() {
+		return numeroReferencia;
+	}
+
+	public void setNumeroReferencia(Long numeroReferencia) {
+		this.numeroReferencia = numeroReferencia;
 	}
 
 	public Double getCuota() {
@@ -67,27 +83,36 @@ public class AcuerdoPago {
 		this.montoCuota = montoCuota;
 	}
 
-	public Cliente getCliente() {
+	
+	public Long getIdAcuerdoPago() {
+		return idAcuerdoPago;
+	}
+
+	public void setIdAcuerdoPago(Long idAcuerdoPago) {
+		this.idAcuerdoPago = idAcuerdoPago;
+	}
+
+	public Long getCliente() {
 		return cliente;
 	}
 
-	public void setCliente(Cliente cliente) {
+	public void setCliente(Long cliente) {
 		this.cliente = cliente;
 	}
 
-	public Deuda getDeuda() {
+	public Long getDeuda() {
 		return deuda;
 	}
 
-	public void setDeuda(Deuda deuda) {
+	public void setDeuda(Long deuda) {
 		this.deuda = deuda;
 	}
 
-	public Boolean getEstado() {
+	public EstadoAcuerdoEnum getEstado() {
 		return estado;
 	}
 
-	public void setEstado(Boolean estado) {
+	public void setEstado(EstadoAcuerdoEnum estado) {
 		this.estado = estado;
 	}
 
