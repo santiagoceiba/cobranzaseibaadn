@@ -2,6 +2,9 @@ package com.ceiba.usuario.comando.manejador;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
+import com.ceiba.manejador.ManejadorComando;
 import com.ceiba.usuario.comando.ComandoAcuerdoPago;
 import com.ceiba.usuario.comando.fabrica.FabricaAcuerdoPago;
 import com.ceiba.usuario.comando.fabrica.FabricaAcuerdoPagoDto;
@@ -10,7 +13,8 @@ import com.ceiba.usuario.modelo.entidad.AcuerdoPago;
 import com.ceiba.usuario.puerto.dao.DaoAcuerdoPago;
 import com.ceiba.usuario.servicio.ServicioActualizarAcuerdoPago;
 
-public class ManejadorActualizarAcuerdo {
+@Component
+public class ManejadorActualizarAcuerdo implements ManejadorComando<ComandoAcuerdoPago>{
 
 	private final FabricaAcuerdoPago fabricaAcuerdoPago;
 	private final FabricaAcuerdoPagoDto fabricaAcuerdoPagoDto;

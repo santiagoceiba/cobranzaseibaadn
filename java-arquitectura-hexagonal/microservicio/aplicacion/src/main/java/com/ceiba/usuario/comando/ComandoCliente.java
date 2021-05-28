@@ -1,11 +1,5 @@
 package com.ceiba.usuario.comando;
 
-import java.util.List;
-
-import com.ceiba.usuario.modelo.entidad.Deuda;
-
-
-
 public class ComandoCliente {
 	
 	
@@ -16,7 +10,7 @@ public class ComandoCliente {
 	
 	
 	
-	public ComandoCliente(Long idCliente, String nombre, String cedula, List<Deuda> listaDeudasCliente) {
+	public ComandoCliente(Long idCliente, String nombre, String cedula) {
 		super();
 		this.idCliente = idCliente;
 		this.nombre = nombre;

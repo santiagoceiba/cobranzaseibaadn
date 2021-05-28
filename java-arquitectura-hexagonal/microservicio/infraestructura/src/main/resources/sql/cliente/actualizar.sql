@@ -1,4 +1,4 @@
 update cliente
 set nombre = :nombre,
-	cedula = :cedula,
+	cedula = :cedula
 where idCliente = :idCliente

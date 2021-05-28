@@ -6,15 +6,15 @@ import com.ceiba.manejador.ManejadorComando;
 import com.ceiba.usuario.comando.ComandoCliente;
 import com.ceiba.usuario.comando.fabrica.FabricaCliente;
 import com.ceiba.usuario.modelo.entidad.Cliente;
-import com.ceiba.usuario.servicio.ServicioActualizacionClienteTest;
+import com.ceiba.usuario.servicio.ServicioActualizacionCliente;
 
 @Component
 public class ManejadorActualizarCliente implements ManejadorComando<ComandoCliente> {
 	
     private final FabricaCliente fabricaCliente;
-    private final ServicioActualizacionClienteTest servicioCliente;
+    private final ServicioActualizacionCliente servicioCliente;
 
-    public ManejadorActualizarCliente(FabricaCliente fabricaCliente, ServicioActualizacionClienteTest servicioCliente) {
+    public ManejadorActualizarCliente(FabricaCliente fabricaCliente, ServicioActualizacionCliente servicioCliente) {
         this.fabricaCliente = fabricaCliente;
         this.servicioCliente = servicioCliente;
     }

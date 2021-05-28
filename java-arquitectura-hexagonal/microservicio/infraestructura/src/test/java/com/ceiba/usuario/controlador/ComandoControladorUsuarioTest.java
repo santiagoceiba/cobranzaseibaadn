@@ -20,17 +20,17 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-@RunWith(SpringRunner.class)
-@ContextConfiguration(classes= ApplicationMock.class)
-@WebMvcTest(ComandoControladorUsuario.class)
+//@RunWith(SpringRunner.class)
+//@ContextConfiguration(classes= ApplicationMock.class)
+//@WebMvcTest(ComandoControladorUsuario.class)
 public class ComandoControladorUsuarioTest {
 
-    @Autowired
-    private ObjectMapper objectMapper;
-
-    @Autowired
-    private MockMvc mocMvc;
-
+//    @Autowired
+//    private ObjectMapper objectMapper;
+//
+//    @Autowired
+//    private MockMvc mocMvc;
+//
 //    @Test
 //    public void crear() throws Exception{
 //        // arrange
@@ -56,7 +56,7 @@ public class ComandoControladorUsuarioTest {
 //                .content(objectMapper.writeValueAsString(usuario)))
 //                .andExpect(status().isOk());
 //    }
-
+//
 //    @Test
 //    public void eliminar() throws Exception {
 //        // arrange

@@ -40,7 +40,7 @@ public class RepositorioClienteMysql implements RepositorioCliente{
     @Override
     public void eliminar(Long id) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
-        paramSource.addValue("id", id);
+        paramSource.addValue("idCliente", id);
 
         this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlEliminar, paramSource);
     }

@@ -28,7 +28,7 @@ public class AcuerdoPago {
 			Integer cantidadCuotas, Long numeroReferencia) {
 		
 		validarObligatorio(fechaAcuerdo, SE_DEBE_INGRESAR_LA_FECHA_ACUERDO);
-		validarObligatorio(montoCuota, SE_DEBE_INGRESAR_CUOTA);
+		validarObligatorio(cuota, SE_DEBE_INGRESAR_CUOTA);
 		validarObligatorio(cantidadCuotas, SE_DEBE_INGRESAR_NOMERO_CUOTAS);
 		validarObligatorio(numeroReferencia, SE_DEBE_INGRESAR_NOMERO_REFERENCIA);
 		

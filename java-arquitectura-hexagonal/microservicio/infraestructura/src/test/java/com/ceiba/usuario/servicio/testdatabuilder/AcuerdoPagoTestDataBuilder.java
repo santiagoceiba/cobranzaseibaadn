@@ -17,7 +17,6 @@ public class AcuerdoPagoTestDataBuilder {
 	private Long numeroReferencia;
 	
 	public AcuerdoPagoTestDataBuilder() {
-		fechaAcuerdo = LocalDateTime.now();
 		montoCuota = 100.0;
 		idCliente = 1L;
 		idDeuda = 1L;
