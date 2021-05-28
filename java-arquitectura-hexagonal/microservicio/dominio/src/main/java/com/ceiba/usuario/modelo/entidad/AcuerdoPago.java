@@ -1,7 +1,7 @@
 package com.ceiba.usuario.modelo.entidad;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
-import java.time.LocalDate;
+
 import java.time.LocalDateTime;
 
 import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdoEnum;
@@ -18,8 +18,8 @@ public class AcuerdoPago {
 	private Long idAcuerdoPago;
 	private LocalDateTime fechaAcuerdo;
 	private Double montoCuota;
-	private Long cliente;
-	private Long deuda;
+	private Long idCliente;
+	private Long idDeuda;
 	private EstadoAcuerdoEnum estado;
 	private Integer cantidadCuotas;
 	private Long numeroReferencia;
@@ -35,8 +35,8 @@ public class AcuerdoPago {
 		this.idAcuerdoPago = idAcuerdoPago;
 		this.fechaAcuerdo = fechaAcuerdo;
 		this.montoCuota = cuota;
-		this.cliente = cliente;
-		this.deuda = deuda;
+		this.idCliente = cliente;
+		this.idDeuda = deuda;
 		this.estado = estado;
 		this.cantidadCuotas = cantidadCuotas;
 		this.numeroReferencia = numeroReferencia;
@@ -57,7 +57,6 @@ public class AcuerdoPago {
 	public void setCantidadCuotas(Integer cantidadCuotas) {
 		this.cantidadCuotas = cantidadCuotas;
 	}
-
 	public LocalDateTime getFechaAcuerdo() {
 		return fechaAcuerdo;
 	}
@@ -93,19 +92,19 @@ public class AcuerdoPago {
 	}
 
 	public Long getCliente() {
-		return cliente;
+		return idCliente;
 	}
 
-	public void setCliente(Long cliente) {
-		this.cliente = cliente;
+	public void setCliente(Long idCliente) {
+		this.idCliente = idCliente;
 	}
 
 	public Long getDeuda() {
-		return deuda;
+		return idDeuda;
 	}
 
-	public void setDeuda(Long deuda) {
-		this.deuda = deuda;
+	public void setDeuda(Long idDeuda) {
+		this.idDeuda = idDeuda;
 	}
 
 	public EstadoAcuerdoEnum getEstado() {

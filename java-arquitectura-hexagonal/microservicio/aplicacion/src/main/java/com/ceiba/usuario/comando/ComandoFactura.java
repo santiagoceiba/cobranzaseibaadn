@@ -1,9 +1,9 @@
-package com.ceiba.usuario.modelo.entidad;
+package com.ceiba.usuario.comando;
 
 import java.time.LocalDateTime;
 
-public class Factura {
-	
+public class ComandoFactura {
+
 	private Long idFactura;
 	private Double montoCuota;
 	private LocalDateTime fechaCaducidad;
@@ -11,7 +11,8 @@ public class Factura {
 	private Boolean estado;
 	
 	
-	public Factura(Long idFactura, Double montoCuota, LocalDateTime fechaCaducidad, Long acuerdoPago, Boolean estado) {
+	public ComandoFactura(Long idFactura, Double montoCuota, LocalDateTime fechaCaducidad, Long acuerdoPago, Boolean estado) {
+		super();
 		this.idFactura = idFactura;
 		this.montoCuota = montoCuota;
 		this.fechaCaducidad = fechaCaducidad;
@@ -21,7 +22,8 @@ public class Factura {
 
 	
 
-	public Factura() {
+	public ComandoFactura() {
+		super();
 	}
 
 
@@ -74,7 +76,4 @@ public class Factura {
 	public void setEstado(Boolean estado) {
 		this.estado = estado;
 	}
-	
-	
-	
 }

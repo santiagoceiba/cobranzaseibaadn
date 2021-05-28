@@ -27,4 +27,8 @@ public class DaoClienteMysql implements DaoAcuerdoPago {
 	  return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoAcuerdoPago());
 	}
 
+
+	
+	
+
 }

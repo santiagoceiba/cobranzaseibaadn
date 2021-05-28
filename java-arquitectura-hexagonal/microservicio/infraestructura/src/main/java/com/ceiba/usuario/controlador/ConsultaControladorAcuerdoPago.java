@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ceiba.usuario.consulta.ManejadorListaAcuerdosPagos;
+import com.ceiba.usuario.modelo.dto.DtoAcuerdoPago;
 import com.ceiba.usuario.modelo.dto.DtoUsuario;
 
 import io.swagger.annotations.Api;
@@ -26,7 +27,7 @@ public class ConsultaControladorAcuerdoPago {
 
     @GetMapping("/listar")
     @ApiOperation("Listar Usuarios")
-    public List<DtoUsuario> listar() {
+    public List<DtoAcuerdoPago> listar() {
         return this.manejadorListaAcuerdosPagos.ejecutar();
     }
 

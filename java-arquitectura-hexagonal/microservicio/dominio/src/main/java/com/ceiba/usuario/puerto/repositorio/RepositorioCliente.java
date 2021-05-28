@@ -28,6 +28,6 @@ public interface RepositorioCliente {
      * @param nombre
      * @return si existe o no
      */
-    boolean existe(String nombre);
+    boolean existe(String cedula);
     
 }

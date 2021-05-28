@@ -1,9 +1,9 @@
-package com.ceiba.usuario.modelo.entidad;
+package com.ceiba.usuario.modelo.dto;
 
 import java.time.LocalDateTime;
 
-public class Factura {
-	
+public class DtoFactura {
+
 	private Long idFactura;
 	private Double montoCuota;
 	private LocalDateTime fechaCaducidad;
@@ -11,7 +11,7 @@ public class Factura {
 	private Boolean estado;
 	
 	
-	public Factura(Long idFactura, Double montoCuota, LocalDateTime fechaCaducidad, Long acuerdoPago, Boolean estado) {
+	public DtoFactura(Long idFactura, Double montoCuota, LocalDateTime fechaCaducidad, Long acuerdoPago, Boolean estado) {
 		this.idFactura = idFactura;
 		this.montoCuota = montoCuota;
 		this.fechaCaducidad = fechaCaducidad;
@@ -21,7 +21,7 @@ public class Factura {
 
 	
 
-	public Factura() {
+	public DtoFactura() {
 	}
 
 
@@ -74,7 +74,4 @@ public class Factura {
 	public void setEstado(Boolean estado) {
 		this.estado = estado;
 	}
-	
-	
-	
 }

@@ -1,9 +1,13 @@
 package com.ceiba.configuracion;
 
+import com.ceiba.usuario.puerto.dao.DaoFactura;
+import com.ceiba.usuario.puerto.repositorio.RepositorioAcuerdo;
 import com.ceiba.usuario.puerto.repositorio.RepositorioCliente;
 import com.ceiba.usuario.puerto.repositorio.RepositorioUsuario;
-import com.ceiba.usuario.servicio.ServicioActualizacionCliente;
+import com.ceiba.usuario.servicio.ServicioActualizacionClienteTest;
+import com.ceiba.usuario.servicio.ServicioActualizarAcuerdoPago;
 import com.ceiba.usuario.servicio.ServicioActualizarUsuario;
+import com.ceiba.usuario.servicio.ServicioCrearAcuerdoPago;
 import com.ceiba.usuario.servicio.ServicioCrearCliente;
 import com.ceiba.usuario.servicio.ServicioCrearUsuario;
 import com.ceiba.usuario.servicio.ServicioEliminarCliente;
@@ -41,9 +45,20 @@ public class BeanServicio {
     }
 
     @Bean
-    public ServicioActualizacionCliente servicioActualizacionCliente(RepositorioCliente repositorioCliente) {
-        return new ServicioActualizacionCliente(repositorioCliente);
+    public ServicioActualizacionClienteTest servicioActualizacionCliente(RepositorioCliente repositorioCliente) {
+        return new ServicioActualizacionClienteTest(repositorioCliente);
     }
 	
+    
+    @Bean
+    public ServicioCrearAcuerdoPago servicioCrearAcuerdoPago(RepositorioAcuerdo repositorioAcuerdo) {
+        return new ServicioCrearAcuerdoPago(repositorioAcuerdo);
+    }
+    
+    
+    @Bean
+    public ServicioActualizarAcuerdoPago servicioActualizarAcuerdoPago(RepositorioAcuerdo repositorioAcuerdo, DaoFactura daoFactura) {
+        return new ServicioActualizarAcuerdoPago(repositorioAcuerdo, daoFactura);
+    }
 
 }

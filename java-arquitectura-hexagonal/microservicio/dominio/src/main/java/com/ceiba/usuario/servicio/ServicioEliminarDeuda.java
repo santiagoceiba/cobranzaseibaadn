@@ -11,6 +11,6 @@ public class ServicioEliminarDeuda {
 	}
 
 	public void ejecutar(Long id) {
-		this.repositorioDeuda.eliminar(id);
+		//this.repositorioDeuda.eliminar(id);
 	}
 }

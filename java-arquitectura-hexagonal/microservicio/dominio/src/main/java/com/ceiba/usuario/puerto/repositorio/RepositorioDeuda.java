@@ -12,17 +12,6 @@ public interface RepositorioDeuda {
 	 */
     Long crear(Deuda deuda);
     
-    /**
-	 * Permite actualizar un deuda
-	 * @param deuda
-	 */
-    void actualizar(Deuda deuda);
-    
-    /**
-     * Permite eliminar un deuda
-     * @param iddeuda
-     */
-    void eliminar(Long idDeuda);
     
     /**
      * Permite validar si existe una deuda con id

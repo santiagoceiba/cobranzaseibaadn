@@ -17,7 +17,7 @@ public class ServicioActualizacionDeuda {
 
     public void ejecutar(Deuda deuda) {
     	validarExistenciaPrevia(deuda);
-        this.repositorioDeuda.actualizar(deuda);
+        //this.repositorioDeuda.actualizar(deuda);
     }
 
 	private void validarExistenciaPrevia(Deuda deuda) {

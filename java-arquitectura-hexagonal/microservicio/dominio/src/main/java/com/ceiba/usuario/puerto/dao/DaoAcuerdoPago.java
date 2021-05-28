@@ -12,4 +12,6 @@ public interface DaoAcuerdoPago {
      * @return los usuarios
      */
     List<DtoAcuerdoPago> listar();
+    
+
 }
