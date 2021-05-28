@@ -17,7 +17,6 @@ public class ManejadorCrearDeuda implements ManejadorComandoRespuesta<ComandoDeu
 	
 	
 	public ManejadorCrearDeuda(FabricaDeuda fabricaDeuda, ServicioCrearDeuda servicioCrearDeuda) {
-		super();
 		this.fabricaDeuda = fabricaDeuda;
 		this.servicioCrearDeuda = servicioCrearDeuda;
 	}

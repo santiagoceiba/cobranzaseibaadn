@@ -10,7 +10,7 @@ public class FabricaAcuerdoPago {
 
 	public AcuerdoPago crear(ComandoAcuerdoPago comandoAcuerdoPago) {
 		return new AcuerdoPago(comandoAcuerdoPago.getIdAcuerdoPago(), comandoAcuerdoPago.getFechaAcuerdo(), comandoAcuerdoPago.getMontoCuota(),
-				comandoAcuerdoPago.getCliente(), comandoAcuerdoPago.getDeuda(), comandoAcuerdoPago.getEstado(),
+				comandoAcuerdoPago.getCliente(), comandoAcuerdoPago.getDeuda(), (comandoAcuerdoPago.getEstado()),
 				comandoAcuerdoPago.getCantidadCuotas(), comandoAcuerdoPago.getNumeroReferencia());
 	}
 }

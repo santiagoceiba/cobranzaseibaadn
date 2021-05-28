@@ -31,10 +31,10 @@ public class ServicioActualizarAcuerdoPago {
 	}
 
 	public void ejecutarTareaJuridicos(AcuerdoPago acuerdoPago) {
-		if (acuerdoPago.getEstado().equals(EstadoAcuerdoEnum.ACTIVO)) {
+		if (acuerdoPago.getEstado().equals("A")) {
 			List<DtoFactura> listaFacturas = this.daoFactura.listarFacturaPorAcuerdo(acuerdoPago.getIdAcuerdoPago());
 			if (obtenerNumeroAcuerdosVencidos(listaFacturas) > 2) {
-				acuerdoPago.setEstado(EstadoAcuerdoEnum.COBRO_JURIDICO);
+				acuerdoPago.setEstado("CJ");
 				this.repositorioAcuerdo.actualizar(acuerdoPago);
 			}
 		}

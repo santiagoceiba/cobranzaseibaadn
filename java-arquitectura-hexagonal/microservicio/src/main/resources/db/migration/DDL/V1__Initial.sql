@@ -18,7 +18,7 @@ fecha_acuerdo date not null,
 monto_cuota int(100) not null,
 idCliente int(11) not null,
 idDeuda int(11) not null,
-estado varchar(11),
+estado longtext(25),
 cantidad_cuotas int (11) not null,
 numero_referencia int (11) not null, 
 primary key (idAcuerdoPago)

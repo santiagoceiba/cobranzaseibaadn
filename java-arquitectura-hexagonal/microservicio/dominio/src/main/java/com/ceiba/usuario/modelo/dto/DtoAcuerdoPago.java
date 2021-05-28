@@ -11,14 +11,14 @@ public class DtoAcuerdoPago {
 	private Double montoCuota;
 	private Long cliente;
 	private Long deuda;
-	private EstadoAcuerdoEnum estado;
+	private String estado;
 	private Integer cantidadCuotas;
 	private Long numeroReferencia;
 	
 	
 	
 	public DtoAcuerdoPago(Long idAcuerdoPago, LocalDateTime fechaAcuerdo, Double montoCuota, Long cliente, Long deuda,
-			EstadoAcuerdoEnum estado, Integer cantidadCuotas, Long numeroReferencia) {
+			String estado, Integer cantidadCuotas, Long numeroReferencia) {
 		super();
 		this.idAcuerdoPago = idAcuerdoPago;
 		this.fechaAcuerdo = fechaAcuerdo;
@@ -59,10 +59,10 @@ public class DtoAcuerdoPago {
 	public void setDeuda(Long deuda) {
 		this.deuda = deuda;
 	}
-	public EstadoAcuerdoEnum getEstado() {
+	public String getEstado() {
 		return estado;
 	}
-	public void setEstado(EstadoAcuerdoEnum estado) {
+	public void setEstado(String estado) {
 		this.estado = estado;
 	}
 	public Integer getCantidadCuotas() {

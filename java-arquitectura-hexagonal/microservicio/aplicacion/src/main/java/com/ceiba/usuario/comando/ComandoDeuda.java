@@ -1,9 +1,6 @@
 package com.ceiba.usuario.comando;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-
-import com.ceiba.usuario.modelo.entidad.Cliente;
 
 
 public class ComandoDeuda {
@@ -62,6 +59,9 @@ public class ComandoDeuda {
 		this.nombreEntidadDeuda = nombreEntidadDeuda;
 		this.conceptoDeuda = conceptoDeuda;
 		this.idCliente = idCliente;
+	}
+	public ComandoDeuda() {
+		super();
 	}
 	
 	

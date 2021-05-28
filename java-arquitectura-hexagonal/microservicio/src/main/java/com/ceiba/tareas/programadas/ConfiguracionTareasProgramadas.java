@@ -7,8 +7,8 @@ import org.springframework.scheduling.annotation.Scheduled;
 //import com.ceiba.usuario.comando.manejador.ManejadorActualizarAcuerdo;
 
 
-@Configuration
-@EnableScheduling
+//@Configuration
+//@EnableScheduling
 public class ConfiguracionTareasProgramadas {
 
 

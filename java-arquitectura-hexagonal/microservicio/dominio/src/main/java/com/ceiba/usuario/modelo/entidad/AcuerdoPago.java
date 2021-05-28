@@ -1,10 +1,9 @@
+
 package com.ceiba.usuario.modelo.entidad;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
 
 import java.time.LocalDateTime;
-
-import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdoEnum;
 
 
 
@@ -20,11 +19,11 @@ public class AcuerdoPago {
 	private Double montoCuota;
 	private Long idCliente;
 	private Long idDeuda;
-	private EstadoAcuerdoEnum estado;
+	private String estado;
 	private Integer cantidadCuotas;
 	private Long numeroReferencia;
 
-	public AcuerdoPago(Long idAcuerdoPago, LocalDateTime fechaAcuerdo, Double cuota, Long cliente, Long deuda, EstadoAcuerdoEnum estado,
+	public AcuerdoPago(Long idAcuerdoPago, LocalDateTime fechaAcuerdo, Double cuota, Long cliente, Long deuda, String estado,
 			Integer cantidadCuotas, Long numeroReferencia) {
 		
 		validarObligatorio(fechaAcuerdo, SE_DEBE_INGRESAR_LA_FECHA_ACUERDO);
@@ -107,11 +106,11 @@ public class AcuerdoPago {
 		this.idDeuda = idDeuda;
 	}
 
-	public EstadoAcuerdoEnum getEstado() {
+	public String getEstado() {
 		return estado;
 	}
 
-	public void setEstado(EstadoAcuerdoEnum estado) {
+	public void setEstado(String estado) {
 		this.estado = estado;
 	}
 

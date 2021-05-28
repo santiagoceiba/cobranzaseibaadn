@@ -2,8 +2,6 @@ package com.ceiba.usuario.comando;
 
 import java.time.LocalDateTime;
 
-import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdoEnum;
-
 
 
 public class ComandoAcuerdoPago {
@@ -13,13 +11,13 @@ public class ComandoAcuerdoPago {
 	private Double montoCuota;
 	private Long cliente;
 	private Long deuda;
-	private EstadoAcuerdoEnum estado;
+	private String estado;
 	private Integer cantidadCuotas;
 	private Long numeroReferencia;
 	
 
 	public ComandoAcuerdoPago(Long idAcuerdoPago, LocalDateTime fechaAcuerdo, Double montoCuota, Long cliente,
-			Long deuda, EstadoAcuerdoEnum estado, Integer cantidadCuotas, Long numeroReferencia) {
+			Long deuda, String estado, Integer cantidadCuotas, Long numeroReferencia) {
 
 		this.idAcuerdoPago = idAcuerdoPago;
 		this.fechaAcuerdo = fechaAcuerdo;
@@ -69,10 +67,10 @@ public class ComandoAcuerdoPago {
 	public void setDeuda(Long deuda) {
 		this.deuda = deuda;
 	}
-	public EstadoAcuerdoEnum getEstado() {
+	public String getEstado() {
 		return estado;
 	}
-	public void setEstado(EstadoAcuerdoEnum estado) {
+	public void setEstado(String estado) {
 		this.estado = estado;
 	}
 	public Integer getCantidadCuotas() {

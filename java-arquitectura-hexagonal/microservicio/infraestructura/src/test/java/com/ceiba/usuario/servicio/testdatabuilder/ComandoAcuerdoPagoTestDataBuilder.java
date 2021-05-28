@@ -2,9 +2,9 @@ package com.ceiba.usuario.servicio.testdatabuilder;
 
 import java.time.LocalDateTime;
 
-import com.ceiba.usuario.modelo.entidad.AcuerdoPago;
+import com.ceiba.usuario.comando.ComandoAcuerdoPago;
 
-public class AcuerdoPagoTestDataBuilder {
+public class ComandoAcuerdoPagoTestDataBuilder {
 	
 	private Long idAcuerdoPago;
 	private LocalDateTime fechaAcuerdo;
@@ -15,9 +15,10 @@ public class AcuerdoPagoTestDataBuilder {
 	private Integer cantidadCuotas;
 	private Long numeroReferencia;
 	
-	public AcuerdoPagoTestDataBuilder() {
-		fechaAcuerdo = LocalDateTime.now();
+	public ComandoAcuerdoPagoTestDataBuilder() {
 		montoCuota = 100.0;
+		fechaAcuerdo = LocalDateTime.now();
+		System.out.println(fechaAcuerdo);
 		idCliente = 1L;
 		idDeuda = 1L;
 		estado = "A";
@@ -26,12 +27,12 @@ public class AcuerdoPagoTestDataBuilder {
   
 	}
 	
-    public AcuerdoPagoTestDataBuilder conId(Long idAcuerdoPago) {
+    public ComandoAcuerdoPagoTestDataBuilder conId(Long idAcuerdoPago) {
         this.idAcuerdoPago = idAcuerdoPago;
         return this;
     }
 
-    public AcuerdoPago build() {
-        return new AcuerdoPago(idAcuerdoPago, fechaAcuerdo, montoCuota, idCliente, idDeuda, estado, cantidadCuotas, numeroReferencia);
+    public ComandoAcuerdoPago build() {
+        return new ComandoAcuerdoPago(idAcuerdoPago, fechaAcuerdo, montoCuota, idCliente, idDeuda, estado, cantidadCuotas, numeroReferencia);
     }
 }
