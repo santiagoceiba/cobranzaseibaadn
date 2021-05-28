@@ -12,7 +12,7 @@ public class AcuerdoPago {
 	private static final String SE_DEBE_INGRESAR_LA_FECHA_ACUERDO = "Se debe ingresar la fecha de acuerdo del pago";
 	private static final String SE_DEBE_INGRESAR_CUOTA = "Se debe ingresar el valor del monto de la cuota";
 	private static final String SE_DEBE_INGRESAR_NOMERO_CUOTAS = "Se debe ingresar el número de cuotas acordadas";
-	private static final String SE_DEBE_INGRESAR_NOMERO_REFERENCIA = "Se debe ingresar el número de referencia de pago";
+	private static final String SE_DEBE_INGRESAR_NOMERO_REFERENCIA = "Se debe ingresar el numero de referencia de pago";
 
 	private Long idAcuerdoPago;
 	private LocalDateTime fechaAcuerdo;
