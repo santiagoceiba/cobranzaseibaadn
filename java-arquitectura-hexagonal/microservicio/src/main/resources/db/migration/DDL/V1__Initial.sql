@@ -15,10 +15,10 @@ create table cliente (
 
 create table acuerdo_pago (idAcuerdoPago int (11) not null auto_increment,
 fecha_acuerdo date not null,
-monto_cuota int(100) not null,
+monto_cuota decimal(100) not null,
 idCliente int(11) not null,
 idDeuda int(11) not null,
-estado longtext(25),
+estado longtext(45),
 cantidad_cuotas int (11) not null,
 numero_referencia int (11) not null, 
 primary key (idAcuerdoPago)

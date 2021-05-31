@@ -1,6 +1,6 @@
 package com.ceiba.factura.modelo.entidad;
 
-import static com.ceiba.dominio.ValidadorArgumento.validarFecha;
+//import static com.ceiba.dominio.ValidadorArgumento.validarFecha;
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
 
 import java.io.Serializable;
@@ -10,25 +10,24 @@ import java.util.concurrent.TimeUnit;
 
 import com.ceiba.acuerdo.pago.modelo.entidad.AcuerdoPago;
 
-public class Factura implements Serializable{
+public class Factura implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	private static final String SE_DEBE_INGRESAR_UNA_FECHA_VALIDA = "La fecha ingresada es mayor a la fecha actual";
+	//private static final String SE_DEBE_INGRESAR_UNA_FECHA_VALIDA = "La fecha ingresada es mayor a la fecha actual";
 	private static final String SE_DEBE_INGRESAR_MONTO_CUOTA = "Se debe ingresar el monto de la cuota";
 	private static final int NUMERO_DIAS_CADUCIDAD = 5;
-	
+
 	private Long idFactura;
 	private Double montoCuota;
 	private LocalDateTime fechaCaducidad;
 	private AcuerdoPago acuerdoPago;
 	private Boolean estado;
-	
 
-	
-	public Factura(Long idFactura, Double montoCuota, LocalDateTime fechaCaducidad, AcuerdoPago acuerdoPago, Boolean estado) {
-		validarFecha(fechaCaducidad, SE_DEBE_INGRESAR_UNA_FECHA_VALIDA);
+	public Factura(Long idFactura, Double montoCuota, LocalDateTime fechaCaducidad, AcuerdoPago acuerdoPago,
+			Boolean estado) {
+		//validarFecha(fechaCaducidad, SE_DEBE_INGRESAR_UNA_FECHA_VALIDA);
 		validarObligatorio(montoCuota, SE_DEBE_INGRESAR_MONTO_CUOTA);
-		
+
 		this.idFactura = idFactura;
 		this.montoCuota = montoCuota;
 		this.fechaCaducidad = fechaCaducidad;
@@ -37,37 +36,29 @@ public class Factura implements Serializable{
 		esFacturaVencida();
 	}
 
-
-
 	public Long getIdFactura() {
 		return idFactura;
 	}
-
 
 	public void setIdFactura(Long idFactura) {
 		this.idFactura = idFactura;
 	}
 
-
 	public Double getMontoCuota() {
 		return montoCuota;
 	}
-
 
 	public void setMontoCuota(Double montoCuota) {
 		this.montoCuota = montoCuota;
 	}
 
-
 	public LocalDateTime getFechaCaducidad() {
 		return fechaCaducidad;
 	}
 
-
 	public void setFechaCaducidad(LocalDateTime fechaCaducidad) {
 		this.fechaCaducidad = fechaCaducidad;
 	}
-
 
 	public AcuerdoPago getAcuerdoPago() {
 		return acuerdoPago;
@@ -77,11 +68,10 @@ public class Factura implements Serializable{
 		return estado;
 	}
 
-
 	public void setEstado(Boolean estado) {
 		this.estado = estado;
 	}
-	
+
 	/**
 	 * método que permite encontrar la diferecia entre dos fechas
 	 * 
@@ -97,9 +87,10 @@ public class Factura implements Serializable{
 		return diferenciaDias;
 
 	}
-	
+
 	/**
-	 * método que permite definir si una factura se encuentra vencida por un número > a 5
+	 * método que permite definir si una factura se encuentra vencida por un número
+	 * > a 5
 	 */
 	private void esFacturaVencida() {
 		LocalDateTime fechaActual = LocalDateTime.now();
@@ -108,12 +99,17 @@ public class Factura implements Serializable{
 			this.estado = Boolean.TRUE;
 		}
 	}
-	
 
 	public Factura() {
 		super();
 	}
+
+	@Override
+	public String toString() {
+		return "Factura [idFactura=" + idFactura + ", montoCuota=" + montoCuota + ", fechaCaducidad=" + fechaCaducidad
+				+ ", acuerdoPago=" + acuerdoPago + ", estado=" + estado + "]";
+	}
 	
 	
-	
+
 }

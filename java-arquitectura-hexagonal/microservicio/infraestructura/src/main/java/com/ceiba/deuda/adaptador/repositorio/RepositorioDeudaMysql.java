@@ -26,6 +26,12 @@ public class RepositorioDeudaMysql implements RepositorioDeuda {
 	@Override
 	public Long crear(Deuda deuda) {
 		// TODO Auto-generated method stub
+		MapSqlParameterSource paramSource = new MapSqlParameterSource();
+		paramSource.addValue("idCliente", deuda.getIdCliente().getIdCliente());
+		paramSource.addValue("monto", deuda.getMonto());
+		paramSource.addValue("fechaInicialDeudaCliente", deuda.getFechaInicialDeudaCliente());
+		paramSource.addValue("nombreEntidadDeuda", deuda.getNombreEntidadDeuda());
+		paramSource.addValue("conceptoDeuda", deuda.getConceptoDeuda());
 		return this.customNamedParameterJdbcTemplate.crear(deuda, sqlCrear);
 	}
 

@@ -15,7 +15,7 @@ public class ComandoDeudaTestDataBuilder {
 	private Cliente idCliente;
 	
 	public ComandoDeudaTestDataBuilder() {
-		Cliente idCliente = new Cliente(1L, "santiago","1234");
+		Cliente idCliente = new Cliente(111L, "santiago","1234");
 		monto = 100.0;
 		fechaInicialDeudaCliente = LocalDateTime.now();
 		nombreEntidadDeuda = "tigo";

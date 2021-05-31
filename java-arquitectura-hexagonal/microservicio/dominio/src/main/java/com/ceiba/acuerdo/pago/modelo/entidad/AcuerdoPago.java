@@ -11,12 +11,9 @@ import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdoEnum;
 import com.ceiba.cliente.modelo.entidad.Cliente;
 import com.ceiba.deuda.modelo.entidad.Deuda;
 import com.ceiba.factura.modelo.entidad.Factura;
-import static com.ceiba.dominio.ValidadorArgumento.validarFecha;
+//import static com.ceiba.dominio.ValidadorArgumento.validarFecha;
 
-
-public class AcuerdoPago implements Serializable{
-
-	
+public class AcuerdoPago implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private static final int NUMERO_ATRASOS_CUOTAS_COBRO_JURIDICO = 2;
@@ -24,9 +21,8 @@ public class AcuerdoPago implements Serializable{
 	private static final String SE_DEBE_INGRESAR_CUOTA = "Se debe ingresar el valor del monto de la cuota";
 	private static final String SE_DEBE_INGRESAR_NOMERO_CUOTAS = "Se debe ingresar el número de cuotas acordadas";
 	private static final String SE_DEBE_INGRESAR_NOMERO_REFERENCIA = "Se debe ingresar el numero de referencia de pago";
-	private static final String SE_DEBE_INGRESAR_UNA_FECHA_VALIDA = "La fecha ingresada es mayor a la fecha actual";
-	
-	
+	//private static final String SE_DEBE_INGRESAR_UNA_FECHA_VALIDA = "La fecha ingresada es mayor a la fecha actual";
+
 	private Long idAcuerdoPago;
 	private LocalDateTime fechaAcuerdo;
 	private Double montoCuota;
@@ -37,14 +33,14 @@ public class AcuerdoPago implements Serializable{
 	private Long numeroReferencia;
 	private List<Factura> listaFacturas;
 
-	public AcuerdoPago(Long idAcuerdoPago, LocalDateTime fechaAcuerdo, Double cuota, Cliente cliente, Deuda deuda, EstadoAcuerdoEnum estado,
-			Integer cantidadCuotas, Long numeroReferencia) {
-		validarFecha(fechaAcuerdo, SE_DEBE_INGRESAR_UNA_FECHA_VALIDA);
+	public AcuerdoPago(Long idAcuerdoPago, LocalDateTime fechaAcuerdo, Double cuota, Cliente cliente, Deuda deuda,
+			EstadoAcuerdoEnum estado, Integer cantidadCuotas, Long numeroReferencia) {
+		//validarFecha(fechaAcuerdo, SE_DEBE_INGRESAR_UNA_FECHA_VALIDA);
 		validarObligatorio(fechaAcuerdo, SE_DEBE_INGRESAR_LA_FECHA_ACUERDO);
 		validarObligatorio(cuota, SE_DEBE_INGRESAR_CUOTA);
 		validarObligatorio(cantidadCuotas, SE_DEBE_INGRESAR_NOMERO_CUOTAS);
 		validarObligatorio(numeroReferencia, SE_DEBE_INGRESAR_NOMERO_REFERENCIA);
-		
+
 		this.idAcuerdoPago = idAcuerdoPago;
 		this.fechaAcuerdo = fechaAcuerdo;
 		this.montoCuota = cuota;
@@ -53,9 +49,9 @@ public class AcuerdoPago implements Serializable{
 		this.estado = estado;
 		this.cantidadCuotas = cantidadCuotas;
 		this.numeroReferencia = numeroReferencia;
-		//this.listaFacturas = crearFacturas();
+		// this.listaFacturas = crearFacturas();
 	}
-	
+
 //	/**
 //	 * Método que permite crear una factura a partir del acuerdo realizado con el cliente
 //	 * @return una lista con las facturas creadas
@@ -69,9 +65,11 @@ public class AcuerdoPago implements Serializable{
 //	}
 //		return null;
 //	}
-	
+
 	/**
-	 * método que permite definir si es necesario cambiar el estado de un acuerdo a Cobro jurídico
+	 * método que permite definir si es necesario cambiar el estado de un acuerdo a
+	 * Cobro jurídico
+	 * 
 	 * @param listaFacturas
 	 */
 	public void cambiarAEstadoJuridico(List<Factura> listaFacturas) {
@@ -81,7 +79,7 @@ public class AcuerdoPago implements Serializable{
 			}
 		}
 	}
-	
+
 	/**
 	 * Método que me permite conocer la cantidad de facturas que un acuerdo tiene
 	 * vencidas
@@ -93,13 +91,12 @@ public class AcuerdoPago implements Serializable{
 		int contarFacturasVencidas = 0;
 		for (Factura factura : listaFacturas) {
 			if (factura.getEstado()) {
-				contarFacturasVencidas ++;
+				contarFacturasVencidas++;
 			}
 		}
 
 		return contarFacturasVencidas;
 	}
-
 
 	public Double getMontoCuota() {
 		return montoCuota;
@@ -116,6 +113,7 @@ public class AcuerdoPago implements Serializable{
 	public void setCantidadCuotas(Integer cantidadCuotas) {
 		this.cantidadCuotas = cantidadCuotas;
 	}
+
 	public LocalDateTime getFechaAcuerdo() {
 		return fechaAcuerdo;
 	}
@@ -123,8 +121,7 @@ public class AcuerdoPago implements Serializable{
 	public void setFechaAcuerdo(LocalDateTime fechaAcuerdo) {
 		this.fechaAcuerdo = fechaAcuerdo;
 	}
-	
-	
+
 	public List<Factura> getListaFacturas() {
 		return listaFacturas;
 	}
@@ -145,22 +142,17 @@ public class AcuerdoPago implements Serializable{
 		this.montoCuota = montoCuota;
 	}
 
-	
 	public Long getIdAcuerdoPago() {
 		return idAcuerdoPago;
 	}
-
-
 
 	public Cliente getCliente() {
 		return idCliente;
 	}
 
-
 	public Deuda getDeuda() {
 		return idDeuda;
 	}
-
 
 	public EstadoAcuerdoEnum getEstado() {
 		return estado;
@@ -171,7 +163,15 @@ public class AcuerdoPago implements Serializable{
 	}
 
 	public AcuerdoPago() {
+		super();
 	}
 
+	@Override
+	public String toString() {
+		return "AcuerdoPago [idAcuerdoPago=" + idAcuerdoPago + ", fechaAcuerdo=" + fechaAcuerdo + ", montoCuota="
+				+ montoCuota + ", idCliente=" + idCliente + ", idDeuda=" + idDeuda + ", estado=" + estado
+				+ ", cantidadCuotas=" + cantidadCuotas + ", numeroReferencia=" + numeroReferencia + ", listaFacturas="
+				+ listaFacturas + "]";
+	}
 	
 }

@@ -24,7 +24,7 @@ public class ComandoAcuerdoPagoTestDataBuilder {
 		Deuda idDeuda = new Deuda(10.0, LocalDateTime.now(), "tigo", "plan de datos", idCliente, 1L);
 		montoCuota = 100.0;
 		fechaAcuerdo = LocalDateTime.now();
-		System.out.println(fechaAcuerdo);
+		System.out.println("--------------------**********************-------SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS"+fechaAcuerdo);
 		this.idCliente = idCliente;
 		this.idDeuda = idDeuda;
 		estado = EstadoAcuerdoEnum.ACTIVO;

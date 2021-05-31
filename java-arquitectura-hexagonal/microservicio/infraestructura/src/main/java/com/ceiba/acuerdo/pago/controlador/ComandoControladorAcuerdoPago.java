@@ -26,6 +26,7 @@ public class ComandoControladorAcuerdoPago {
 	@PostMapping(value="/crear")
     @ApiOperation("Crear acuerdo")
 	public ComandoRespuesta<Long> crear(@RequestBody ComandoAcuerdoPago comandoAcuerdo) {
+
 	       return manejadorListaAcuerdosPagos.ejecutar(comandoAcuerdo);
 	    }
 	

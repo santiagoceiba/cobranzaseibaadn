@@ -26,9 +26,20 @@ public class RepositorioAcuerdoMysql implements RepositorioAcuerdo {
 	}
 
 	@Override
-	public Long crear(AcuerdoPago AcuerdoPago) {
+	public Long crear(AcuerdoPago acuerdoPago) {
 		// TODO Auto-generated method stub
-		return this.customNamedParameterJdbcTemplate.crear(AcuerdoPago, sqlCrear);
+		
+		MapSqlParameterSource paramSource = new MapSqlParameterSource();
+		paramSource.addValue("idCliente", acuerdoPago.getCliente().getIdCliente());
+		paramSource.addValue("idDeuda", acuerdoPago.getDeuda().getIdDeuda());
+		paramSource.addValue("fechaAcuerdo", acuerdoPago.getFechaAcuerdo());
+		paramSource.addValue("montoCuota", acuerdoPago.getCuota());
+		paramSource.addValue("estado", acuerdoPago.getEstado().toString());
+		paramSource.addValue("cantidadCuotas", acuerdoPago.getCantidadCuotas());
+		paramSource.addValue("numeroReferencia", acuerdoPago.getNumeroReferencia());
+
+		return this.customNamedParameterJdbcTemplate.crear(acuerdoPago, paramSource,  sqlCrear);
+		//return this.customNamedParameterJdbcTemplate.crear(AcuerdoPago, sqlCrear);
 	}
 
 	@Override

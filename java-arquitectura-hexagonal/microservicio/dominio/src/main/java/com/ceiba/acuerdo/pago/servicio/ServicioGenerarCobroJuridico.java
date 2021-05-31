@@ -15,7 +15,6 @@ public class ServicioGenerarCobroJuridico {
 	private final RepositorioFactura repositorioFactura;
 
 	public ServicioGenerarCobroJuridico(RepositorioAcuerdo repositorioAcuerdo, RepositorioFactura repositorioFactura) {
-		super();
 		this.repositorioAcuerdo = repositorioAcuerdo;
 		this.repositorioFactura = repositorioFactura;
 	}

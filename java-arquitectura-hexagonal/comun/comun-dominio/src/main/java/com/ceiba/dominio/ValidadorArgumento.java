@@ -96,7 +96,7 @@ public class ValidadorArgumento {
     }
     
     public static void validarFecha(LocalDateTime fechaIngreso, String mensaje) {
-    	if (fechaIngreso.compareTo(LocalDateTime.now()) > 0  ) {
+    	if (fechaIngreso.compareTo(LocalDateTime.now()) >= 0  ) {
     		throw new ExcepcionValorInvalido(mensaje);
 		}
     	
