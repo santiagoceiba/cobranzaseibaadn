@@ -1,0 +1,1 @@
+insert into acuerdo_pago (fecha_acuerdo, monto_cuota, idCliente, idDeuda, estado, cantidad_cuotas, numero_referencia) values (:fechaAcuerdo, :montoCuota, :idCliente, :idDeuda, :estado, :cantidadCuotas, :numeroReferencia)
