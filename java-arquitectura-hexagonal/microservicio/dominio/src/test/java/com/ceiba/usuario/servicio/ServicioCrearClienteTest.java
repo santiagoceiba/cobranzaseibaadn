@@ -4,9 +4,10 @@ import org.junit.Test;
 import org.mockito.Mockito;
 
 import com.ceiba.BasePrueba;
+import com.ceiba.cliente.modelo.entidad.Cliente;
+import com.ceiba.cliente.puerto.repositorio.RepositorioCliente;
+import com.ceiba.cliente.servicio.ServicioCrearCliente;
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
-import com.ceiba.usuario.modelo.entidad.Cliente;
-import com.ceiba.usuario.puerto.repositorio.RepositorioCliente;
 import com.ceiba.usuario.servicio.testdatabuilder.ClienteTestDataBuilder;
 
 public class ServicioCrearClienteTest {

@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.ceiba.usuario.modelo.dto.DtoAcuerdoPago;
-import com.ceiba.usuario.puerto.dao.DaoAcuerdoPago;
+import com.ceiba.acuerdo.pago.modelo.dto.DtoAcuerdoPago;
+import com.ceiba.acuerdo.pago.puerto.dao.DaoAcuerdoPago;
 
 @Component
 public class ManejadorListaAcuerdosPagos {

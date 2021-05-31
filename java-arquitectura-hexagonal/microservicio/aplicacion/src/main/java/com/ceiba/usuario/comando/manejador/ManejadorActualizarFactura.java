@@ -1,7 +1,7 @@
 package com.ceiba.usuario.comando.manejador;
 
+import com.ceiba.factura.servicio.ServicioActualizarFactura;
 import com.ceiba.usuario.comando.fabrica.FabricaFactura;
-import com.ceiba.usuario.servicio.ServicioActualizarFactura;
 
 public class ManejadorActualizarFactura {
 

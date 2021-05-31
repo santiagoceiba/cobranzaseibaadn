@@ -2,8 +2,8 @@ package com.ceiba.usuario.comando.fabrica;
 
 import org.springframework.stereotype.Component;
 
+import com.ceiba.acuerdo.pago.modelo.entidad.AcuerdoPago;
 import com.ceiba.usuario.comando.ComandoAcuerdoPago;
-import com.ceiba.usuario.modelo.entidad.AcuerdoPago;
 
 @Component
 public class FabricaAcuerdoPago {

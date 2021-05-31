@@ -1,6 +1,6 @@
 package com.ceiba.usuario.servicio.testdatabuilder;
 
-import com.ceiba.usuario.modelo.entidad.Cliente;
+import com.ceiba.cliente.modelo.entidad.Cliente;
 
 public class ClienteTestDataBuilder {
 

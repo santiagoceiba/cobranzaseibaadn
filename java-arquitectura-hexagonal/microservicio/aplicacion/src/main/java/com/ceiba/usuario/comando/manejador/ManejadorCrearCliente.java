@@ -3,11 +3,11 @@ package com.ceiba.usuario.comando.manejador;
 import org.springframework.stereotype.Component;
 
 import com.ceiba.ComandoRespuesta;
+import com.ceiba.cliente.modelo.entidad.Cliente;
+import com.ceiba.cliente.servicio.ServicioCrearCliente;
 import com.ceiba.manejador.ManejadorComandoRespuesta;
 import com.ceiba.usuario.comando.ComandoCliente;
 import com.ceiba.usuario.comando.fabrica.FabricaCliente;
-import com.ceiba.usuario.modelo.entidad.Cliente;
-import com.ceiba.usuario.servicio.ServicioCrearCliente;
 
 @Component
 public class ManejadorCrearCliente implements ManejadorComandoRespuesta<ComandoCliente, ComandoRespuesta<Long>> {

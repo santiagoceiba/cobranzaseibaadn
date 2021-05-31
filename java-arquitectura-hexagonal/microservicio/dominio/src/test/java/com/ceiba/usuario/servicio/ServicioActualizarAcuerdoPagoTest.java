@@ -4,10 +4,11 @@ import org.junit.Test;
 import org.mockito.Mockito;
 
 import com.ceiba.BasePrueba;
+import com.ceiba.acuerdo.pago.modelo.entidad.AcuerdoPago;
+import com.ceiba.acuerdo.pago.puerto.repositorio.RepositorioAcuerdo;
+import com.ceiba.acuerdo.pago.servicio.ServicioActualizarAcuerdoPago;
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
-import com.ceiba.usuario.modelo.entidad.AcuerdoPago;
-import com.ceiba.usuario.puerto.dao.DaoFactura;
-import com.ceiba.usuario.puerto.repositorio.RepositorioAcuerdo;
+import com.ceiba.factura.puerto.dao.DaoFactura;
 import com.ceiba.usuario.servicio.testdatabuilder.AcuerdoPagoTestDataBuilder;
 
 public class ServicioActualizarAcuerdoPagoTest {

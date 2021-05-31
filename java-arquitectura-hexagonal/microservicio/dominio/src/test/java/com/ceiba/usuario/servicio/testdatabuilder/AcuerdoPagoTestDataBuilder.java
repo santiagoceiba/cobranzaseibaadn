@@ -2,7 +2,7 @@ package com.ceiba.usuario.servicio.testdatabuilder;
 
 import java.time.LocalDateTime;
 
-import com.ceiba.usuario.modelo.entidad.AcuerdoPago;
+import com.ceiba.acuerdo.pago.modelo.entidad.AcuerdoPago;
 
 public class AcuerdoPagoTestDataBuilder {
 	
