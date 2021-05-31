@@ -1,0 +1,2 @@
+select idAcuerdoPago,fecha_acuerdo,monto_cuota,idCliente,idDeuda,estado,cantidad_cuotas,numero_referencia
+from acuerdo_pago
