@@ -3,22 +3,24 @@ package com.ceiba.acuerdo.pago.modelo.dto;
 import java.time.LocalDateTime;
 
 import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdoEnum;
+import com.ceiba.cliente.modelo.entidad.Cliente;
+import com.ceiba.deuda.modelo.entidad.Deuda;
 
 public class DtoAcuerdoPago {
 	
 	private Long idAcuerdoPago;
 	private LocalDateTime fechaAcuerdo;
 	private Double montoCuota;
-	private Long cliente;
-	private Long deuda;
-	private String estado;
+	private Cliente cliente;
+	private Deuda deuda;
+	private EstadoAcuerdoEnum estado;
 	private Integer cantidadCuotas;
 	private Long numeroReferencia;
 	
 	
 	
-	public DtoAcuerdoPago(Long idAcuerdoPago, LocalDateTime fechaAcuerdo, Double montoCuota, Long cliente, Long deuda,
-			String estado, Integer cantidadCuotas, Long numeroReferencia) {
+	public DtoAcuerdoPago(Long idAcuerdoPago, LocalDateTime fechaAcuerdo, Double montoCuota, Cliente cliente, Deuda deuda,
+			EstadoAcuerdoEnum estado, Integer cantidadCuotas, Long numeroReferencia) {
 		super();
 		this.idAcuerdoPago = idAcuerdoPago;
 		this.fechaAcuerdo = fechaAcuerdo;
@@ -47,22 +49,22 @@ public class DtoAcuerdoPago {
 	public void setMontoCuota(Double montoCuota) {
 		this.montoCuota = montoCuota;
 	}
-	public Long getCliente() {
+	public Cliente getCliente() {
 		return cliente;
 	}
-	public void setCliente(Long cliente) {
+	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
-	public Long getDeuda() {
+	public Deuda getDeuda() {
 		return deuda;
 	}
-	public void setDeuda(Long deuda) {
+	public void setDeuda(Deuda deuda) {
 		this.deuda = deuda;
 	}
-	public String getEstado() {
+	public EstadoAcuerdoEnum getEstado() {
 		return estado;
 	}
-	public void setEstado(String estado) {
+	public void setEstado(EstadoAcuerdoEnum estado) {
 		this.estado = estado;
 	}
 	public Integer getCantidadCuotas() {

@@ -17,7 +17,7 @@ public interface RepositorioAcuerdo {
 	 */
     void actualizar(AcuerdoPago AcuerdoPago);
     
-    
+   
     /**
      * Permite eliminar un AcuerdoPago
      * @param idAcuerdoPago

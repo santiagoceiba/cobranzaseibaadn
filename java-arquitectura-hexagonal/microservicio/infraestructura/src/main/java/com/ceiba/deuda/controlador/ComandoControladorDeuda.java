@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ceiba.ComandoRespuesta;
-import com.ceiba.usuario.comando.ComandoDeuda;
-import com.ceiba.usuario.comando.manejador.ManejadorCrearDeuda;
+import com.ceiba.deuda.comando.ComandoDeuda;
+import com.ceiba.deuda.comando.manejador.ManejadorCrearDeuda;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

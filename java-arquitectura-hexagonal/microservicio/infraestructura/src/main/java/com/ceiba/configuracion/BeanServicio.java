@@ -59,8 +59,8 @@ public class BeanServicio {
     
     
     @Bean
-    public ServicioActualizarAcuerdoPago servicioActualizarAcuerdoPago(RepositorioAcuerdo repositorioAcuerdo, DaoFactura daoFactura) {
-        return new ServicioActualizarAcuerdoPago(repositorioAcuerdo, daoFactura);
+    public ServicioActualizarAcuerdoPago servicioActualizarAcuerdoPago(RepositorioAcuerdo repositorioAcuerdo) {
+        return new ServicioActualizarAcuerdoPago(repositorioAcuerdo);
     }
 
     @Bean ServicioCrearDeuda servicioCrearDeuda (RepositorioDeuda repositorioDeuda) {

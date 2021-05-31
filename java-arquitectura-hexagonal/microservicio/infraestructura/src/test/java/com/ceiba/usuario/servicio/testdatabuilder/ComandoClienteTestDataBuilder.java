@@ -1,6 +1,6 @@
 package com.ceiba.usuario.servicio.testdatabuilder;
 
-import com.ceiba.usuario.comando.ComandoCliente;
+import com.ceiba.cliente.comando.ComandoCliente;
 
 public class ComandoClienteTestDataBuilder {
 

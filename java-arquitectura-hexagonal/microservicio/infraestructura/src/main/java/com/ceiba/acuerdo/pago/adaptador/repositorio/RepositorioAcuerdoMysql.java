@@ -9,43 +9,48 @@ import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
 import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
 
 @Repository
-public class RepositorioAcuerdoMysql implements RepositorioAcuerdo{
-	
-	 private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
+public class RepositorioAcuerdoMysql implements RepositorioAcuerdo {
 
-	    @SqlStatement(namespace="acuerdo", value="crear")
-	    private static String sqlCrear;
-	    
-	    @SqlStatement(namespace="acuerdo", value="existe")
-	    private static String sqlExiste;
-	    
-	    public RepositorioAcuerdoMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
-	    	this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
-	    }
+	private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
-		@Override
-		public Long crear(AcuerdoPago AcuerdoPago) {
-			// TODO Auto-generated method stub
-			 return this.customNamedParameterJdbcTemplate.crear(AcuerdoPago, sqlCrear);
-		}
+	@SqlStatement(namespace = "acuerdo", value = "crear")
+	private static String sqlCrear;
 
-		@Override
-		public void actualizar(AcuerdoPago AcuerdoPago) {
-			// TODO Auto-generated method stub
-			
-		}
+	@SqlStatement(namespace = "acuerdo", value = "existe")
+	private static String sqlExiste;
 
-		@Override
-		public void eliminar(Long idAcuerdoPago) {
-			// TODO Auto-generated method stub
-			
-		}
 
-		@Override
-		public boolean existe(Long idAcuerdoPago) {
-			 MapSqlParameterSource paramSource = new MapSqlParameterSource();
-		        paramSource.addValue("idAcuerdoPago", idAcuerdoPago);
 
-		        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste,paramSource, Boolean.class);
-		}
+	public RepositorioAcuerdoMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
+		this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
+	}
+
+	@Override
+	public Long crear(AcuerdoPago AcuerdoPago) {
+		// TODO Auto-generated method stub
+		return this.customNamedParameterJdbcTemplate.crear(AcuerdoPago, sqlCrear);
+	}
+
+	@Override
+	public void actualizar(AcuerdoPago AcuerdoPago) {
+		// TODO Auto-generated method stub
+
+	}
+
+
+	@Override
+	public boolean existe(Long idAcuerdoPago) {
+		MapSqlParameterSource paramSource = new MapSqlParameterSource();
+		paramSource.addValue("idAcuerdoPago", idAcuerdoPago);
+
+		return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste,
+				paramSource, Boolean.class);
+	}
+
+
+	@Override
+	public void eliminar(Long idAcuerdoPago) {
+		// TODO Auto-generated method stub
+
+	}
 }

@@ -7,6 +7,9 @@ import java.time.LocalDateTime;
 import org.springframework.jdbc.core.RowMapper;
 
 import com.ceiba.acuerdo.pago.modelo.dto.DtoAcuerdoPago;
+import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdoEnum;
+import com.ceiba.cliente.modelo.entidad.Cliente;
+import com.ceiba.deuda.modelo.entidad.Deuda;
 import com.ceiba.infraestructura.jdbc.MapperResult;
 
 public class MapeoAcuerdoPago implements RowMapper<DtoAcuerdoPago>, MapperResult {
@@ -16,9 +19,9 @@ public class MapeoAcuerdoPago implements RowMapper<DtoAcuerdoPago>, MapperResult
 		Long idAcuerdoPago = rs.getLong("idAcuerdoPago");
 		LocalDateTime fechaAcuerdo = extraerLocalDateTime(rs, "fecha_acuerdo");
 		Double montoCuota = rs.getDouble("monto_cuota");
-		Long cliente = rs.getLong("idCliente");
-		Long deuda = rs.getLong("idDeuda");
-		String estado = (rs.getString("estado"));
+		Cliente cliente = (Cliente) rs.getObject("idCliente");
+		Deuda deuda = (Deuda) rs.getObject("idDeuda");
+		EstadoAcuerdoEnum estado = (EstadoAcuerdoEnum) (rs.getObject("estado"));
 		Integer cantidadCuotas = rs.getInt("cantidad_cuotas");
 		Long numeroReferencia = rs.getLong("numero_referencia");
 

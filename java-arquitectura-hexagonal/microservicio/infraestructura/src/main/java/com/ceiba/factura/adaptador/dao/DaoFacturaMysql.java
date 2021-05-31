@@ -24,6 +24,6 @@ public class DaoFacturaMysql implements DaoFactura{
 
     @Override
     public List<DtoFactura> listarFacturaPorAcuerdo(Long idAcuerdoPago) {
-        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoFactura());
+      return null; // return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoFactura());
     }
 }

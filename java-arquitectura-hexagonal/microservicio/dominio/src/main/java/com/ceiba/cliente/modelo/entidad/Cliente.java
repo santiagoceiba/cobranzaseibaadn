@@ -3,8 +3,12 @@ package com.ceiba.cliente.modelo.entidad;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
 
-public class Cliente {
+import java.io.Serializable;
 
+public class Cliente implements Serializable{
+
+
+	private static final long serialVersionUID = 1L;
 	private static final String SE_DEBE_INGRESAR_LA_CEDULA = "Se debe ingresar la cedula del cliente";
 	private static final String SE_DEBE_INGRESAR_EL_NOMBRE_DE_CLIENTE = "Se debe ingresar el nombre de cliente";
 
@@ -36,17 +40,13 @@ public class Cliente {
 		return cedula;
 	}
 
-	public void setCedula(String cedula) {
-		this.cedula = cedula;
-	}
-
 	public Long getIdCliente() {
 		return idCliente;
 	}
 
-	public void setIdCliente(Long idCliente) {
-		this.idCliente = idCliente;
+	public Cliente() {
 	}
+
 
 
 }

@@ -2,7 +2,8 @@ package com.ceiba.usuario.servicio.testdatabuilder;
 
 import java.time.LocalDateTime;
 
-import com.ceiba.usuario.comando.ComandoDeuda;
+import com.ceiba.cliente.modelo.entidad.Cliente;
+import com.ceiba.deuda.comando.ComandoDeuda;
 
 public class ComandoDeudaTestDataBuilder {
 
@@ -11,14 +12,15 @@ public class ComandoDeudaTestDataBuilder {
 	private LocalDateTime fechaInicialDeudaCliente;
 	private String nombreEntidadDeuda;
 	private String conceptoDeuda;
-	private Long idCliente;
+	private Cliente idCliente;
 	
 	public ComandoDeudaTestDataBuilder() {
+		Cliente idCliente = new Cliente(1L, "santiago","1234");
 		monto = 100.0;
 		fechaInicialDeudaCliente = LocalDateTime.now();
 		nombreEntidadDeuda = "tigo";
 		conceptoDeuda = "pd";
-		idCliente = 2L;
+		this.idCliente = idCliente;
 	}
 	
     public ComandoDeudaTestDataBuilder conIdDeuda(Long idDeuda) {

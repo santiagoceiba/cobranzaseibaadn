@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ceiba.acuerdo.pago.consulta.ManejadorListaAcuerdosPagos;
 import com.ceiba.acuerdo.pago.modelo.dto.DtoAcuerdoPago;
-import com.ceiba.usuario.consulta.ManejadorListaAcuerdosPagos;
 import com.ceiba.usuario.modelo.dto.DtoUsuario;
 
 import io.swagger.annotations.Api;
