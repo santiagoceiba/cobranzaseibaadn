@@ -1,0 +1,1 @@
+insert into cliente (nombre, cedula) values (:nombre, :cedula)
