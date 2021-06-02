@@ -14,7 +14,7 @@ public class ServicioActualizacionClienteTest {
 
 	
     @Test
-    public void validarUsuarioExistenciaPreviaTest() {
+    public void validarClienteExistenciaPreviaTest() {
         // arrange
         Cliente cliente = new ClienteTestDataBuilder().conId(1L).build();
         RepositorioCliente repositorioCliente = Mockito.mock(RepositorioCliente.class);

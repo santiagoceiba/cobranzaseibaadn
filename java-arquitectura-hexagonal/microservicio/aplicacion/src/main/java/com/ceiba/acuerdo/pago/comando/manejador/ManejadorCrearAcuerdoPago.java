@@ -20,10 +20,7 @@ public class ManejadorCrearAcuerdoPago {
 	}
 	
 	  public ComandoRespuesta<Long> ejecutar(ComandoAcuerdoPago comandoAcuerdoPago) {
-			System.out.print("comandoacuerdo334567"+comandoAcuerdoPago.getCantidadCuotas()+
-					comandoAcuerdoPago.getEstado()+ comandoAcuerdoPago.getFechaAcuerdo()+ comandoAcuerdoPago.getIdCliente()+ comandoAcuerdoPago.getIdDeuda());
 	        AcuerdoPago acuerdoPago = this.fabrica.crear(comandoAcuerdoPago);
-
 	        return new ComandoRespuesta<>(this.servicioCrearAcuerdoPago.ejecutar(acuerdoPago));
 	    }
 }

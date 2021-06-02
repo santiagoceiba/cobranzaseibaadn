@@ -20,7 +20,7 @@ public class ServicioActualizarAcuerdoPago {
 	}
 
     private void validarExistenciaPrevia(AcuerdoPago acuerdoPago) {
-        boolean existe = this.repositorioAcuerdo.existe(acuerdoPago.getIdAcuerdoPago());
+        boolean existe = this.repositorioAcuerdo.existe(acuerdoPago.getNumeroReferencia());
         if(existe) {
             throw new ExcepcionDuplicidad(EL_ACUERDO_YA_EXISTE_EN_EL_SISTEMA);
         }

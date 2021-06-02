@@ -116,16 +116,5 @@ public class Deuda implements Serializable {
 		return diferenciaDias;
 
 	}
-
-	public Deuda() {
-		super();
-	}
-
-	@Override
-	public String toString() {
-		return "Deuda [idDeuda=" + idDeuda + ", monto=" + monto + ", fechaInicialDeudaCliente="
-				+ fechaInicialDeudaCliente + ", nombreEntidadDeuda=" + nombreEntidadDeuda + ", conceptoDeuda="
-				+ conceptoDeuda + ", idCliente=" + idCliente + "]";
-	}
 	
 }

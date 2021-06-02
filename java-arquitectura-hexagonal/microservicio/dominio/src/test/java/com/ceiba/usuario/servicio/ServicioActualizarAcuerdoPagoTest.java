@@ -14,7 +14,7 @@ public class ServicioActualizarAcuerdoPagoTest {
 
 	
     @Test
-    public void validarUsuarioExistenciaPreviaTest() {
+    public void validarAcuerdoPagoExistenciaPreviaTest() {
         // arrange
         AcuerdoPago acuerdoPago = new AcuerdoPagoTestDataBuilder().conId(1L).build();
         RepositorioAcuerdo repositorioAcuerdo = Mockito.mock(RepositorioAcuerdo.class);

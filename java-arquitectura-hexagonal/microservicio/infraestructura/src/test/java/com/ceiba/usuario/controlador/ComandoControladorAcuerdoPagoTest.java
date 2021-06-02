@@ -34,8 +34,8 @@ public class ComandoControladorAcuerdoPagoTest {
     @Test
     public void crear() throws Exception{
         // arrange
-        ComandoAcuerdoPago comandoAcuerdo = new ComandoAcuerdoPagoTestDataBuilder().build();
-
+        ComandoAcuerdoPago comandoAcuerdo = new ComandoAcuerdoPagoTestDataBuilder().conId(100L).build();
+        
         // act - assert
         mocMvc.perform(post("/acuerdosPagos/crear")
                 .contentType(MediaType.APPLICATION_JSON)

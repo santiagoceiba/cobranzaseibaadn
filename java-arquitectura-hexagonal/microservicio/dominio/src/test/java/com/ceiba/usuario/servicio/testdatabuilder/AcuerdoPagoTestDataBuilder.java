@@ -3,7 +3,7 @@ package com.ceiba.usuario.servicio.testdatabuilder;
 import java.time.LocalDateTime;
 
 import com.ceiba.acuerdo.pago.modelo.entidad.AcuerdoPago;
-import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdoEnum;
+import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdo;
 import com.ceiba.cliente.modelo.entidad.Cliente;
 import com.ceiba.deuda.modelo.entidad.Deuda;
 
@@ -14,7 +14,7 @@ public class AcuerdoPagoTestDataBuilder {
 	private Double montoCuota;
 	private Cliente idCliente;
 	private Deuda idDeuda;
-	private EstadoAcuerdoEnum estado;
+	private EstadoAcuerdo estado;
 	private Integer cantidadCuotas;
 	private Long numeroReferencia;
 	
@@ -22,11 +22,12 @@ public class AcuerdoPagoTestDataBuilder {
 		
 		Cliente idCliente = new Cliente(1L, "santiago","1234");
 		Deuda idDeuda = new Deuda(10.0, LocalDateTime.now(), "tigo", "plan de datos", idCliente, 1L);
+		idAcuerdoPago = 1L;
 		fechaAcuerdo = LocalDateTime.now();
 		montoCuota = 100.0;
 		this.idCliente = idCliente;
 		this.idDeuda = idDeuda;
-		estado = EstadoAcuerdoEnum.ACTIVO;
+		estado = EstadoAcuerdo.ACTIVO;
 		cantidadCuotas = 2;
 		numeroReferencia = 12345L;
   

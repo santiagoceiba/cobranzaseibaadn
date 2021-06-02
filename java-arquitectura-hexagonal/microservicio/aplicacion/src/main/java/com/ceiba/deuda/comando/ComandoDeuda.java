@@ -2,8 +2,6 @@ package com.ceiba.deuda.comando;
 
 import java.time.LocalDateTime;
 
-import com.ceiba.cliente.modelo.entidad.Cliente;
-
 
 public class ComandoDeuda {
 	
@@ -13,8 +11,19 @@ public class ComandoDeuda {
 	private LocalDateTime fechaInicialDeudaCliente;
 	private String nombreEntidadDeuda;
 	private String conceptoDeuda;
-	private Cliente idCliente;
+	private Long idCliente;
 	
+	
+	public ComandoDeuda(Long idDeuda, Double monto, LocalDateTime fechaInicialDeudaCliente, String nombreEntidadDeuda,
+			String conceptoDeuda, Long idCliente) {
+		super();
+		this.idDeuda = idDeuda;
+		this.monto = monto;
+		this.fechaInicialDeudaCliente = fechaInicialDeudaCliente;
+		this.nombreEntidadDeuda = nombreEntidadDeuda;
+		this.conceptoDeuda = conceptoDeuda;
+		this.idCliente = idCliente;
+	}
 	
 	public Long getIdDeuda() {
 		return idDeuda;
@@ -46,22 +55,13 @@ public class ComandoDeuda {
 	public void setConceptoDeuda(String conceptoDeuda) {
 		this.conceptoDeuda = conceptoDeuda;
 	}
-	public Cliente getIdCliente() {
+	public Long getIdCliente() {
 		return idCliente;
 	}
-	public void setIdCliente(Cliente idCliente) {
+	public void setIdCliente(Long idCliente) {
 		this.idCliente = idCliente;
 	}
-	public ComandoDeuda(Long idDeuda, Double monto, LocalDateTime fechaInicialDeudaCliente, String nombreEntidadDeuda,
-			String conceptoDeuda, Cliente idCliente) {
-		super();
-		this.idDeuda = idDeuda;
-		this.monto = monto;
-		this.fechaInicialDeudaCliente = fechaInicialDeudaCliente;
-		this.nombreEntidadDeuda = nombreEntidadDeuda;
-		this.conceptoDeuda = conceptoDeuda;
-		this.idCliente = idCliente;
-	}
+
 	public ComandoDeuda() {
 		super();
 	}

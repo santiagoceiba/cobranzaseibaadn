@@ -12,16 +12,15 @@ import com.ceiba.usuario.servicio.testdatabuilder.ClienteTestDataBuilder;
 
 public class ServicioCrearClienteTest {
 
-	
-
-    @Test
-    public void validarUsuarioExistenciaPreviaTest() {
-        // arrange
-        Cliente cliente = new ClienteTestDataBuilder().build();
-        RepositorioCliente repositorioCliente = Mockito.mock(RepositorioCliente.class);
-        Mockito.when(repositorioCliente.existe(Mockito.anyString())).thenReturn(true);
-        ServicioCrearCliente serviciCrearCliente = new ServicioCrearCliente(repositorioCliente);
-        // act - assert
-        BasePrueba.assertThrows(() -> serviciCrearCliente.ejecutar(cliente), ExcepcionDuplicidad.class,"El cliente ya existe en el sistema");
-    }
+	@Test
+	public void validarClienteExistenciaPreviaTest() {
+		// arrange
+		Cliente cliente = new ClienteTestDataBuilder().build();
+		RepositorioCliente repositorioCliente = Mockito.mock(RepositorioCliente.class);
+		Mockito.when(repositorioCliente.existe(Mockito.anyString())).thenReturn(true);
+		ServicioCrearCliente serviciCrearCliente = new ServicioCrearCliente(repositorioCliente);
+		// act - assert
+		BasePrueba.assertThrows(() -> serviciCrearCliente.ejecutar(cliente), ExcepcionDuplicidad.class,
+				"El cliente ya existe en el sistema");
+	}
 }

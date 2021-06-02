@@ -2,7 +2,7 @@ package com.ceiba.acuerdo.pago.modelo.dto;
 
 import java.time.LocalDateTime;
 
-import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdoEnum;
+import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdo;
 import com.ceiba.cliente.modelo.entidad.Cliente;
 import com.ceiba.deuda.modelo.entidad.Deuda;
 
@@ -13,14 +13,14 @@ public class DtoAcuerdoPago {
 	private Double montoCuota;
 	private Cliente cliente;
 	private Deuda deuda;
-	private EstadoAcuerdoEnum estado;
+	private EstadoAcuerdo estado;
 	private Integer cantidadCuotas;
 	private Long numeroReferencia;
 	
 	
 	
 	public DtoAcuerdoPago(Long idAcuerdoPago, LocalDateTime fechaAcuerdo, Double montoCuota, Cliente cliente, Deuda deuda,
-			EstadoAcuerdoEnum estado, Integer cantidadCuotas, Long numeroReferencia) {
+			EstadoAcuerdo estado, Integer cantidadCuotas, Long numeroReferencia) {
 		super();
 		this.idAcuerdoPago = idAcuerdoPago;
 		this.fechaAcuerdo = fechaAcuerdo;
@@ -61,10 +61,10 @@ public class DtoAcuerdoPago {
 	public void setDeuda(Deuda deuda) {
 		this.deuda = deuda;
 	}
-	public EstadoAcuerdoEnum getEstado() {
+	public EstadoAcuerdo getEstado() {
 		return estado;
 	}
-	public void setEstado(EstadoAcuerdoEnum estado) {
+	public void setEstado(EstadoAcuerdo estado) {
 		this.estado = estado;
 	}
 	public Integer getCantidadCuotas() {

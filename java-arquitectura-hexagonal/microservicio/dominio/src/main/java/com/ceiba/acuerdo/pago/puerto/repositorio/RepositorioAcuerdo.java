@@ -29,6 +29,8 @@ public interface RepositorioAcuerdo {
      * @param idAcuerdoPago
      * @return si existe o no
      */
-    boolean existe(Long idAcuerdoPago );
+    boolean existe(Long numeroReferencia );
+    
+    AcuerdoPago consultarAcuerdoPorId(Long idAcuerdoPago);
     
 }

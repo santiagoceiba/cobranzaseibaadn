@@ -100,9 +100,6 @@ public class Factura implements Serializable {
 		}
 	}
 
-	public Factura() {
-		super();
-	}
 
 	@Override
 	public String toString() {

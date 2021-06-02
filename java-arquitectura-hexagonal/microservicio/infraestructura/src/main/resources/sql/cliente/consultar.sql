@@ -1,0 +1,1 @@
+Select idCliente, nombre, cedula from cliente where  idCliente = :idCliente

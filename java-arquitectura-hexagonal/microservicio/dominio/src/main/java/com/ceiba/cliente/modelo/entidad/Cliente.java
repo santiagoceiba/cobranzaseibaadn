@@ -39,15 +39,5 @@ public class Cliente implements Serializable {
 	public Long getIdCliente() {
 		return idCliente;
 	}
-
-	public Cliente() {
-		super();
-	}
-
-	@Override
-	public String toString() {
-		return "Cliente [idCliente=" + idCliente + ", nombre=" + nombre + ", cedula=" + cedula + "]";
-	}
-
 	
 }

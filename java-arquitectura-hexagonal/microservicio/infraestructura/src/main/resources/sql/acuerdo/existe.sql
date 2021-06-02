@@ -1,1 +1,1 @@
-select count(1) from acuerdo_pago where idAcuerdoPago = :idAcuerdoPago
+select count(1) from acuerdo_pago where numero_referencia = :numeroReferencia

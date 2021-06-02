@@ -2,19 +2,16 @@ package com.ceiba.factura.comando;
 
 import java.time.LocalDateTime;
 
-import com.ceiba.acuerdo.pago.modelo.entidad.AcuerdoPago;
-
 public class ComandoFactura {
 
 	private Long idFactura;
 	private Double montoCuota;
 	private LocalDateTime fechaCaducidad;
-	private AcuerdoPago acuerdoPago;
+	private Long acuerdoPago;
 	private Boolean estado;
 	
 	
-	public ComandoFactura(Long idFactura, Double montoCuota, LocalDateTime fechaCaducidad, AcuerdoPago acuerdoPago, Boolean estado) {
-		super();
+	public ComandoFactura(Long idFactura, Double montoCuota, LocalDateTime fechaCaducidad, Long acuerdoPago, Boolean estado) {
 		this.idFactura = idFactura;
 		this.montoCuota = montoCuota;
 		this.fechaCaducidad = fechaCaducidad;
@@ -60,12 +57,12 @@ public class ComandoFactura {
 	}
 
 
-	public AcuerdoPago getAcuerdoPago() {
+	public Long getAcuerdoPago() {
 		return acuerdoPago;
 	}
 
 
-	public void setAcuerdoPago(AcuerdoPago acuerdoPago) {
+	public void setAcuerdoPago(Long acuerdoPago) {
 		this.acuerdoPago = acuerdoPago;
 	}
 

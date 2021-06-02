@@ -1,8 +1,10 @@
 package com.ceiba.deuda.adaptador.repositorio;
 
+
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.stereotype.Repository;
 
+import com.ceiba.deuda.mapeo.MapeoDeuda;
 import com.ceiba.deuda.modelo.entidad.Deuda;
 import com.ceiba.deuda.puerto.repositorio.RepositorioDeuda;
 import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
@@ -12,12 +14,20 @@ import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
 public class RepositorioDeudaMysql implements RepositorioDeuda {
 
 	private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
+	
 
 	@SqlStatement(namespace = "deuda", value = "crear")
 	private static String sqlCrear;
 
 	@SqlStatement(namespace = "deuda", value = "existe")
 	private static String sqlExiste;
+	
+    
+    @SqlStatement(namespace="deuda", value ="consultar")
+    private static String sqlConsulta;
+    
+    @SqlStatement(namespace="deuda", value ="actualizar")
+    private static String sqlActualizar;
 
 	public RepositorioDeudaMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
 		this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
@@ -25,7 +35,7 @@ public class RepositorioDeudaMysql implements RepositorioDeuda {
 
 	@Override
 	public Long crear(Deuda deuda) {
-		// TODO Auto-generated method stub
+	
 		MapSqlParameterSource paramSource = new MapSqlParameterSource();
 		paramSource.addValue("idCliente", deuda.getIdCliente().getIdCliente());
 		paramSource.addValue("monto", deuda.getMonto());
@@ -42,4 +52,21 @@ public class RepositorioDeudaMysql implements RepositorioDeuda {
 		return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste,
 				paramSource, Boolean.class);
 	}
+
+	@Override
+	public Deuda consultarDeuda(Long idDeuda) {
+		  MapSqlParameterSource paramSource = new MapSqlParameterSource();
+	       paramSource.addValue("idDeuda", idDeuda);
+		return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlConsulta,paramSource,
+				new MapeoDeuda());
+	}
+
+	@Override
+	public void actualizar(Deuda deuda) {
+		this.customNamedParameterJdbcTemplate.actualizar(deuda, sqlActualizar);
+		
+	}
+
+
+
 }
