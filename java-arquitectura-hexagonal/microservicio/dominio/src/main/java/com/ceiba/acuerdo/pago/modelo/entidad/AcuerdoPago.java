@@ -11,7 +11,6 @@ import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdo;
 import com.ceiba.cliente.modelo.entidad.Cliente;
 import com.ceiba.deuda.modelo.entidad.Deuda;
 import com.ceiba.factura.modelo.entidad.Factura;
-//import static com.ceiba.dominio.ValidadorArgumento.validarFecha;
 
 public class AcuerdoPago implements Serializable {
 
@@ -78,7 +77,7 @@ public class AcuerdoPago implements Serializable {
 		int contarFacturasVencidas = 0;
 		for (Factura factura : listaFacturas) {
 			if (factura.getEstado()) {
-				//contarFacturasVencidas++;
+				contarFacturasVencidas++;
 			}
 		}
 
@@ -107,14 +106,6 @@ public class AcuerdoPago implements Serializable {
 
 	public void setFechaAcuerdo(LocalDateTime fechaAcuerdo) {
 		this.fechaAcuerdo = fechaAcuerdo;
-	}
-
-	public List<Factura> getListaFacturas() {
-		return listaFacturas;
-	}
-
-	public void setListaFacturas(List<Factura> listaFacturas) {
-		this.listaFacturas = listaFacturas;
 	}
 
 	public Long getNumeroReferencia() {

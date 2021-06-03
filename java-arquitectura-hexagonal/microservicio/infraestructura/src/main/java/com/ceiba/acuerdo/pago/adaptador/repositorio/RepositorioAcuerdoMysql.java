@@ -41,6 +41,7 @@ public class RepositorioAcuerdoMysql implements RepositorioAcuerdo {
 	@SqlStatement(namespace="acuerdo", value ="consultarReferencia")
 	private static String sqlConsultaNumeroReferencia;
 
+	private static String NUMERO_REFERENCIA = "numeroReferencia";
 
 	public RepositorioAcuerdoMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
 		this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
@@ -57,7 +58,7 @@ public class RepositorioAcuerdoMysql implements RepositorioAcuerdo {
 		paramSource.addValue("montoCuota", acuerdoPago.getMontoCuota());
 		paramSource.addValue("estado", acuerdoPago.getEstado().name());
 		paramSource.addValue("cantidadCuotas", acuerdoPago.getCantidadCuotas());
-		paramSource.addValue("numeroReferencia", acuerdoPago.getNumeroReferencia());
+		paramSource.addValue(NUMERO_REFERENCIA, acuerdoPago.getNumeroReferencia());
 		Long resultadoConsulta = this.customNamedParameterJdbcTemplate.crear(acuerdoPago, paramSource,  sqlCrear);
 		AcuerdoPago acuerdoPagoConId = consultarAcuerdoPorNumeroReferencia(acuerdoPago.getNumeroReferencia());
 		crearFacturas(acuerdoPagoConId);
@@ -75,7 +76,7 @@ public class RepositorioAcuerdoMysql implements RepositorioAcuerdo {
 	@Override
 	public boolean existe(Long numeroReferencia) {
 		MapSqlParameterSource paramSource = new MapSqlParameterSource();
-		paramSource.addValue("numeroReferencia", numeroReferencia);
+		paramSource.addValue(NUMERO_REFERENCIA, numeroReferencia);
 
 		return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste,
 				paramSource, Boolean.class);
@@ -99,7 +100,7 @@ public class RepositorioAcuerdoMysql implements RepositorioAcuerdo {
 	@Override
 	public AcuerdoPago consultarAcuerdoPorNumeroReferencia(Long numeroReferencia) {
 		MapSqlParameterSource paramSource = new MapSqlParameterSource();
-		paramSource.addValue("numeroReferencia", numeroReferencia);
+		paramSource.addValue(NUMERO_REFERENCIA, numeroReferencia);
 		return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlConsultaNumeroReferencia,
 				paramSource, new MapeoAcuerdoPago(this.repositorioCliente, this.repositorioDeuda));
 	}

@@ -6,16 +6,16 @@ public interface RepositorioAcuerdo {
 	
 	/**
 	 * Permite crear un AcuerdoPago
-	 * @param AcuerdoPago
+	 * @param acuerdoPago
 	 * @return el id generado
 	 */
-    Long crear(AcuerdoPago AcuerdoPago);
+    Long crear(AcuerdoPago acuerdoPago);
     
     /**
 	 * Permite actualizar un AcuerdoPago
-	 * @param AcuerdoPago
+	 * @param acuerdoPago
 	 */
-    void actualizar(AcuerdoPago AcuerdoPago);
+    void actualizar(AcuerdoPago acuerdoPago);
     
    
     /**
@@ -26,7 +26,7 @@ public interface RepositorioAcuerdo {
     
     /**
      * Permite validar si existe una AcuerdoPago con id
-     * @param idAcuerdoPago
+     * @param numeroReferencia
      * @return si existe o no
      */
     boolean existe(Long numeroReferencia );

@@ -16,7 +16,6 @@ public class Deuda implements Serializable {
 	private static final String SE_DEBE_INGRESAR_FECHA_DEUDA = "Se debe ingresar la fecha en la que el cliente inicio la deuda";
 	private static final String SE_DEBE_INGRESAR_NOMBRE_ENTIDAD_DEUDA = "Se debe ingresar el  nombre de la entidad a la que se debe la mora";
 	private static final String SE_DEBE_INGRESAR_CONCEPTO_CUOTA = "Se debe ingresar el concepto por el cual se debe la mora";
-	//private static final String SE_DEBE_INGRESAR_UNA_FECHA_VALIDA = "La fecha ingresada es mayor a la fecha actual";
 
 	private Long idDeuda;
 	private Double monto;
@@ -27,7 +26,6 @@ public class Deuda implements Serializable {
 
 	public Deuda(Double monto, LocalDateTime fechaInicialDeudaCliente, String nombreEntidadDeuda, String conceptoDeuda,
 			Cliente idCliente, Long idDeuda) {
-		//validarFecha(fechaInicialDeudaCliente, SE_DEBE_INGRESAR_UNA_FECHA_VALIDA);
 		validarObligatorio(fechaInicialDeudaCliente, SE_DEBE_INGRESAR_FECHA_DEUDA);
 		validarObligatorio(nombreEntidadDeuda, SE_DEBE_INGRESAR_NOMBRE_ENTIDAD_DEUDA);
 		validarObligatorio(conceptoDeuda, SE_DEBE_INGRESAR_CONCEPTO_CUOTA);
@@ -86,12 +84,6 @@ public class Deuda implements Serializable {
 		this.idCliente = idCliente;
 	}
 
-	/**
-	 * Método que permite hacer el incremento del monto de deuda siempre que la mora
-	 * sea mayor a un año
-	 * 
-	 * @param deuda
-	 */
 	private void validarAumentoPorAntiguedadDeuda() {
 		Long diferenciaDias = encontrarDiferenciaFechas(this.fechaInicialDeudaCliente, LocalDateTime.now());
 
@@ -101,19 +93,11 @@ public class Deuda implements Serializable {
 
 	}
 
-	/**
-	 * método que permite encontrar la diferecia entre dos fechas
-	 * 
-	 * @param fechaInicialDeuda
-	 * @param fechaActual
-	 */
-	// TODO buscar mejos manera de encontrar la diferencia
 	private Long encontrarDiferenciaFechas(LocalDateTime fechaInicialDeuda, LocalDateTime fechaActual) {
 
 		long diferenciaMiliSegundos = Duration.between(fechaInicialDeuda, fechaActual).toMillis();
 		long diferenciaHoras = TimeUnit.MILLISECONDS.toHours(diferenciaMiliSegundos);
-		long diferenciaDias = diferenciaHoras / 24;
-		return diferenciaDias;
+		return diferenciaHoras / 24;
 
 	}
 	

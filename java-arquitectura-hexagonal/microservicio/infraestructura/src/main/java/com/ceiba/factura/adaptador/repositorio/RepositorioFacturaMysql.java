@@ -21,6 +21,12 @@ public class RepositorioFacturaMysql implements RepositorioFactura {
 	@SqlStatement(namespace = "factura", value = "crear")
 	private static String sqlCrear;
 
+	@SqlStatement(namespace = "factura", value = "actualizar")
+	private static String sqlActualizar;
+
+	@SqlStatement(namespace = "factura", value = "existe")
+	private static String sqlExiste;
+
 	private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
 	public RepositorioFacturaMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
@@ -34,6 +40,11 @@ public class RepositorioFacturaMysql implements RepositorioFactura {
 	}
 
 	@Override
+	public void actualizar(Factura factura) {
+		this.customNamedParameterJdbcTemplate.actualizar(factura, sqlActualizar);
+	}
+
+	@Override
 	public void crearFactura(Long idAcuerdo, LocalDateTime fechaCaducidad, Double montoCuota) {
 
 		int valorPorDefectoEstado = 0;
@@ -44,6 +55,15 @@ public class RepositorioFacturaMysql implements RepositorioFactura {
 		paramSource.addValue("estado", valorPorDefectoEstado);
 		customNamedParameterJdbcTemplate.crear(paramSource, sqlCrear);
 
+	}
+
+	@Override
+	public Boolean existe(Long idFactura) {
+		MapSqlParameterSource paramSource = new MapSqlParameterSource();
+		paramSource.addValue("idFactura", idFactura);
+
+		return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste,
+				paramSource, Boolean.class);
 	}
 
 }

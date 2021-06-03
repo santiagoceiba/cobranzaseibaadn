@@ -21,8 +21,7 @@ public class FabricaFactura {
         		comandoFactura.getIdFactura(),
         		comandoFactura.getMontoCuota(),
         		comandoFactura.getFechaCaducidad(),
-        		acuerdoPago,
-        		comandoFactura.getEstado()
+        		acuerdoPago
         );
     }
     

@@ -19,8 +19,9 @@ public class MapeoFactura implements RowMapper<Factura>, MapperResult{
         LocalDateTime fechaCaducidad =extraerLocalDateTime(resultSet, "fecha_caducidad");
         AcuerdoPago acuerdoPago = (AcuerdoPago) resultSet.getObject("acuerdo_pago");
         Boolean estado = resultSet.getBoolean("estado");
- 
-        return new Factura(idFactura,montoCuota,fechaCaducidad,acuerdoPago, estado);
+        Factura factura = new Factura(idFactura,montoCuota,fechaCaducidad,acuerdoPago);
+        factura.setEstado(estado);
+        return factura;
 	}
 
 }

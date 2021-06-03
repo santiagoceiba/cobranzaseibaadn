@@ -18,7 +18,6 @@ public class FacturaTestDataBuilder {
     	AcuerdoPago acuerdoPago = new AcuerdoPagoTestDataBuilder().build() ;
     	montoCuota = 10.0;
     	fechaCaducidad = LocalDateTime.now();
-    	estado = false;
     	this.acuerdoPago = acuerdoPago;
 
     }
@@ -31,6 +30,6 @@ public class FacturaTestDataBuilder {
     }
 
     public Factura build() {
-        return new Factura(idFactura, montoCuota, fechaCaducidad, acuerdoPago, estado);
+        return new Factura(idFactura, montoCuota, fechaCaducidad, acuerdoPago);
     }
 }

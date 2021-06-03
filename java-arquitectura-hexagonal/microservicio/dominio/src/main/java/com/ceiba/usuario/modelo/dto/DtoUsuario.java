@@ -13,7 +13,6 @@ public class DtoUsuario {
     
     
 	public DtoUsuario(Long id, String nombre, String clave, LocalDateTime fechaCreacion) {
-		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.clave = clave;
