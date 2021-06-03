@@ -19,18 +19,18 @@ fecha_acuerdo datetime not null,
 monto_cuota int(60) not null,
 idCliente int(11) not null,
 idDeuda int(11) not null,
-estado int(45),
+estado varchar(45),
 cantidad_cuotas int(11) not null,
-numero_referencia int(11) not null, 
+numero_referencia int(11) not null,
 primary key (idAcuerdoPago)
 );
 
 create table deuda (idDeuda int(11) not null auto_increment,
-monto decimal(60) not null,
+monto int(60) not null,
 fecha_inicial_deuda_cliente datetime,
-nombre_entidad_deuda varchar(11),
-concepto_deuda varchar(11),
-id_cliente int(11) not null,
+nombre_entidad_deuda varchar(100),
+concepto_deuda varchar(100),
+id_cliente int(11) null default null,
 primary key (idDeuda)
 );
 

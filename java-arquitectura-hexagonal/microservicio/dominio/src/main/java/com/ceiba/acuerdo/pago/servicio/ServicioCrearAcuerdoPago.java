@@ -17,8 +17,7 @@ public class ServicioCrearAcuerdoPago {
 	}
 
 	public Long ejecutar(AcuerdoPago acuerdo) {
-		//validarExistenciaPrevia(acuerdo);
-		// Se crea el acuerdo de pago
+		validarExistenciaPrevia(acuerdo);
 		Long respuestaCreacionAcuerdo = this.repositorioAcuerdo.crear(acuerdo);
 		return respuestaCreacionAcuerdo;
 	}

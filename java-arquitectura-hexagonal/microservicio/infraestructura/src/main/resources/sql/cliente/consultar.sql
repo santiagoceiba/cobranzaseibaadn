@@ -1,1 +1,1 @@
-Select idCliente, nombre, cedula from cliente where  idCliente = :idCliente
+Select idCliente, nombre, cedula from cliente where  idCliente = :idCliente order by nombre desc limit 1

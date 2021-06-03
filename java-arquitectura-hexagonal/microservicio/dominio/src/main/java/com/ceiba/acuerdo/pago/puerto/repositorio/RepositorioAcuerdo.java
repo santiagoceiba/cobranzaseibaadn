@@ -32,5 +32,7 @@ public interface RepositorioAcuerdo {
     boolean existe(Long numeroReferencia );
     
     AcuerdoPago consultarAcuerdoPorId(Long idAcuerdoPago);
+
+    AcuerdoPago consultarAcuerdoPorNumeroReferencia(Long numeroReferencia);
     
 }

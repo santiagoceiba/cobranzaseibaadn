@@ -19,20 +19,24 @@ import com.ceiba.infraestructura.jdbc.MapperResult;
 public class MapeoAcuerdoPago implements RowMapper<AcuerdoPago>, MapperResult {
 	
 	
-	@Autowired
-	private RepositorioCliente repositorioCliente;
-	
-	@Autowired
-	private RepositorioDeuda repositorioDeuda;
-	
+
+	private final RepositorioCliente repositorioCliente;
+
+	private final RepositorioDeuda repositorioDeuda;
+
+	public MapeoAcuerdoPago(RepositorioCliente repositorioCliente, RepositorioDeuda repositorioDeuda) {
+		this.repositorioCliente = repositorioCliente;
+		this.repositorioDeuda = repositorioDeuda;
+	}
+
 	@Override
 	public AcuerdoPago mapRow(ResultSet resultSet, int rowNum) throws SQLException {
 	    Long idAcuerdoPago = resultSet.getLong("idAcuerdoPago");
-        Long numeroReferencia = resultSet.getLong("numeroReferencia");
+        Long numeroReferencia = resultSet.getLong("numero_referencia");
         String estado = resultSet.getString("estado");
-        Integer cantidadCuotas = resultSet.getInt("cantidadCuotas");
-        Double  montoCuota = resultSet.getDouble("montoCuota");
-        LocalDateTime fechaAcuerdo = extraerLocalDateTime(resultSet, "fechaAcuerdo");
+        Integer cantidadCuotas = resultSet.getInt("cantidad_cuotas");
+        Double  montoCuota = resultSet.getDouble("monto_cuota");
+        LocalDateTime fechaAcuerdo = extraerLocalDateTime(resultSet, "fecha_acuerdo");
         Long idCliente = resultSet.getLong("idCliente");
         Long idDeuda = resultSet.getLong("idDeuda");
         Cliente cliente = obtenerCliente(idCliente);

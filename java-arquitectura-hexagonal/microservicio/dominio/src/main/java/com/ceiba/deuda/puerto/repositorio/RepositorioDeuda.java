@@ -22,8 +22,7 @@ public interface RepositorioDeuda {
 
 	/**
 	 * Método que permite consultar un cliente a partir de su id
-	 * 
-	 * @param idCliente id del cliente a consultar
+	 *
 	 * @return el cliente requerido
 	 */
 	Deuda consultarDeuda(Long idDeuda);

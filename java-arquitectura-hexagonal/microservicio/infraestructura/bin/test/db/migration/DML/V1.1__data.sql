@@ -1,1 +1,2 @@
-insert into cliente(nombre,cedula) values('santiago','11111')
+insert into cliente(nombre,cedula) values('santiago','11111');
+insert into deuda (monto, fecha_inicial_deuda_cliente, nombre_entidad_deuda, concepto_deuda, id_cliente) values (10, '2021-05-05 08:12:13', 'tigo', 'plan de datos', 1);

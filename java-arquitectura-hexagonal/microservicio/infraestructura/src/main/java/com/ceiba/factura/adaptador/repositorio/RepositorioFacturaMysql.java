@@ -38,7 +38,7 @@ public class RepositorioFacturaMysql implements RepositorioFactura {
 
 		int valorPorDefectoEstado = 0;
 		MapSqlParameterSource paramSource = new MapSqlParameterSource();
-		paramSource.addValue("acuerdopago", idAcuerdo);
+		paramSource.addValue("acuerdoPago", idAcuerdo);
 		paramSource.addValue("fechaCaducidad", fechaCaducidad);
 		paramSource.addValue("montoCuota", montoCuota);
 		paramSource.addValue("estado", valorPorDefectoEstado);

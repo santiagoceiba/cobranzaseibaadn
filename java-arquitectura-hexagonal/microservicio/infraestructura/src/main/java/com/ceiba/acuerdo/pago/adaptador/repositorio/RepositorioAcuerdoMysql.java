@@ -2,6 +2,8 @@ package com.ceiba.acuerdo.pago.adaptador.repositorio;
 
 import java.time.LocalDateTime;
 
+import com.ceiba.cliente.puerto.repositorio.RepositorioCliente;
+import com.ceiba.deuda.puerto.repositorio.RepositorioDeuda;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.stereotype.Repository;
@@ -17,7 +19,13 @@ import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
 public class RepositorioAcuerdoMysql implements RepositorioAcuerdo {
 
 	private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
-	
+
+	@Autowired
+	private RepositorioCliente repositorioCliente;
+
+	@Autowired
+	private RepositorioDeuda repositorioDeuda;
+
 	@Autowired
 	private  RepositorioFactura repositorioFactura;
 
@@ -27,8 +35,11 @@ public class RepositorioAcuerdoMysql implements RepositorioAcuerdo {
 	@SqlStatement(namespace = "acuerdo", value = "existe")
 	private static String sqlExiste;
 
-    @SqlStatement(namespace="cliente", value ="consultar")
+    @SqlStatement(namespace="acuerdo", value ="consultar")
     private static String sqlConsulta;
+
+	@SqlStatement(namespace="acuerdo", value ="consultarReferencia")
+	private static String sqlConsultaNumeroReferencia;
 
 
 	public RepositorioAcuerdoMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
@@ -47,8 +58,10 @@ public class RepositorioAcuerdoMysql implements RepositorioAcuerdo {
 		paramSource.addValue("estado", acuerdoPago.getEstado().name());
 		paramSource.addValue("cantidadCuotas", acuerdoPago.getCantidadCuotas());
 		paramSource.addValue("numeroReferencia", acuerdoPago.getNumeroReferencia());
-		crearFacturas(acuerdoPago);
-		return this.customNamedParameterJdbcTemplate.crear(acuerdoPago, paramSource,  sqlCrear);
+		Long resultadoConsulta = this.customNamedParameterJdbcTemplate.crear(acuerdoPago, paramSource,  sqlCrear);
+		AcuerdoPago acuerdoPagoConId = consultarAcuerdoPorNumeroReferencia(acuerdoPago.getNumeroReferencia());
+		crearFacturas(acuerdoPagoConId);
+		return resultadoConsulta;
 		
 	}
 
@@ -80,15 +93,18 @@ public class RepositorioAcuerdoMysql implements RepositorioAcuerdo {
 		MapSqlParameterSource paramSource = new MapSqlParameterSource();
 		paramSource.addValue("idAcuerdoPago", idAcuerdoPago);
 		return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlConsulta,
-				paramSource, new MapeoAcuerdoPago());
+				paramSource, new MapeoAcuerdoPago(this.repositorioCliente, this.repositorioDeuda));
+	}
+
+	@Override
+	public AcuerdoPago consultarAcuerdoPorNumeroReferencia(Long numeroReferencia) {
+		MapSqlParameterSource paramSource = new MapSqlParameterSource();
+		paramSource.addValue("numeroReferencia", numeroReferencia);
+		return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlConsultaNumeroReferencia,
+				paramSource, new MapeoAcuerdoPago(this.repositorioCliente, this.repositorioDeuda));
 	}
 	
-	
-	/**
-	 * Método que permite crear las facturas para el acuerdo de apgo
-	 * @param acuerdo valores para la creación de la factura
-	 * @param fechaActual fecha del sistema en el momento en el que se crea la factura
-	 */
+
 	private void crearFacturas(AcuerdoPago acuerdo) {
 		// Se crea la lista de facturas para el acuerdo de pago
 		Integer numeroFacturas = acuerdo.getCantidadCuotas();
