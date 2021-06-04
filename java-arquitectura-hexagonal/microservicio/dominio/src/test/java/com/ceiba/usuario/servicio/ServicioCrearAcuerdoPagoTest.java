@@ -12,14 +12,14 @@ import com.ceiba.usuario.servicio.testdatabuilder.AcuerdoPagoTestDataBuilder;
 
 public class ServicioCrearAcuerdoPagoTest {
 
-//    @Test
-//    public void validarAcuerdoExistenciaPreviaTest() {
-//        // arrange
-//        AcuerdoPago acuerdoPago = new AcuerdoPagoTestDataBuilder().build();
-//        RepositorioAcuerdo repositorioAcuerdo = Mockito.mock(RepositorioAcuerdo.class);
-//        Mockito.when(repositorioAcuerdo.existe(Mockito.anyLong())).thenReturn(true);
-//        ServicioCrearAcuerdoPago servicioCrearAcuerdo = new ServicioCrearAcuerdoPago(repositorioAcuerdo);
-//        // act - assert
-//        BasePrueba.assertThrows(() -> servicioCrearAcuerdo.ejecutar(acuerdoPago), ExcepcionDuplicidad.class,"El acuerdo ya existe en el sistema");
-//    }
+    @Test
+    public void validarAcuerdoExistenciaPreviaTest() {
+        // arrange
+        AcuerdoPago acuerdoPago = new AcuerdoPagoTestDataBuilder().build();
+        RepositorioAcuerdo repositorioAcuerdo = Mockito.mock(RepositorioAcuerdo.class);
+        Mockito.when(repositorioAcuerdo.existe(Mockito.anyLong())).thenReturn(true);
+        ServicioCrearAcuerdoPago servicioCrearAcuerdo = new ServicioCrearAcuerdoPago(repositorioAcuerdo);
+        // act - assert
+        BasePrueba.assertThrows(() -> servicioCrearAcuerdo.ejecutar(acuerdoPago), ExcepcionDuplicidad.class,"El acuerdo ya existe en el sistema");
+    }
 }
