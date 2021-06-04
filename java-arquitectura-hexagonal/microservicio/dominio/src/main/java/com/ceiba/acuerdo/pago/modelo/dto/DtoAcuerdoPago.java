@@ -31,6 +31,7 @@ public class DtoAcuerdoPago {
 		this.cantidadCuotas = cantidadCuotas;
 		this.numeroReferencia = numeroReferencia;
 	}
+
 	public Long getIdAcuerdoPago() {
 		return idAcuerdoPago;
 	}

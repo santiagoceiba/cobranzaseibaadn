@@ -2,6 +2,9 @@ package com.ceiba.cliente.adaptador.dao;
 
 import java.util.List;
 
+import com.ceiba.cliente.puerto.repositorio.RepositorioCliente;
+import com.ceiba.deuda.puerto.repositorio.RepositorioDeuda;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.ceiba.acuerdo.pago.modelo.dto.DtoAcuerdoPago;
@@ -14,6 +17,12 @@ public class DaoClienteMysql implements DaoAcuerdoPago {
 
 	private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
+	@Autowired
+	private RepositorioCliente repositorioCliente;
+
+	@Autowired
+	private RepositorioDeuda repositorioDeuda;
+
 	@SqlStatement(namespace = "acuerdo", value = "listar")
 	private static String sqlListar;
 
@@ -23,8 +32,7 @@ public class DaoClienteMysql implements DaoAcuerdoPago {
 
 	@Override
 	public List<DtoAcuerdoPago> listar() {
-		// TODO Auto-generated method stub
-	  return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoAcuerdoPago());
+	  return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoAcuerdoPago(this.repositorioCliente, this.repositorioDeuda));
 	}
 
 

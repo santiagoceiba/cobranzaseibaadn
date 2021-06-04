@@ -25,7 +25,7 @@ public class ConsultaControladorAcuerdoPago {
     }
 
     @GetMapping("/listar")
-    @ApiOperation("Listar Usuarios")
+    @ApiOperation("Listar acuerdos")
     public List<DtoAcuerdoPago> listar() {
         return this.manejadorListaAcuerdosPagos.ejecutar();
     }
