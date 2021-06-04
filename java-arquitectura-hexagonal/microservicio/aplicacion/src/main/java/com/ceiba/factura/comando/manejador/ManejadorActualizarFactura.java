@@ -2,24 +2,24 @@ package com.ceiba.factura.comando.manejador;
 import com.ceiba.factura.comando.ComandoFactura;
 import com.ceiba.factura.comando.fabrica.FabricaFactura;
 import com.ceiba.factura.modelo.entidad.Factura;
-import com.ceiba.factura.servicio.ServicioActualizarFactura;
+import com.ceiba.factura.servicio.ServicioCambiarEstadoPagoFactura;
 import org.springframework.stereotype.Component;
 
 @Component
 public class ManejadorActualizarFactura {
 
 	private final FabricaFactura fabricaFactura;
-	private final ServicioActualizarFactura servicioActualizarFactura;
+	private final ServicioCambiarEstadoPagoFactura servicioCambiarEstadoPagoFactura;
 	
 	
 	public ManejadorActualizarFactura(FabricaFactura fabricaFactura,
-			ServicioActualizarFactura servicioActualizarFactura) {
+			ServicioCambiarEstadoPagoFactura servicioCambiarEstadoPagoFactura) {
 		this.fabricaFactura = fabricaFactura;
-		this.servicioActualizarFactura = servicioActualizarFactura;
+		this.servicioCambiarEstadoPagoFactura = servicioCambiarEstadoPagoFactura;
 	}
 
 	public void ejecutar(ComandoFactura comandoFactura) {
 		Factura factura = this.fabricaFactura.crear(comandoFactura);
-		this.servicioActualizarFactura.ejecutar(factura);
+		this.servicioCambiarEstadoPagoFactura.ejecutar(factura);
 	}
 }

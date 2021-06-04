@@ -34,7 +34,7 @@ id_cliente int(11) null default null,
 primary key (idDeuda)
 );
 
-create table factura (idfactura int(11) not null auto_increment,
+create table factura (idFactura int(11) not null auto_increment,
 montocuota int(60) not null,
 fechacaducidad datetime not null,
 acuerdopago int(11) not null,

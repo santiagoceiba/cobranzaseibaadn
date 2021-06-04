@@ -14,10 +14,10 @@ public class MapeoFactura implements RowMapper<Factura>, MapperResult{
 
 	@Override
 	public Factura mapRow(ResultSet resultSet, int rowNum) throws SQLException {
-	    Long idFactura = resultSet.getLong("idFactura");
-        Double montoCuota = resultSet.getDouble("monto_cuota");
-        LocalDateTime fechaCaducidad =extraerLocalDateTime(resultSet, "fecha_caducidad");
-        AcuerdoPago acuerdoPago = (AcuerdoPago) resultSet.getObject("acuerdo_pago");
+	    Long idFactura = resultSet.getLong("idfactura");
+        Double montoCuota = resultSet.getDouble("montocuota");
+        LocalDateTime fechaCaducidad =extraerLocalDateTime(resultSet, "fechacaducidad");
+        AcuerdoPago acuerdoPago = (AcuerdoPago) resultSet.getObject("acuerdopago");
         Boolean estado = resultSet.getBoolean("estado");
         Factura factura = new Factura(idFactura,montoCuota,fechaCaducidad,acuerdoPago);
         factura.setEstado(estado);

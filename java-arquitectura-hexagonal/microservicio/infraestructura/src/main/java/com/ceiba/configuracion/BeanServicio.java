@@ -1,6 +1,6 @@
 package com.ceiba.configuracion;
 
-import com.ceiba.factura.servicio.ServicioActualizarFactura;
+import com.ceiba.factura.servicio.ServicioCambiarEstadoPagoFactura;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -51,8 +51,8 @@ public class BeanServicio {
 		return new ServicioCrearDeuda(repositorioDeuda);
 	}
 	@Bean
-	ServicioActualizarFactura servicioActualizarFactura(RepositorioFactura repositorioFactura){
-		return new ServicioActualizarFactura(repositorioFactura);
+    ServicioCambiarEstadoPagoFactura servicioActualizarFactura(RepositorioFactura repositorioFactura){
+		return new ServicioCambiarEstadoPagoFactura(repositorioFactura);
 	}
 	@Bean
 	ServicioGenerarCobroJuridico servicioGenerarCobroJuridico(RepositorioAcuerdo reposotiroioAcuerdo,

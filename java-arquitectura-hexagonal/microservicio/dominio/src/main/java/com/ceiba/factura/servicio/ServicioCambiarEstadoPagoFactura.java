@@ -4,14 +4,14 @@ import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
 import com.ceiba.factura.modelo.entidad.Factura;
 import com.ceiba.factura.puerto.repositorio.RepositorioFactura;
 
-public class ServicioActualizarFactura {
+public class ServicioCambiarEstadoPagoFactura {
 
-    private static final String LA_FACTURA_YA_EXISTE_EN_EL_SISTEMA = "la factura ya existe en el sistema";
+    private static final String LA_FACTURA_NO_EXISTE_EN_EL_SISTEMA = "la factura no existe en el sistema";
 
 
     private final RepositorioFactura repositorioFactura;
 
-    public ServicioActualizarFactura( RepositorioFactura repositorioFactura) {
+    public ServicioCambiarEstadoPagoFactura(RepositorioFactura repositorioFactura) {
         this.repositorioFactura = repositorioFactura;
     }
 
@@ -22,8 +22,8 @@ public class ServicioActualizarFactura {
 
     private void validarExistenciaPrevia(Factura factura) {
         boolean existe = this.repositorioFactura.existe(factura.getIdFactura());
-        if(existe) {
-            throw new ExcepcionDuplicidad(LA_FACTURA_YA_EXISTE_EN_EL_SISTEMA);
+        if(!existe) {
+            throw new ExcepcionDuplicidad(LA_FACTURA_NO_EXISTE_EN_EL_SISTEMA);
         }
     }
 

@@ -19,13 +19,6 @@ public class ComandoFactura {
 		this.estado = estado;
 	}
 
-	
-
-	public ComandoFactura() {
-		super();
-	}
-
-
 
 	public Long getIdFactura() {
 		return idFactura;
@@ -74,5 +67,8 @@ public class ComandoFactura {
 
 	public void setEstado(Boolean estado) {
 		this.estado = estado;
+	}
+
+	public ComandoFactura() {
 	}
 }

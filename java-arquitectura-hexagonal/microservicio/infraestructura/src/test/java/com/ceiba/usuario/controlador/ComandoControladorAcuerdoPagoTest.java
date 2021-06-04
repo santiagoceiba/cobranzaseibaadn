@@ -42,7 +42,7 @@ public class ComandoControladorAcuerdoPagoTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(comandoAcuerdo)))
                 .andExpect(status().isOk())
-                .andExpect(content().json("{'valor': 1}"));
+                .andExpect(content().json("{'valor': 2}"));
     }
     
 
