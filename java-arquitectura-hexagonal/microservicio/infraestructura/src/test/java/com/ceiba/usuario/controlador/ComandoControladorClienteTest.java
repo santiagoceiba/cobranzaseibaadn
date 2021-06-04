@@ -2,6 +2,7 @@ package com.ceiba.usuario.controlador;
 
 import com.ceiba.ApplicationMock;
 import com.ceiba.cliente.comando.ComandoCliente;
+import com.ceiba.cliente.controlador.ComandoControladorCliente;
 import com.ceiba.usuario.servicio.testdatabuilder.ComandoClienteTestDataBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
@@ -20,7 +21,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes= ApplicationMock.class)
-@WebMvcTest(ComandoControladorUsuario.class)
+@WebMvcTest(ComandoControladorCliente.class)
 @AutoConfigureMockMvc(addFilters = false)
 public class ComandoControladorClienteTest {
 

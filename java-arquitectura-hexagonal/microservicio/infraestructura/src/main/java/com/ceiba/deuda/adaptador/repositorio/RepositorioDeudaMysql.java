@@ -4,6 +4,8 @@ package com.ceiba.deuda.adaptador.repositorio;
 import com.ceiba.cliente.puerto.repositorio.RepositorioCliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
 import com.ceiba.deuda.mapeo.MapeoDeuda;
@@ -47,7 +49,9 @@ public class RepositorioDeudaMysql implements RepositorioDeuda {
 		paramSource.addValue("nombreEntidadDeuda", deuda.getNombreEntidadDeuda());
 		paramSource.addValue("conceptoDeuda", deuda.getConceptoDeuda());
 		paramSource.addValue("idCliente", idCliente);
-		return this.customNamedParameterJdbcTemplate.crear(deuda, sqlCrear);
+		KeyHolder keyHolder = new GeneratedKeyHolder();
+		this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlCrear, paramSource, keyHolder, new String[]{"id"});
+		return keyHolder.getKey().longValue();
 	}
 
 	@Override

@@ -4,7 +4,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import com.ceiba.acuerdo.pago.controlador.ComandoControladorAcuerdoPago;
+import com.ceiba.deuda.controlador.ComandoControladorDeuda;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,34 +16,32 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import com.ceiba.ApplicationMock;
-import com.ceiba.acuerdo.pago.comando.ComandoAcuerdoPago;
-import com.ceiba.usuario.servicio.testdatabuilder.ComandoAcuerdoPagoTestDataBuilder;
+import com.ceiba.deuda.comando.ComandoDeuda;
+import com.ceiba.usuario.servicio.testdatabuilder.ComandoDeudaTestDataBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes= ApplicationMock.class)
-@WebMvcTest(ComandoControladorAcuerdoPago.class)
+@ContextConfiguration(classes = ApplicationMock.class)
+@WebMvcTest(ComandoControladorDeuda.class)
 @AutoConfigureMockMvc(addFilters = false)
-public class ComandoControladorAcuerdoPagoTest {
-	
-	@Autowired
-	private ObjectMapper objectMapper;
+public class ComandoControladorDeudaTest {
 
-	@Autowired
-	private MockMvc mocMvc;
-	
+    @Autowired
+    private ObjectMapper objectMapper;
+
+    @Autowired
+    private MockMvc mocMvc;
+
     @Test
-    public void crear() throws Exception{
+    public void crear() throws Exception {
         // arrange
-        ComandoAcuerdoPago comandoAcuerdo = new ComandoAcuerdoPagoTestDataBuilder().conId(100L).build();
-        
-        // act - assert
-        mocMvc.perform(post("/acuerdosPagos/crear")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(comandoAcuerdo)))
-                .andExpect(status().isOk())
-                .andExpect(content().json("{'valor': 1}"));
-    }
-    
+        ComandoDeuda deuda = new ComandoDeudaTestDataBuilder().build();
 
+        // act - assert
+        mocMvc.perform(post("/deudas/crear")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(deuda)))
+                .andExpect(status().isOk())
+                .andExpect(content().json("{'valor': 2}"));
+    }
 }
