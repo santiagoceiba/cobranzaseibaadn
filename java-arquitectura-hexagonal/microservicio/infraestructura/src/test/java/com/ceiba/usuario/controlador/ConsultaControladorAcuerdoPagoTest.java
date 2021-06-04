@@ -28,7 +28,6 @@ import static org.hamcrest.core.Is.is;
 public class ConsultaControladorAcuerdoPagoTest {
 
 
-
     @Autowired
     private MockMvc mocMvc;
 

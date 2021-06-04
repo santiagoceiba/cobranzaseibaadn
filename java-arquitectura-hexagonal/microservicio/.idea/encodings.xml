@@ -9,5 +9,6 @@
     <file url="file://$PROJECT_DIR$/dominio/src/main/java/com/ceiba/factura/modelo/entidad/Factura.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/infraestructura/src/main/java/com/ceiba/acuerdo/pago/controlador/ComandoControladorAcuerdoPago.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/infraestructura/src/main/java/com/ceiba/acuerdo/pago/mapeo/MapeoAcuerdoPago.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/logs/spring-boot-logger.log" charset="windows-1252" />
   </component>
 </project>
