@@ -2,6 +2,8 @@ package com.ceiba.acuerdo.pago.puerto.repositorio;
 
 import com.ceiba.acuerdo.pago.modelo.entidad.AcuerdoPago;
 
+import java.util.List;
+
 public interface RepositorioAcuerdo {
 	
 	/**
@@ -16,7 +18,8 @@ public interface RepositorioAcuerdo {
 	 * @param acuerdoPago
 	 */
     void actualizar(AcuerdoPago acuerdoPago);
-    
+
+    List<AcuerdoPago> listarAcuerdosPago();
    
     /**
      * Permite eliminar un AcuerdoPago

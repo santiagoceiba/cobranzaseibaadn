@@ -53,16 +53,12 @@ public class AcuerdoPago implements Serializable {
 
 
 	/**
-	 * método que permite definir si es necesario cambiar el estado de un acuerdo a
+	 * Método que permite definir si es necesario cambiar el estado de un acuerdo a
 	 * Cobro jurídico
-	 * 
-	 * @param listaFacturas
 	 */
-	public void cambiarAEstadoJuridico(List<Factura> listaFacturas) {
-		if (this.estado.equals(EstadoAcuerdo.ACTIVO)) {
-			if (obtenerNumeroAcuerdosVencidos(listaFacturas) > NUMERO_ATRASOS_CUOTAS_COBRO_JURIDICO) {
+	public void cambiarAEstadoJuridico() {
+		if (this.estado.equals(EstadoAcuerdo.ACTIVO) && obtenerNumeroAcuerdosVencidos(this.listaFacturas) >= NUMERO_ATRASOS_CUOTAS_COBRO_JURIDICO) {
 				this.estado = EstadoAcuerdo.COBRO_JURIDICO;
-			}
 		}
 	}
 
@@ -74,14 +70,9 @@ public class AcuerdoPago implements Serializable {
 	 * @return
 	 */
 	private int obtenerNumeroAcuerdosVencidos(List<Factura> listaFacturas) {
-		int contarFacturasVencidas = 0;
-		for (Factura factura : listaFacturas) {
-			if (factura.getEstado()) {
-				contarFacturasVencidas++;
-			}
-		}
 
-		return contarFacturasVencidas;
+		Long contarFacturasVencidas = listaFacturas.stream().filter(factura -> factura.getEstado() == true).count();
+		return contarFacturasVencidas.intValue();
 	}
 
 	public Double getMontoCuota() {
@@ -102,10 +93,6 @@ public class AcuerdoPago implements Serializable {
 
 	public LocalDateTime getFechaAcuerdo() {
 		return fechaAcuerdo;
-	}
-
-	public void setFechaAcuerdo(LocalDateTime fechaAcuerdo) {
-		this.fechaAcuerdo = fechaAcuerdo;
 	}
 
 	public Long getNumeroReferencia() {
@@ -133,6 +120,11 @@ public class AcuerdoPago implements Serializable {
 		this.estado = estado;
 	}
 
+	public List<Factura> getListaFacturas() {
+		return listaFacturas;
+	}
 
-	
+	public void agregarListaFacturas(List<Factura> listaFacturas) {
+		this.listaFacturas = listaFacturas;
+	}
 }

@@ -1,1 +1,1 @@
-select idfactura, montocuota, fechacaducidad,acuerdopago, estado from factura where  acuerdopago = :idAcuerdoPago
+select idFactura, montocuota, fechacaducidad,acuerdopago, estado from factura where  acuerdopago = :idAcuerdoPago

@@ -27,7 +27,7 @@ public class ServicioGenerarCobroJuridicoTest {
         Mockito.when(repositorioFactura.obtenerListaFacturas(Mockito.anyLong())).thenReturn(listaFacturasMock());
         ServicioGenerarCobroJuridico servicioGenerarCobroJuridico = new ServicioGenerarCobroJuridico(repositorioAcuerdo, repositorioFactura);
         // act - assert
-        BasePrueba.assertThrows(() -> servicioGenerarCobroJuridico.ejecutarTareaJuridicos(acuerdoPago), ExcepcionSinDatos.class,"El acuerdo no contiene ninguna factura");
+        BasePrueba.assertThrows(() -> servicioGenerarCobroJuridico.ejecutarTareaJuridicos(), ExcepcionSinDatos.class,"El acuerdo no contiene ninguna factura");
     }
 
 	private List<Factura> listaFacturasMock() {

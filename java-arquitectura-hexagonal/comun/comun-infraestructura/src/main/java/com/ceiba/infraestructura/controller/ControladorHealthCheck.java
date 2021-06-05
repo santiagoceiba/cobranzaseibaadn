@@ -29,4 +29,6 @@ public class ControladorHealthCheck {
 			return new ResponseEntity<Object>(true,HttpStatus.OK );
 		}
 	}
+
+
 }

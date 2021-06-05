@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.ceiba.acuerdo.pago.modelo.entidad.AcuerdoPago;
 import com.ceiba.acuerdo.pago.puerto.repositorio.RepositorioAcuerdo;
+import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdo;
 import com.ceiba.dominio.excepcion.ExcepcionSinDatos;
 import com.ceiba.factura.modelo.entidad.Factura;
 import com.ceiba.factura.puerto.repositorio.RepositorioFactura;
@@ -19,12 +20,27 @@ public class ServicioGenerarCobroJuridico {
 		this.repositorioFactura = repositorioFactura;
 	}
 
-	public void ejecutarTareaJuridicos(AcuerdoPago acuerdoPago) {
+	public void ejecutarTareaJuridicos() {
+		List<AcuerdoPago> listaAcuerdosPago = this.repositorioAcuerdo.listarAcuerdosPago();
+		for (AcuerdoPago acuerdoPago: listaAcuerdosPago) {
+			List<Factura> listaFacturas = this.repositorioFactura.obtenerListaFacturas(acuerdoPago.getIdAcuerdoPago());
+			acuerdoPago.agregarListaFacturas(listaFacturas);
+			validarContenidoListas(listaFacturas);
+			acuerdoPago.cambiarAEstadoJuridico();
+			System.out.println("estado"+ acuerdoPago.getEstado());
+			if(acuerdoPago.getEstado() == EstadoAcuerdo.COBRO_JURIDICO){
+				this.repositorioAcuerdo.actualizar(acuerdoPago);
+			}
+			actualizarEstadoComponentes(listaFacturas);
+		}
+	}
 
-		List<Factura> listaFacturas = this.repositorioFactura.obtenerListaFacturas(acuerdoPago.getIdAcuerdoPago());
-		validarContenidoListas(listaFacturas);
-		acuerdoPago.cambiarAEstadoJuridico(listaFacturas);
-		this.repositorioAcuerdo.actualizar(acuerdoPago);
+	private void actualizarEstadoComponentes( List<Factura> listaFacturas) {
+
+
+		for (Factura factura : listaFacturas) {
+			if(!factura.getEstado()) this.repositorioFactura.actualizar(factura);
+		}
 	}
 
 	private void validarContenidoListas(List<Factura> listaFacturas) {

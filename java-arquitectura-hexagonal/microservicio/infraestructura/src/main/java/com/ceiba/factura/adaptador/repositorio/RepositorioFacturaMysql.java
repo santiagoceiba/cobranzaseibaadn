@@ -3,6 +3,9 @@ package com.ceiba.factura.adaptador.repositorio;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import com.ceiba.acuerdo.pago.puerto.repositorio.RepositorioAcuerdo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.stereotype.Repository;
 
@@ -14,6 +17,10 @@ import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
 
 @Repository
 public class RepositorioFacturaMysql implements RepositorioFactura {
+
+	@Autowired
+	@Lazy
+	private RepositorioAcuerdo repositorioAcuerdo;
 
 	@SqlStatement(namespace = "factura", value = "listarFacturaPorAcuerdo")
 	private static String sqlListar;
@@ -35,8 +42,11 @@ public class RepositorioFacturaMysql implements RepositorioFactura {
 
 	@Override
 	public List<Factura> obtenerListaFacturas(Long idAcuerdoPago) {
-		return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar,
-				new MapeoFactura());
+
+		MapSqlParameterSource paramSource = new MapSqlParameterSource();
+		paramSource.addValue("idAcuerdoPago", idAcuerdoPago);
+		return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, paramSource,
+				new MapeoFactura(this.repositorioAcuerdo));
 	}
 
 	@Override
