@@ -1,9 +1,6 @@
 package com.ceiba.deuda.controlador;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.ceiba.ComandoRespuesta;
 import com.ceiba.deuda.comando.ComandoDeuda;
@@ -14,6 +11,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/deudas")
+@CrossOrigin(origins = "http://localhost:4200")
 @Api(tags = { "Controlador comando usuario"})
 public class ComandoControladorDeuda {
 

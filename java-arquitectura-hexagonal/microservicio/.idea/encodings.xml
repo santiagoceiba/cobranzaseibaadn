@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/aplicacion/src/main/java/com/ceiba/acuerdo/pagocomando/fabrica/FabricaAcuerdoPago.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/aplicacion/src/main/java/com/ceiba/deuda/comando/fabrica/FabricaDeuda.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/dominio/src/main/java/com/ceiba/acuerdo/pago/modelo/entidad/AcuerdoPago.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/dominio/src/main/java/com/ceiba/cliente/puerto/repositorio/RepositorioCliente.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/dominio/src/main/java/com/ceiba/deuda/modelo/entidad/Deuda.java" charset="windows-1252" />
