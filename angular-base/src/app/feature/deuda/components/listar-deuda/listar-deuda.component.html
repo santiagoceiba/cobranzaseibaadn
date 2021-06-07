@@ -1,0 +1,31 @@
+<br>
+<h5 class="card-title">Deudas registrados</h5>
+<h6 class="card-subtitle mb-2 text-muted">Lista de deudas registrados en el sistema</h6>
+<br>
+
+<table class="table">
+  <thead class = "table-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre entidad</th>
+      <th scope="col">Concepto deuda</th>
+      <th scope="col">Fecha deuda</th>
+      <th scope="col">Monto deuda</th>
+      <th scope="col">Nombre cliente</th>
+      <th scope="col">Cedula cliente</th>
+
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let item of listaDeudas; let indice=index">
+      <th scope="row">{{indice + 1}}</th>
+      <td>{{item.nombreEntidadDeuda}}</td>
+      <td>{{item.conceptoDeuda}}</td>
+      <td>{{item.fechaInicialDeudaCliente}}</td>
+      <td>{{item.monto}}</td>
+      <td>{{item.cliente.nombre}}</td>
+      <td>{{item.cliente.cedula}}</td>
+    </tr>
+  </tbody>
+</table>
+

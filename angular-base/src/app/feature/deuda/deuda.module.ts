@@ -5,12 +5,16 @@ import { DeudaRoutingModule } from './deuda-routing.module';
 import { CrearDeudaComponent } from './components/crear-deuda/crear-deuda.component';
 import { DeudaComponent } from './components/deuda/deuda.component';
 import { SharedModule } from '@shared/shared.module';
+import { ListarDeudaComponent } from './components/listar-deuda/listar-deuda.component';
+import { BorrarDeudaComponent } from './components/borrar-deuda/borrar-deuda.component';
 
 
 @NgModule({
   declarations: [
     DeudaComponent,
-    CrearDeudaComponent
+    CrearDeudaComponent,
+    ListarDeudaComponent,
+    BorrarDeudaComponent
   ],
   imports: [
     CommonModule,

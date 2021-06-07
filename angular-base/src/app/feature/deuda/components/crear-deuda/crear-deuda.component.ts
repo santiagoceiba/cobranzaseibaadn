@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Cliente } from '@producto/shared/model/cliente';
 import { ProductoService } from '@producto/shared/service/producto.service';
-import { Deuda } from '../../shared/model/deuda';
+import {  DtoDeuda } from '../../shared/model/dto/Dtodeuda';
 import { DeudaService } from '../../shared/service/deuda.service';
 
 @Component({
@@ -44,7 +44,7 @@ export class CrearDeudaComponent implements OnInit {
 
 
   crear() {
-    let deuda: Deuda  = this.armarDeuda();;
+    let deuda: DtoDeuda  = this.armarDeuda();;
     this.deudaService.guardar(deuda).subscribe(data => {
       console.log(data);
     })
@@ -52,9 +52,9 @@ export class CrearDeudaComponent implements OnInit {
   }
 
 
-  armarDeuda(): Deuda {
+  armarDeuda(): DtoDeuda {
 
-    let deuda = new Deuda();
+    let deuda = new DtoDeuda();
     deuda.nombreEntidadDeuda = this.deudaForm.get('nombreEntidad').value;
     deuda.conceptoDeuda = this.deudaForm.get('conceptoDeuda').value;
     deuda.monto = this.deudaForm.get('montoDeuda').value;

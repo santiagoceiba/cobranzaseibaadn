@@ -1,5 +1,5 @@
 
-export class Deuda {
+export class DtoDeuda {
     idDeuda: number;
 	monto: number;
 	fechaInicialDeudaCliente: string;

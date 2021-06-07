@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from '@core/services/http.service';
 import { Producto } from '@producto/shared/model/producto';
-import { Deuda } from '../model/deuda';
+import { DtoDeuda } from '../model/dto/Dtodeuda';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -12,11 +12,11 @@ export class DeudaService {
   constructor(protected http: HttpService) {}
 
   public consultar() {
-    return this.http.doGet<Deuda[]>(`${environment.endpoint}/clientes/listar`);
+    return this.http.doGet<DtoDeuda[]>(`${environment.endpoint}/deudas/listar`);
   }
 
-  public guardar(deuda: Deuda) {
-    return this.http.doPost<Deuda, number>(`${environment.endpoint}/deudas/crear`, deuda);
+  public guardar(deuda: DtoDeuda) {
+    return this.http.doPost<DtoDeuda, number>(`${environment.endpoint}/deudas/crear`, deuda);
   }
 
   public eliminar(producto: Producto) {

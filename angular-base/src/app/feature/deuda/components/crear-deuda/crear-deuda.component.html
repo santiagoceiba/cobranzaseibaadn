@@ -4,28 +4,28 @@
 <br>
 <form  class="row g-3 mx-auto" [formGroup]="deudaForm"  (ngSubmit)="crear()" novalidate class="needs-validation">
 
-    <div class="col-8">
+    <div class="col-8 mb-2">
       <label for="inputnombreentidad" class="form-label">Nombre de la entidad de la deuda</label>
       <input type="text" formControlName="nombreEntidad" class="form-control" id="inputnombreentidad" placeholder="Ingrese el nombre de la entidad de la deuda">
     </div>
-    <div class="col-8">
+    <div class="col-8 mb-2">
       <label for="inputconceptodeuda" class="form-label">Concepto de la deuda</label>
       <input type="text" formControlName="conceptoDeuda" class="form-control" id="inputconceptodeuda" placeholder="Ingrese el concepto de la deuda">
     </div>
-    <div class="col-8 mb-3">
+    <div class="col-8 mb-2">
         <span class="input-group-text">Ingrese el monto de la deuda $</span>
         <input type="text" formControlName="montoDeuda" class="form-control" aria-label="Ingrese el monto de la deuda">
         <span class="input-group-text">.00</span>
     </div>
 
-    <div class="form-group row ">
+    <div class="form-group row mb-2">
         <label for="example-datetime-local-input" class="col-2 col-form-label">Fecha de la deuda</label>
         <div class="col-6">
           <input class="form-control" formControlName="fechaDeuda" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
         </div>
     </div>
 
-    <div class="col-md-8">
+    <div class="col-md-8 mb-2">
       <label for="inputState" class="form-label">Cliente</label>
       <select id="inputState" class="form-select" formControlName="clienteDeuda">
         <option  *ngFor = "let item of listaCliente">{{item.nombre}}-{{item.cedula}}</option>
