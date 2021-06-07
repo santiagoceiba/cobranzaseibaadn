@@ -2,6 +2,10 @@ package com.ceiba.cliente.adaptador.dao;
 
 import java.util.List;
 
+import com.ceiba.cliente.adaptador.mapeo.MapeoAcuerdoPago;
+import com.ceiba.cliente.adaptador.mapeo.MapeoCliente;
+import com.ceiba.cliente.modelo.dto.DtoCliente;
+import com.ceiba.cliente.puerto.dao.DaoCliente;
 import com.ceiba.cliente.puerto.repositorio.RepositorioCliente;
 import com.ceiba.deuda.puerto.repositorio.RepositorioDeuda;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,17 +17,12 @@ import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
 import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
 
 @Component
-public class DaoClienteMysql implements DaoAcuerdoPago {
+public class DaoClienteMysql implements DaoCliente {
 
 	private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
-	@Autowired
-	private RepositorioCliente repositorioCliente;
 
-	@Autowired
-	private RepositorioDeuda repositorioDeuda;
-
-	@SqlStatement(namespace = "acuerdo", value = "listar")
+	@SqlStatement(namespace = "cliente", value = "listar")
 	private static String sqlListar;
 
 	public DaoClienteMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
@@ -31,8 +30,8 @@ public class DaoClienteMysql implements DaoAcuerdoPago {
 	}
 
 	@Override
-	public List<DtoAcuerdoPago> listar() {
-	  return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoAcuerdoPago(this.repositorioCliente, this.repositorioDeuda));
+	public List<DtoCliente> listar() {
+	  return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoCliente());
 	}
 
 

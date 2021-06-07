@@ -1,0 +1,621 @@
+2021-06-06 21:08:33,246 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application on SANTIAGO-DUQUE with PID 17692 (started by santiago.duque in D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio)
+2021-06-06 21:08:33,250 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-06-06 21:08:33,327 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-06 21:08:33,327 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-06 21:08:34,774 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-06-06 21:08:34,853 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-06-06 21:08:34,855 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 21:08:34,855 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 21:08:34,856 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:08:34,856 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:08:34,856 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 21:08:34,857 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource applicationConfig: [classpath:/application.yaml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:08:34,857 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:08:34,882 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-06-06 21:08:34,929 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-06 21:08:35,005 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-06-06 21:08:35,008 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-06-06 21:08:35,476 WARN io.undertow.websockets.jsr.Bootstrap [restartedMain] UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-06-06 21:08:35,499 INFO io.undertow.servlet.spec.ServletContextImpl [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-06-06 21:08:35,499 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2171 ms
+2021-06-06 21:08:35,739 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-06-06 21:08:36,006 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-06-06 21:08:36,288 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-06-06 21:08:36,303 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:mysql://localhost:3308/cobros_adn_ceiba (MySQL 8.0)
+2021-06-06 21:08:36,367 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.017s)
+2021-06-06 21:08:36,376 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema `cobros_adn_ceiba`: 1
+2021-06-06 21:08:36,377 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `cobros_adn_ceiba` is up to date. No migration necessary.
+2021-06-06 21:08:36,865 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-06-06 21:08:36,959 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-06 21:08:37,021 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-06 21:08:37,046 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-06-06 21:08:37,269 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-06-06 21:08:37,295 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-06-06 21:08:37,332 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-06-06 21:08:37,473 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_1
+2021-06-06 21:08:37,482 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_2
+2021-06-06 21:08:37,488 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: actualizarUsingPUT_1
+2021-06-06 21:08:37,534 INFO io.undertow.Undertow [restartedMain] starting server: Undertow - 2.0.29.Final
+2021-06-06 21:08:37,549 INFO org.xnio.Xnio [restartedMain] XNIO version 3.3.8.Final
+2021-06-06 21:08:37,562 INFO org.xnio.nio.NioXnio [restartedMain] XNIO NIO Implementation Version 3.3.8.Final
+2021-06-06 21:08:37,673 INFO org.springframework.boot.web.embedded.undertow.UndertowServletWebServer [restartedMain] Undertow started on port(s) 8080 (http) with context path '/cobros'
+2021-06-06 21:08:37,676 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Application in 4.927 seconds (JVM running for 5.44)
+2021-06-06 21:17:59,361 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application on SANTIAGO-DUQUE with PID 2808 (started by santiago.duque in D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio)
+2021-06-06 21:17:59,364 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-06-06 21:17:59,448 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-06 21:17:59,449 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-06 21:18:01,102 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-06-06 21:18:01,171 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-06-06 21:18:01,173 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 21:18:01,173 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 21:18:01,173 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:18:01,173 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:18:01,174 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 21:18:01,174 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource applicationConfig: [classpath:/application.yaml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:18:01,174 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:18:01,205 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-06-06 21:18:01,260 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-06 21:18:01,337 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-06-06 21:18:01,340 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-06-06 21:18:01,792 WARN io.undertow.websockets.jsr.Bootstrap [restartedMain] UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-06-06 21:18:01,889 INFO io.undertow.servlet.spec.ServletContextImpl [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-06-06 21:18:01,889 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2440 ms
+2021-06-06 21:18:02,093 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-06-06 21:18:02,342 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-06-06 21:18:02,626 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-06-06 21:18:02,639 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:mysql://localhost:3308/cobros_adn_ceiba (MySQL 8.0)
+2021-06-06 21:18:02,701 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.021s)
+2021-06-06 21:18:02,712 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema `cobros_adn_ceiba`: 1
+2021-06-06 21:18:02,713 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `cobros_adn_ceiba` is up to date. No migration necessary.
+2021-06-06 21:18:07,275 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-06-06 21:18:07,387 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-06 21:18:07,464 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-06 21:18:07,497 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-06-06 21:18:07,751 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-06-06 21:18:07,778 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-06-06 21:18:07,814 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-06-06 21:18:07,959 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_1
+2021-06-06 21:18:07,967 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_2
+2021-06-06 21:18:07,973 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: actualizarUsingPUT_1
+2021-06-06 21:18:08,018 INFO io.undertow.Undertow [restartedMain] starting server: Undertow - 2.0.29.Final
+2021-06-06 21:18:08,028 INFO org.xnio.Xnio [restartedMain] XNIO version 3.3.8.Final
+2021-06-06 21:18:08,040 INFO org.xnio.nio.NioXnio [restartedMain] XNIO NIO Implementation Version 3.3.8.Final
+2021-06-06 21:18:08,185 INFO org.springframework.boot.web.embedded.undertow.UndertowServletWebServer [restartedMain] Undertow started on port(s) 8080 (http) with context path '/cobros'
+2021-06-06 21:18:08,189 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Application in 9.404 seconds (JVM running for 9.928)
+2021-06-06 21:19:21,398 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application on SANTIAGO-DUQUE with PID 1060 (started by santiago.duque in D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio)
+2021-06-06 21:19:21,401 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-06-06 21:19:21,483 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-06 21:19:21,483 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-06 21:19:23,090 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-06-06 21:19:23,160 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-06-06 21:19:23,162 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 21:19:23,162 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 21:19:23,162 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:19:23,163 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:19:23,163 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 21:19:23,163 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource applicationConfig: [classpath:/application.yaml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:19:23,163 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:19:23,194 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-06-06 21:19:23,236 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-06 21:19:23,318 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-06-06 21:19:23,321 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-06-06 21:19:23,751 WARN io.undertow.websockets.jsr.Bootstrap [restartedMain] UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-06-06 21:19:23,823 INFO io.undertow.servlet.spec.ServletContextImpl [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-06-06 21:19:23,824 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2341 ms
+2021-06-06 21:19:24,027 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-06-06 21:19:24,268 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-06-06 21:19:24,556 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-06-06 21:19:24,568 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:mysql://localhost:3308/cobros_adn_ceiba (MySQL 8.0)
+2021-06-06 21:19:24,631 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.021s)
+2021-06-06 21:19:24,641 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema `cobros_adn_ceiba`: 1
+2021-06-06 21:19:24,642 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `cobros_adn_ceiba` is up to date. No migration necessary.
+2021-06-06 21:19:27,285 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-06-06 21:19:27,383 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-06 21:19:27,443 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-06 21:19:27,471 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-06-06 21:19:27,729 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-06-06 21:19:27,752 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-06-06 21:19:27,790 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-06-06 21:19:27,936 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_1
+2021-06-06 21:19:27,945 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_2
+2021-06-06 21:19:27,952 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: actualizarUsingPUT_1
+2021-06-06 21:19:28,002 INFO io.undertow.Undertow [restartedMain] starting server: Undertow - 2.0.29.Final
+2021-06-06 21:19:28,013 INFO org.xnio.Xnio [restartedMain] XNIO version 3.3.8.Final
+2021-06-06 21:19:28,024 INFO org.xnio.nio.NioXnio [restartedMain] XNIO NIO Implementation Version 3.3.8.Final
+2021-06-06 21:19:28,148 INFO org.springframework.boot.web.embedded.undertow.UndertowServletWebServer [restartedMain] Undertow started on port(s) 8080 (http) with context path '/cobros'
+2021-06-06 21:19:28,152 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Application in 7.325 seconds (JVM running for 7.825)
+2021-06-06 21:20:50,264 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application on SANTIAGO-DUQUE with PID 9812 (started by santiago.duque in D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio)
+2021-06-06 21:20:50,267 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-06-06 21:20:50,350 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-06 21:20:50,350 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-06 21:20:51,897 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-06-06 21:20:51,976 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-06-06 21:20:51,978 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 21:20:51,978 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 21:20:51,978 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:20:51,979 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:20:51,979 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 21:20:51,979 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource applicationConfig: [classpath:/application.yaml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:20:51,979 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:20:52,010 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-06-06 21:20:52,050 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-06 21:20:52,126 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-06-06 21:20:52,129 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-06-06 21:20:52,634 WARN io.undertow.websockets.jsr.Bootstrap [restartedMain] UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-06-06 21:20:52,661 INFO io.undertow.servlet.spec.ServletContextImpl [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-06-06 21:20:52,661 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2310 ms
+2021-06-06 21:20:52,952 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-06-06 21:20:53,232 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-06-06 21:20:53,524 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-06-06 21:20:53,536 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:mysql://localhost:3308/cobros_adn_ceiba (MySQL 8.0)
+2021-06-06 21:20:53,602 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.022s)
+2021-06-06 21:20:53,614 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema `cobros_adn_ceiba`: 1
+2021-06-06 21:20:53,615 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `cobros_adn_ceiba` is up to date. No migration necessary.
+2021-06-06 21:20:54,103 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-06-06 21:20:54,201 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-06 21:20:54,262 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-06 21:20:54,286 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-06-06 21:20:54,533 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-06-06 21:20:54,560 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-06-06 21:20:54,601 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-06-06 21:20:54,741 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_1
+2021-06-06 21:20:54,747 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_2
+2021-06-06 21:20:54,753 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: actualizarUsingPUT_1
+2021-06-06 21:20:54,802 INFO io.undertow.Undertow [restartedMain] starting server: Undertow - 2.0.29.Final
+2021-06-06 21:20:54,813 INFO org.xnio.Xnio [restartedMain] XNIO version 3.3.8.Final
+2021-06-06 21:20:54,825 INFO org.xnio.nio.NioXnio [restartedMain] XNIO NIO Implementation Version 3.3.8.Final
+2021-06-06 21:20:54,942 INFO org.springframework.boot.web.embedded.undertow.UndertowServletWebServer [restartedMain] Undertow started on port(s) 8080 (http) with context path '/cobros'
+2021-06-06 21:20:54,945 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Application in 5.229 seconds (JVM running for 5.742)
+2021-06-06 21:53:43,572 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application on SANTIAGO-DUQUE with PID 18556 (started by santiago.duque in D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio)
+2021-06-06 21:53:43,572 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-06-06 21:53:43,619 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-06 21:53:43,619 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-06 21:53:44,854 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-06-06 21:53:44,916 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-06-06 21:53:44,916 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 21:53:44,916 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 21:53:44,916 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:53:44,916 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:53:44,916 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 21:53:44,916 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource applicationConfig: [classpath:/application.yaml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:53:44,916 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 21:53:44,947 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-06-06 21:53:44,979 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-06 21:53:45,057 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-06-06 21:53:45,057 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-06-06 21:53:45,449 WARN io.undertow.websockets.jsr.Bootstrap [restartedMain] UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-06-06 21:53:45,495 INFO io.undertow.servlet.spec.ServletContextImpl [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-06-06 21:53:45,496 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1876 ms
+2021-06-06 21:53:45,702 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-06-06 21:53:45,921 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-06-06 21:53:46,171 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-06-06 21:53:46,186 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:mysql://localhost:3308/cobros_adn_ceiba (MySQL 8.0)
+2021-06-06 21:53:46,242 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.017s)
+2021-06-06 21:53:46,253 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema `cobros_adn_ceiba`: 1
+2021-06-06 21:53:46,254 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `cobros_adn_ceiba` is up to date. No migration necessary.
+2021-06-06 21:53:46,673 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-06-06 21:53:46,766 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-06 21:53:46,813 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-06 21:53:46,829 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-06-06 21:53:47,032 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-06-06 21:53:47,047 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-06-06 21:53:47,079 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-06-06 21:53:47,206 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_1
+2021-06-06 21:53:47,215 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_2
+2021-06-06 21:53:47,221 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: actualizarUsingPUT_1
+2021-06-06 21:53:47,269 INFO io.undertow.Undertow [restartedMain] starting server: Undertow - 2.0.29.Final
+2021-06-06 21:53:47,278 INFO org.xnio.Xnio [restartedMain] XNIO version 3.3.8.Final
+2021-06-06 21:53:47,287 INFO org.xnio.nio.NioXnio [restartedMain] XNIO NIO Implementation Version 3.3.8.Final
+2021-06-06 21:53:47,382 INFO org.springframework.boot.web.embedded.undertow.UndertowServletWebServer [restartedMain] Undertow started on port(s) 8080 (http) with context path '/cobros'
+2021-06-06 21:53:47,385 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Application in 4.253 seconds (JVM running for 4.638)
+2021-06-06 21:58:23,945 INFO io.undertow.servlet.spec.ServletContextImpl [XNIO-1 task-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-06 21:58:23,946 INFO org.springframework.web.servlet.FrameworkServlet [XNIO-1 task-1] Initializing Servlet 'dispatcherServlet'
+2021-06-06 21:58:23,951 INFO org.springframework.web.servlet.FrameworkServlet [XNIO-1 task-1] Completed initialization in 5 ms
+2021-06-06 23:30:01,354 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application on SANTIAGO-DUQUE with PID 6828 (started by santiago.duque in D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio)
+2021-06-06 23:30:01,357 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-06-06 23:30:01,426 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-06 23:30:01,427 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-06 23:30:02,631 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-06-06 23:30:02,698 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-06-06 23:30:02,699 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 23:30:02,700 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 23:30:02,700 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:30:02,700 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:30:02,700 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 23:30:02,701 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource applicationConfig: [classpath:/application.yaml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:30:02,701 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:30:02,727 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-06-06 23:30:02,763 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-06 23:30:02,828 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-06-06 23:30:02,831 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-06-06 23:30:03,223 WARN io.undertow.websockets.jsr.Bootstrap [restartedMain] UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-06-06 23:30:03,245 INFO io.undertow.servlet.spec.ServletContextImpl [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-06-06 23:30:03,245 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1818 ms
+2021-06-06 23:30:03,467 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-06-06 23:30:03,670 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-06-06 23:30:03,910 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-06-06 23:30:03,922 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:mysql://localhost:3308/cobros_adn_ceiba (MySQL 8.0)
+2021-06-06 23:30:03,978 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.015s)
+2021-06-06 23:30:03,986 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema `cobros_adn_ceiba`: 1
+2021-06-06 23:30:03,987 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `cobros_adn_ceiba` is up to date. No migration necessary.
+2021-06-06 23:30:04,047 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consultaControladorAcuerdoPago' defined in URL [jar:file:/D:/adn%20ceiba/cobranzas/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/acuerdo/pago/controlador/ConsultaControladorAcuerdoPago.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'manejadorListaAcuerdosPagos' defined in URL [jar:file:/D:/adn%20ceiba/cobranzas/java-arquitectura-hexagonal/microservicio/aplicacion/build/libs/aplicacion-0.0.1-SNAPSHOT.jar!/com/ceiba/acuerdo/pago/consulta/ManejadorListaAcuerdosPagos.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ceiba.acuerdo.pago.puerto.dao.DaoAcuerdoPago' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-06-06 23:30:04,048 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-06-06 23:30:04,051 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-06-06 23:30:04,070 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-06-06 23:30:04,214 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.ceiba.acuerdo.pago.consulta.ManejadorListaAcuerdosPagos required a bean of type 'com.ceiba.acuerdo.pago.puerto.dao.DaoAcuerdoPago' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.ceiba.acuerdo.pago.puerto.dao.DaoAcuerdoPago' in your configuration.
+
+2021-06-06 23:35:51,681 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application on SANTIAGO-DUQUE with PID 14232 (started by santiago.duque in D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio)
+2021-06-06 23:35:51,684 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-06-06 23:35:51,753 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-06 23:35:51,753 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-06 23:35:52,944 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-06-06 23:35:53,010 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-06-06 23:35:53,011 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 23:35:53,011 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 23:35:53,011 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:35:53,012 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:35:53,012 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 23:35:53,012 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource applicationConfig: [classpath:/application.yaml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:35:53,012 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:35:53,037 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-06-06 23:35:53,080 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-06 23:35:53,137 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-06-06 23:35:53,140 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-06-06 23:35:53,537 WARN io.undertow.websockets.jsr.Bootstrap [restartedMain] UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-06-06 23:35:53,553 INFO io.undertow.servlet.spec.ServletContextImpl [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-06-06 23:35:53,554 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1801 ms
+2021-06-06 23:35:53,764 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-06-06 23:35:54,002 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-06-06 23:35:54,227 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-06-06 23:35:54,237 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:mysql://localhost:3308/cobros_adn_ceiba (MySQL 8.0)
+2021-06-06 23:35:54,292 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.017s)
+2021-06-06 23:35:54,300 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema `cobros_adn_ceiba`: 1
+2021-06-06 23:35:54,302 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `cobros_adn_ceiba` is up to date. No migration necessary.
+2021-06-06 23:35:54,366 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consultaControladorAcuerdoPago' defined in URL [jar:file:/D:/adn%20ceiba/cobranzas/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/acuerdo/pago/controlador/ConsultaControladorAcuerdoPago.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'manejadorListaAcuerdosPagos' defined in URL [jar:file:/D:/adn%20ceiba/cobranzas/java-arquitectura-hexagonal/microservicio/aplicacion/build/libs/aplicacion-0.0.1-SNAPSHOT.jar!/com/ceiba/acuerdo/pago/consulta/ManejadorListaAcuerdosPagos.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ceiba.acuerdo.pago.puerto.dao.DaoAcuerdoPago' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-06-06 23:35:54,367 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-06-06 23:35:54,370 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-06-06 23:35:54,385 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-06-06 23:35:54,518 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.ceiba.acuerdo.pago.consulta.ManejadorListaAcuerdosPagos required a bean of type 'com.ceiba.acuerdo.pago.puerto.dao.DaoAcuerdoPago' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.ceiba.acuerdo.pago.puerto.dao.DaoAcuerdoPago' in your configuration.
+
+2021-06-06 23:38:58,579 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application on SANTIAGO-DUQUE with PID 20132 (started by santiago.duque in D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio)
+2021-06-06 23:38:58,583 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-06-06 23:38:58,655 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-06 23:38:58,655 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-06 23:38:59,880 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-06-06 23:38:59,947 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-06-06 23:38:59,948 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 23:38:59,948 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 23:38:59,948 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:38:59,949 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:38:59,949 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 23:38:59,949 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource applicationConfig: [classpath:/application.yaml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:38:59,949 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:38:59,974 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-06-06 23:39:00,011 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-06 23:39:00,084 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-06-06 23:39:00,087 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-06-06 23:39:00,449 WARN io.undertow.websockets.jsr.Bootstrap [restartedMain] UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-06-06 23:39:00,469 INFO io.undertow.servlet.spec.ServletContextImpl [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-06-06 23:39:00,469 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1814 ms
+2021-06-06 23:39:00,707 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-06-06 23:39:00,923 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-06-06 23:39:01,164 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-06-06 23:39:01,174 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:mysql://localhost:3308/cobros_adn_ceiba (MySQL 8.0)
+2021-06-06 23:39:01,228 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.017s)
+2021-06-06 23:39:01,236 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema `cobros_adn_ceiba`: 1
+2021-06-06 23:39:01,237 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `cobros_adn_ceiba` is up to date. No migration necessary.
+2021-06-06 23:39:01,336 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consultaControladorCliente' defined in URL [jar:file:/D:/adn%20ceiba/cobranzas/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/cliente/controlador/ConsultaControladorCliente.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ceiba.cliente.comando.manejador.ManejadorListaClientes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-06-06 23:39:01,338 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-06-06 23:39:01,341 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-06-06 23:39:01,353 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-06-06 23:39:01,485 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.ceiba.cliente.controlador.ConsultaControladorCliente required a bean of type 'com.ceiba.cliente.comando.manejador.ManejadorListaClientes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.ceiba.cliente.comando.manejador.ManejadorListaClientes' in your configuration.
+
+2021-06-06 23:40:20,497 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application on SANTIAGO-DUQUE with PID 20080 (started by santiago.duque in D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio)
+2021-06-06 23:40:20,497 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-06-06 23:40:20,566 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-06 23:40:20,566 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-06 23:40:21,771 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-06-06 23:40:21,832 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-06-06 23:40:21,832 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 23:40:21,832 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 23:40:21,832 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:40:21,832 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:40:21,832 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 23:40:21,832 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource applicationConfig: [classpath:/application.yaml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:40:21,832 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:40:21,860 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-06-06 23:40:21,902 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-06 23:40:21,983 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-06-06 23:40:21,993 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-06-06 23:40:22,366 WARN io.undertow.websockets.jsr.Bootstrap [restartedMain] UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-06-06 23:40:22,386 INFO io.undertow.servlet.spec.ServletContextImpl [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-06-06 23:40:22,386 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1820 ms
+2021-06-06 23:40:22,597 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-06-06 23:40:22,828 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-06-06 23:40:23,080 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-06-06 23:40:23,090 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:mysql://localhost:3308/cobros_adn_ceiba (MySQL 8.0)
+2021-06-06 23:40:23,141 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.015s)
+2021-06-06 23:40:23,151 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema `cobros_adn_ceiba`: 1
+2021-06-06 23:40:23,151 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `cobros_adn_ceiba` is up to date. No migration necessary.
+2021-06-06 23:40:23,582 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-06-06 23:40:23,654 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-06 23:40:23,714 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-06 23:40:23,734 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-06-06 23:40:23,916 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-06-06 23:40:23,936 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-06-06 23:40:23,966 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-06-06 23:40:24,087 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_1
+2021-06-06 23:40:24,095 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_2
+2021-06-06 23:40:24,097 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: actualizarUsingPUT_1
+2021-06-06 23:40:24,107 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: listarUsingGET_1
+2021-06-06 23:40:24,137 INFO io.undertow.Undertow [restartedMain] starting server: Undertow - 2.0.29.Final
+2021-06-06 23:40:24,147 INFO org.xnio.Xnio [restartedMain] XNIO version 3.3.8.Final
+2021-06-06 23:40:24,157 INFO org.xnio.nio.NioXnio [restartedMain] XNIO NIO Implementation Version 3.3.8.Final
+2021-06-06 23:40:24,238 INFO org.springframework.boot.web.embedded.undertow.UndertowServletWebServer [restartedMain] Undertow started on port(s) 8080 (http) with context path '/cobros'
+2021-06-06 23:40:24,246 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Application in 4.177 seconds (JVM running for 4.565)
+2021-06-06 23:41:06,124 INFO io.undertow.servlet.spec.ServletContextImpl [XNIO-1 task-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-06 23:41:06,124 INFO org.springframework.web.servlet.FrameworkServlet [XNIO-1 task-1] Initializing Servlet 'dispatcherServlet'
+2021-06-06 23:41:06,130 INFO org.springframework.web.servlet.FrameworkServlet [XNIO-1 task-1] Completed initialization in 5 ms
+2021-06-06 23:41:06,213 ERROR com.ceiba.infraestructura.error.ManejadorError [XNIO-1 task-1] UncategorizedSQLException
+org.springframework.jdbc.UncategorizedSQLException: PreparedStatementCallback; uncategorized SQLException for SQL [select idAcuerdoPago,fecha_acuerdo,monto_cuota,idCliente,idDeuda,estado,cantidad_cuotas,numero_referencia
+from acuerdo_pago]; SQL state [S0022]; error code [0]; Column 'nombre' not found.; nested exception is java.sql.SQLException: Column 'nombre' not found.
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1443)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:633)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:669)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:694)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:748)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.query(NamedParameterJdbcTemplate.java:216)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.query(NamedParameterJdbcTemplate.java:228)
+	at com.ceiba.cliente.adaptador.dao.DaoClienteMysql.listar(DaoClienteMysql.java:34)
+	at com.ceiba.cliente.comando.manejador.ManejadorListaClientes.ejecutar(ManejadorListaClientes.java:18)
+	at com.ceiba.cliente.controlador.ConsultaControladorCliente.listar(ConsultaControladorCliente.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:503)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at com.ceiba.infraestructura.filtro.FiltroHeaderSeguridad.doFilter(FiltroHeaderSeguridad.java:28)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:114)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:104)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:269)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:78)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:133)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:130)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:249)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:78)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:99)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:376)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLException: Column 'nombre' not found.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:897)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:886)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ResultSetImpl.findColumn(ResultSetImpl.java:1077)
+	at com.mysql.jdbc.ResultSetImpl.getString(ResultSetImpl.java:5174)
+	at com.zaxxer.hikari.pool.HikariProxyResultSet.getString(HikariProxyResultSet.java)
+	at com.ceiba.cliente.adaptador.mapeo.MapeoCliente.mapRow(MapeoCliente.java:15)
+	at com.ceiba.cliente.adaptador.mapeo.MapeoCliente.mapRow(MapeoCliente.java:11)
+	at org.springframework.jdbc.core.RowMapperResultSetExtractor.extractData(RowMapperResultSetExtractor.java:94)
+	at org.springframework.jdbc.core.RowMapperResultSetExtractor.extractData(RowMapperResultSetExtractor.java:61)
+	at org.springframework.jdbc.core.JdbcTemplate$1.doInPreparedStatement(JdbcTemplate.java:679)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:617)
+	... 81 common frames omitted
+2021-06-06 23:41:06,250 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [XNIO-1 task-1] Resolved [org.springframework.jdbc.UncategorizedSQLException: PreparedStatementCallback; uncategorized SQLException for SQL [select idAcuerdoPago,fecha_acuerdo,monto_cuota,idCliente,idDeuda,estado,cantidad_cuotas,numero_referencia
+from acuerdo_pago]; SQL state [S0022]; error code [0]; Column 'nombre' not found.; nested exception is java.sql.SQLException: Column 'nombre' not found.]
+2021-06-06 23:41:58,545 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application on SANTIAGO-DUQUE with PID 6308 (started by santiago.duque in D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio)
+2021-06-06 23:41:58,548 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-06-06 23:41:58,612 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-06 23:41:58,613 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-06 23:41:59,817 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-06-06 23:41:59,884 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-06-06 23:41:59,885 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 23:41:59,886 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 23:41:59,886 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:41:59,886 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:41:59,886 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 23:41:59,886 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource applicationConfig: [classpath:/application.yaml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:41:59,886 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:41:59,910 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-06-06 23:41:59,949 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-06 23:42:00,021 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-06-06 23:42:00,023 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-06-06 23:42:00,406 WARN io.undertow.websockets.jsr.Bootstrap [restartedMain] UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-06-06 23:42:00,427 INFO io.undertow.servlet.spec.ServletContextImpl [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-06-06 23:42:00,428 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1815 ms
+2021-06-06 23:42:00,666 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-06-06 23:42:00,863 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-06-06 23:42:01,114 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-06-06 23:42:01,130 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:mysql://localhost:3308/cobros_adn_ceiba (MySQL 8.0)
+2021-06-06 23:42:01,183 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.017s)
+2021-06-06 23:42:01,192 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema `cobros_adn_ceiba`: 1
+2021-06-06 23:42:01,192 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `cobros_adn_ceiba` is up to date. No migration necessary.
+2021-06-06 23:42:01,257 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/D:/adn%20ceiba/cobranzas/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/cliente/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+2021-06-06 23:42:01,259 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown initiated...
+2021-06-06 23:42:01,262 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Shutdown completed.
+2021-06-06 23:42:01,273 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-06-06 23:42:01,276 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'daoClienteMysql' defined in URL [jar:file:/D:/adn%20ceiba/cobranzas/java-arquitectura-hexagonal/microservicio/infraestructura/build/libs/infraestructura-0.0.1-SNAPSHOT.jar!/com/ceiba/cliente/adaptador/dao/DaoClienteMysql.class]: Initialization of bean failed; nested exception is com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.ceiba.Application.main(Application.java:11)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.ceiba.infraestructura.jdbc.sqlstatement.StatementException: No se encontró el archivo [sql/cliente/listar.sql]
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessFieldCallback.doWith(DataAccessFieldCallback.java:64)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:705)
+	at org.springframework.util.ReflectionUtils.doWithFields(ReflectionUtils.java:684)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.configureFieldInjection(DataAccessAnnotationProcessor.java:37)
+	at com.ceiba.infraestructura.jdbc.sqlstatement.DataAccessAnnotationProcessor.postProcessBeforeInitialization(DataAccessAnnotationProcessor.java:19)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 20 common frames omitted
+2021-06-06 23:44:05,474 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Application on SANTIAGO-DUQUE with PID 18840 (started by santiago.duque in D:\adn ceiba\cobranzas\java-arquitectura-hexagonal\microservicio)
+2021-06-06 23:44:05,474 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-06-06 23:44:05,558 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-06 23:44:05,558 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-06 23:44:06,770 INFO com.ulisesbocchio.jasyptspringboot.configuration.EnableEncryptablePropertiesBeanFactoryPostProcessor [restartedMain] Post-processing PropertySource instances
+2021-06-06 23:44:06,839 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-06-06 23:44:06,839 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 23:44:06,839 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 23:44:06,839 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:44:06,839 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:44:06,839 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-06-06 23:44:06,839 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource applicationConfig: [classpath:/application.yaml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:44:06,839 INFO com.ulisesbocchio.jasyptspringboot.EncryptablePropertySourceConverter [restartedMain] Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-06-06 23:44:06,873 INFO com.ulisesbocchio.jasyptspringboot.filter.DefaultLazyPropertyFilter [restartedMain] Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-06-06 23:44:06,918 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-06 23:44:06,986 INFO com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver [restartedMain] Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-06-06 23:44:06,986 INFO com.ulisesbocchio.jasyptspringboot.detector.DefaultLazyPropertyDetector [restartedMain] Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-06-06 23:44:07,435 WARN io.undertow.websockets.jsr.Bootstrap [restartedMain] UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-06-06 23:44:07,457 INFO io.undertow.servlet.spec.ServletContextImpl [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-06-06 23:44:07,457 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1899 ms
+2021-06-06 23:44:07,699 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Starting...
+2021-06-06 23:44:07,930 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] pool - Start completed.
+2021-06-06 23:44:08,182 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Flyway Community Edition 5.2.1 by Boxfuse
+2021-06-06 23:44:08,192 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Database: jdbc:mysql://localhost:3308/cobros_adn_ceiba (MySQL 8.0)
+2021-06-06 23:44:08,253 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.014s)
+2021-06-06 23:44:08,263 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Current version of schema `cobros_adn_ceiba`: 1
+2021-06-06 23:44:08,263 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [restartedMain] Schema `cobros_adn_ceiba` is up to date. No migration necessary.
+2021-06-06 23:44:08,704 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-06-06 23:44:08,786 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-06 23:44:08,844 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-06 23:44:08,867 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-06-06 23:44:09,056 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-06-06 23:44:09,076 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-06-06 23:44:09,106 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-06-06 23:44:09,219 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_1
+2021-06-06 23:44:09,229 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: crearUsingPOST_2
+2021-06-06 23:44:09,239 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: actualizarUsingPUT_1
+2021-06-06 23:44:09,249 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: listarUsingGET_1
+2021-06-06 23:44:09,279 INFO io.undertow.Undertow [restartedMain] starting server: Undertow - 2.0.29.Final
+2021-06-06 23:44:09,289 INFO org.xnio.Xnio [restartedMain] XNIO version 3.3.8.Final
+2021-06-06 23:44:09,299 INFO org.xnio.nio.NioXnio [restartedMain] XNIO NIO Implementation Version 3.3.8.Final
+2021-06-06 23:44:09,390 INFO org.springframework.boot.web.embedded.undertow.UndertowServletWebServer [restartedMain] Undertow started on port(s) 8080 (http) with context path '/cobros'
+2021-06-06 23:44:09,390 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Application in 4.35 seconds (JVM running for 4.715)
+2021-06-06 23:44:50,227 INFO io.undertow.servlet.spec.ServletContextImpl [XNIO-1 task-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-06 23:44:50,227 INFO org.springframework.web.servlet.FrameworkServlet [XNIO-1 task-1] Initializing Servlet 'dispatcherServlet'
+2021-06-06 23:44:50,232 INFO org.springframework.web.servlet.FrameworkServlet [XNIO-1 task-1] Completed initialization in 5 ms

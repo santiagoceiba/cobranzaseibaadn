@@ -1,8 +1,13 @@
 <nav>
-  <a id="linkProducto" routerLink="./" routerLinkActive="active"
-    [routerLinkActiveOptions]="{ exact: true }">Producto</a>
-  <a id="linkCrearProducto" routerLink="./crear" routerLinkActive="active">Crear producto</a>
-  <a id="linkBorrarProducto" routerLink="./borrar" routerLinkActive="active">Borrar producto</a>
-  <a id="linkListarProducto" routerLink="./listar" routerLinkActive="active">listar producto</a>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#nav-crear" type="button" role="tab" aria-controls="nav-crear" aria-selected="true"
+    id="linkCrearProducto" aria-current="page" routerLink="./crear" routerLinkActive="active">Crear Cliente</button>
+    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nav-borrar" type="button" role="tab" aria-controls="nav-borrar" aria-selected="false"
+    id="linkBorrarProducto" class="nav-link active" aria-current="page" routerLink="./borrar" routerLinkActive="active" >Borrar Cliente</button>
+    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false"
+    id="linkListarProducto" class="nav-link active" aria-current="page" routerLink="./listar" routerLinkActive="active">Lista de clientes</button>
+  </div>
 </nav>
+
+
 <router-outlet></router-outlet>

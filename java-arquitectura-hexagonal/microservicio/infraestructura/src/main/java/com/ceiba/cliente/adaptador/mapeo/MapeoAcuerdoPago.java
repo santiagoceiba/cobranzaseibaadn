@@ -1,4 +1,4 @@
-package com.ceiba.cliente.adaptador.dao;
+package com.ceiba.cliente.adaptador.mapeo;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

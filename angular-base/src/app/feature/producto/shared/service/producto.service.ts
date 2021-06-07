@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from '@core-service/http.service';
 import { environment } from 'src/environments/environment';
+import { Cliente } from '../model/cliente';
 import { Producto } from '../model/producto';
 
 
@@ -10,12 +11,11 @@ export class ProductoService {
   constructor(protected http: HttpService) {}
 
   public consultar() {
-    return this.http.doGet<Producto[]>(`${environment.endpoint}/tiposFamilia`, this.http.optsName('consultar productos'));
+    return this.http.doGet<Cliente[]>(`${environment.endpoint}/clientes/listar`);
   }
 
-  public guardar(producto: Producto) {
-    return this.http.doPost<Producto, boolean>(`${environment.endpoint}/productos`, producto,
-                                                this.http.optsName('crear/actualizar productos'));
+  public guardar(cliente: Cliente) {
+    return this.http.doPost<Cliente, number>(`${environment.endpoint}/clientes/crear`, cliente);
   }
 
   public eliminar(producto: Producto) {

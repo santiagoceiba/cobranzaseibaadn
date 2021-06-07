@@ -1,8 +1,22 @@
-<p>listar-producto works!</p>
-<div id="productos">
-  <ul class="productos">
-    <li *ngFor="let item of listaProductos | async">
-      <span>{{item.id}}</span> {{item.descripcion}}
-    </li>
-  </ul>
-</div>
+<br>
+<h5 class="card-title">Clientes registrados</h5>
+<h6 class="card-subtitle mb-2 text-muted">Lista de clientes registrados en el sistema</h6>
+<br>
+
+<table class="table">
+  <thead class = "table-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">nombre</th>
+      <th scope="col">cedula</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let item of listaClientes; let indice=index">
+      <th scope="row">{{indice + 1}}</th>
+      <td>{{item.nombre}}</td>
+      <td>{{item.cedula}}</td>
+    </tr>
+  </tbody>
+</table>
+

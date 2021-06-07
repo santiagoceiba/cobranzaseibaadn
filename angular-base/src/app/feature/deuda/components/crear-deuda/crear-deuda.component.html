@@ -1,8 +1,8 @@
 <br>
-<h5 class="card-title">Diligenciar información del cliente</h5>
-<h6 class="card-subtitle mb-2 text-muted">Por favor ingrese la información para crear un cliente</h6>
+<h5 class="card-title">Diligenciar información de la deuda</h5>
+<h6 class="card-subtitle mb-2 text-muted">Por favor ingrese la información para crear una deuda</h6>
 <br>
-<form [formGroup]="clienteForm" (ngSubmit)="crear()" novalidate class="needs-validation">
+<form >
   <div class="row mb-3">
     <label for="inputnombre" class="col-sm-2 col-form-label">Nombre</label>
     <div class="col-sm-4">
@@ -35,7 +35,7 @@
 <div>
   
 </div>
-<div class="modal fade" id="staticBackdrop" *ngIf= "respuestaCreacionCliente" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdrop"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -53,3 +53,4 @@
     </div>
   </div>
 </div>
+
