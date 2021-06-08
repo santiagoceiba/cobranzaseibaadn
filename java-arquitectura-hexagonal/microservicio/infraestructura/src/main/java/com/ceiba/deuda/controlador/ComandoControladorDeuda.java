@@ -1,13 +1,11 @@
 package com.ceiba.deuda.controlador;
 
-import org.springframework.web.bind.annotation.*;
-
 import com.ceiba.ComandoRespuesta;
 import com.ceiba.deuda.comando.ComandoDeuda;
 import com.ceiba.deuda.comando.manejador.ManejadorCrearDeuda;
-
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/deudas")

@@ -1,16 +1,13 @@
 package com.ceiba.acuerdo.pago.comando.manejador;
 
 
-import org.springframework.stereotype.Component;
-
 import com.ceiba.acuerdo.pago.comando.ComandoAcuerdoPago;
-
 import com.ceiba.acuerdo.pago.modelo.entidad.AcuerdoPago;
 import com.ceiba.acuerdo.pago.puerto.dao.DaoAcuerdoPago;
 import com.ceiba.acuerdo.pago.servicio.ServicioActualizarAcuerdoPago;
-import com.ceiba.acuerdo.pago.servicio.ServicioGenerarCobroJuridico;
 import com.ceiba.acuerdo.pagocomando.fabrica.FabricaAcuerdoPago;
 import com.ceiba.manejador.ManejadorComando;
+import org.springframework.stereotype.Component;
 
 @Component
 public class ManejadorActualizarAcuerdo implements ManejadorComando<ComandoAcuerdoPago>{

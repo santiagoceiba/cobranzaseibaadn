@@ -1,16 +1,16 @@
 
 package com.ceiba.acuerdo.pago.modelo.entidad;
 
-import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
+import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdo;
+import com.ceiba.cliente.modelo.entidad.Cliente;
+import com.ceiba.deuda.modelo.entidad.Deuda;
+import com.ceiba.factura.modelo.entidad.Factura;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdo;
-import com.ceiba.cliente.modelo.entidad.Cliente;
-import com.ceiba.deuda.modelo.entidad.Deuda;
-import com.ceiba.factura.modelo.entidad.Factura;
+import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
 
 public class AcuerdoPago implements Serializable {
 

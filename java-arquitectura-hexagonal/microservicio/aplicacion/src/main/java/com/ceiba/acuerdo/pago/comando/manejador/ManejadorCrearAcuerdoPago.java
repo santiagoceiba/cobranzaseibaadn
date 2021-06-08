@@ -1,12 +1,11 @@
 package com.ceiba.acuerdo.pago.comando.manejador;
 
-import org.springframework.stereotype.Component;
-
 import com.ceiba.ComandoRespuesta;
 import com.ceiba.acuerdo.pago.comando.ComandoAcuerdoPago;
 import com.ceiba.acuerdo.pago.modelo.entidad.AcuerdoPago;
 import com.ceiba.acuerdo.pago.servicio.ServicioCrearAcuerdoPago;
 import com.ceiba.acuerdo.pagocomando.fabrica.FabricaAcuerdoPago;
+import org.springframework.stereotype.Component;
 
 @Component
 public class ManejadorCrearAcuerdoPago {

@@ -1,13 +1,13 @@
 package com.ceiba.acuerdo.pago.servicio;
 
-import java.util.List;
-
 import com.ceiba.acuerdo.pago.modelo.entidad.AcuerdoPago;
 import com.ceiba.acuerdo.pago.puerto.repositorio.RepositorioAcuerdo;
 import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdo;
 import com.ceiba.dominio.excepcion.ExcepcionSinDatos;
 import com.ceiba.factura.modelo.entidad.Factura;
 import com.ceiba.factura.puerto.repositorio.RepositorioFactura;
+
+import java.util.List;
 
 public class ServicioGenerarCobroJuridico {
 

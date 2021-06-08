@@ -1,10 +1,10 @@
 package com.ceiba.acuerdo.pago.modelo.dto;
 
-import java.time.LocalDateTime;
-
 import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdo;
 import com.ceiba.cliente.modelo.entidad.Cliente;
 import com.ceiba.deuda.modelo.entidad.Deuda;
+
+import java.time.LocalDateTime;
 
 public class DtoAcuerdoPago {
 	

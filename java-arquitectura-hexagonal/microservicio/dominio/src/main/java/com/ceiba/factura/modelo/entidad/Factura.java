@@ -1,13 +1,13 @@
 package com.ceiba.factura.modelo.entidad;
 
-import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
+import com.ceiba.acuerdo.pago.modelo.entidad.AcuerdoPago;
 
 import java.io.Serializable;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
 
-import com.ceiba.acuerdo.pago.modelo.entidad.AcuerdoPago;
+import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
 
 public class Factura implements Serializable {
 

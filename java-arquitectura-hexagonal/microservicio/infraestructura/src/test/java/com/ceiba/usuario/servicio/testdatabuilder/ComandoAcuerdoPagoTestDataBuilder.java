@@ -1,9 +1,9 @@
 package com.ceiba.usuario.servicio.testdatabuilder;
 
-import java.time.LocalDateTime;
-
 import com.ceiba.acuerdo.pago.comando.ComandoAcuerdoPago;
 import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdo;
+
+import java.time.LocalDateTime;
 
 public class ComandoAcuerdoPagoTestDataBuilder {
 	

@@ -1,14 +1,13 @@
 package com.ceiba.usuario.servicio;
 
-import org.junit.Test;
-import org.mockito.Mockito;
-
 import com.ceiba.BasePrueba;
 import com.ceiba.deuda.modelo.entidad.Deuda;
 import com.ceiba.deuda.puerto.repositorio.RepositorioDeuda;
 import com.ceiba.deuda.servicio.ServicioActualizacionDeuda;
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
 import com.ceiba.usuario.servicio.testdatabuilder.DeudaTestDataBuilder;
+import org.junit.Test;
+import org.mockito.Mockito;
 
 public class ServicioActualizacionDeudaTest {
 

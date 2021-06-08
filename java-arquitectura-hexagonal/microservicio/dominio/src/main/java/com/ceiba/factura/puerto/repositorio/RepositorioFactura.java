@@ -1,9 +1,9 @@
 package com.ceiba.factura.puerto.repositorio;
 
+import com.ceiba.factura.modelo.entidad.Factura;
+
 import java.time.LocalDateTime;
 import java.util.List;
-
-import com.ceiba.factura.modelo.entidad.Factura;
 
 public interface RepositorioFactura {
 	

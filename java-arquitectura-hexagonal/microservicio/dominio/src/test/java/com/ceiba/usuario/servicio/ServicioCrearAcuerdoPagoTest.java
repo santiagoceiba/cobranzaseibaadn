@@ -1,14 +1,13 @@
 package com.ceiba.usuario.servicio;
 
-import org.junit.Test;
-import org.mockito.Mockito;
-
 import com.ceiba.BasePrueba;
 import com.ceiba.acuerdo.pago.modelo.entidad.AcuerdoPago;
 import com.ceiba.acuerdo.pago.puerto.repositorio.RepositorioAcuerdo;
 import com.ceiba.acuerdo.pago.servicio.ServicioCrearAcuerdoPago;
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
 import com.ceiba.usuario.servicio.testdatabuilder.AcuerdoPagoTestDataBuilder;
+import org.junit.Test;
+import org.mockito.Mockito;
 
 public class ServicioCrearAcuerdoPagoTest {
 

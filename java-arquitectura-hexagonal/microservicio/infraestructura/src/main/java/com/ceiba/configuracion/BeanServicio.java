@@ -1,9 +1,5 @@
 package com.ceiba.configuracion;
 
-import com.ceiba.factura.servicio.ServicioCambiarEstadoPagoFactura;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
 import com.ceiba.acuerdo.pago.puerto.repositorio.RepositorioAcuerdo;
 import com.ceiba.acuerdo.pago.servicio.ServicioActualizarAcuerdoPago;
 import com.ceiba.acuerdo.pago.servicio.ServicioCrearAcuerdoPago;
@@ -15,6 +11,9 @@ import com.ceiba.cliente.servicio.ServicioEliminarCliente;
 import com.ceiba.deuda.puerto.repositorio.RepositorioDeuda;
 import com.ceiba.deuda.servicio.ServicioCrearDeuda;
 import com.ceiba.factura.puerto.repositorio.RepositorioFactura;
+import com.ceiba.factura.servicio.ServicioCambiarEstadoPagoFactura;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 
 @Configuration

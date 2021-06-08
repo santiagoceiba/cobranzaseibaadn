@@ -1,7 +1,5 @@
 package com.ceiba.deuda.comando.manejador;
 
-import com.ceiba.cliente.modelo.dto.DtoCliente;
-
 import com.ceiba.deuda.modelo.dto.DtoDeuda;
 import com.ceiba.deuda.puerto.dao.DaoDeuda;
 import org.springframework.stereotype.Component;

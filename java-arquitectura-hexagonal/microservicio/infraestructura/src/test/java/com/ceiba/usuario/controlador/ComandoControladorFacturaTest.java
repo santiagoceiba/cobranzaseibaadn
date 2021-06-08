@@ -3,9 +3,7 @@ package com.ceiba.usuario.controlador;
 import com.ceiba.ApplicationMock;
 import com.ceiba.factura.adaptador.controlador.ComandoControladorFactura;
 import com.ceiba.factura.comando.ComandoFactura;
-
 import com.ceiba.usuario.servicio.testdatabuilder.ComandoFacturaTestDataBuilder;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;

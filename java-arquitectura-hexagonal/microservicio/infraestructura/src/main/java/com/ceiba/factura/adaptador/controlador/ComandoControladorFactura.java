@@ -1,6 +1,5 @@
 package com.ceiba.factura.adaptador.controlador;
 
-import com.ceiba.cliente.comando.ComandoCliente;
 import com.ceiba.factura.comando.ComandoFactura;
 import com.ceiba.factura.comando.manejador.ManejadorActualizarFactura;
 import io.swagger.annotations.Api;

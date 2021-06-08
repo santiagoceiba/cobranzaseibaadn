@@ -1,23 +1,19 @@
 package com.ceiba.acuerdo.pago.adaptador.repositorio;
 
-import java.time.LocalDateTime;
-import java.util.List;
-
-import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdo;
+import com.ceiba.acuerdo.pago.mapeo.MapeoAcuerdoPago;
+import com.ceiba.acuerdo.pago.modelo.entidad.AcuerdoPago;
+import com.ceiba.acuerdo.pago.puerto.repositorio.RepositorioAcuerdo;
 import com.ceiba.cliente.puerto.repositorio.RepositorioCliente;
-import com.ceiba.deuda.mapeo.MapeoDeuda;
 import com.ceiba.deuda.puerto.repositorio.RepositorioDeuda;
-import com.ceiba.factura.adaptador.dao.MapeoFactura;
+import com.ceiba.factura.puerto.repositorio.RepositorioFactura;
+import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
+import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.stereotype.Repository;
 
-import com.ceiba.acuerdo.pago.mapeo.MapeoAcuerdoPago;
-import com.ceiba.acuerdo.pago.modelo.entidad.AcuerdoPago;
-import com.ceiba.acuerdo.pago.puerto.repositorio.RepositorioAcuerdo;
-import com.ceiba.factura.puerto.repositorio.RepositorioFactura;
-import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
-import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Repository
 public class RepositorioAcuerdoMysql implements RepositorioAcuerdo {

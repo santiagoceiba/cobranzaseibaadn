@@ -1,11 +1,10 @@
 package com.ceiba.acuerdo.pago.consulta;
 
-import java.util.List;
-
+import com.ceiba.acuerdo.pago.modelo.dto.DtoAcuerdoPago;
 import com.ceiba.acuerdo.pago.puerto.dao.DaoAcuerdoPago;
 import org.springframework.stereotype.Component;
 
-import com.ceiba.acuerdo.pago.modelo.dto.DtoAcuerdoPago;
+import java.util.List;
 
 
 @Component

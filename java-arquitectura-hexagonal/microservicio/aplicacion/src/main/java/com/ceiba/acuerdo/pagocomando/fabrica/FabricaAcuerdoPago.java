@@ -1,14 +1,13 @@
 package com.ceiba.acuerdo.pagocomando.fabrica;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 import com.ceiba.acuerdo.pago.comando.ComandoAcuerdoPago;
 import com.ceiba.acuerdo.pago.modelo.entidad.AcuerdoPago;
 import com.ceiba.cliente.modelo.entidad.Cliente;
 import com.ceiba.cliente.puerto.repositorio.RepositorioCliente;
 import com.ceiba.deuda.modelo.entidad.Deuda;
 import com.ceiba.deuda.puerto.repositorio.RepositorioDeuda;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 @Component
 public class FabricaAcuerdoPago {

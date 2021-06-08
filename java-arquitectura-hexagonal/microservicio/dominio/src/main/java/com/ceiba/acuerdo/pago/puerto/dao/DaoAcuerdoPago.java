@@ -1,8 +1,8 @@
 package com.ceiba.acuerdo.pago.puerto.dao;
 
-import java.util.List;
-
 import com.ceiba.acuerdo.pago.modelo.dto.DtoAcuerdoPago;
+
+import java.util.List;
 
 public interface DaoAcuerdoPago {
 	

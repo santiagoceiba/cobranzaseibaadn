@@ -1,12 +1,11 @@
 package com.ceiba.deuda.comando.fabrica;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 import com.ceiba.cliente.modelo.entidad.Cliente;
 import com.ceiba.cliente.puerto.repositorio.RepositorioCliente;
 import com.ceiba.deuda.comando.ComandoDeuda;
 import com.ceiba.deuda.modelo.entidad.Deuda;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 @Component
 public class FabricaDeuda {

@@ -1,8 +1,7 @@
 package com.ceiba.usuario.controlador;
 
-
 import com.ceiba.ApplicationMock;
-import com.ceiba.cliente.controlador.ConsultaControladorCliente;
+import com.ceiba.deuda.controlador.ConsultaControladorDeuda;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,13 +19,11 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes= ApplicationMock.class)
-@WebMvcTest(ConsultaControladorCliente.class)
+@WebMvcTest(ConsultaControladorDeuda.class)
 @AutoConfigureMockMvc(addFilters = false)
-public class ConsultaControladorAcuerdoPagoTest {
-
+public class ConsultaControladorDeudaTest {
 
     @Autowired
     private MockMvc mocMvc;
@@ -34,10 +31,20 @@ public class ConsultaControladorAcuerdoPagoTest {
     @DirtiesContext(methodMode = DirtiesContext.MethodMode.BEFORE_METHOD)
     @Test
     public void listar() throws Exception{
-        mocMvc.perform(get("/acuerdos/listar")
+        mocMvc.perform(get("/deudas/listar")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(1)))
-                .andExpect(jsonPath("$[0].numeroReferencia", is(1234)));
+                .andExpect(jsonPath("$[0].nombreEntidadDeuda", is("tigo")));
     }
+    @DirtiesContext(methodMode = DirtiesContext.MethodMode.BEFORE_METHOD)
+    @Test
+    public void listarPorIdCliente() throws Exception{
+        mocMvc.perform(get("/deudas/listarPorId")
+                .contentType(MediaType.APPLICATION_JSON).param("idCliente","1"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$", hasSize(1)))
+                .andExpect(jsonPath("$[0].nombreEntidadDeuda", is("tigo")));
+    }
+
 }

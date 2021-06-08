@@ -2,17 +2,16 @@ package com.ceiba.deuda.adaptador.repositorio;
 
 
 import com.ceiba.cliente.puerto.repositorio.RepositorioCliente;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
-import org.springframework.jdbc.support.GeneratedKeyHolder;
-import org.springframework.jdbc.support.KeyHolder;
-import org.springframework.stereotype.Repository;
-
 import com.ceiba.deuda.mapeo.MapeoDeuda;
 import com.ceiba.deuda.modelo.entidad.Deuda;
 import com.ceiba.deuda.puerto.repositorio.RepositorioDeuda;
 import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
 import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.stereotype.Repository;
 
 @Repository
 public class RepositorioDeudaMysql implements RepositorioDeuda {

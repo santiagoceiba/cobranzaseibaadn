@@ -1,13 +1,12 @@
 package com.ceiba.deuda.comando.manejador;
 
-import org.springframework.stereotype.Component;
-
 import com.ceiba.ComandoRespuesta;
 import com.ceiba.deuda.comando.ComandoDeuda;
 import com.ceiba.deuda.comando.fabrica.FabricaDeuda;
 import com.ceiba.deuda.modelo.entidad.Deuda;
 import com.ceiba.deuda.servicio.ServicioCrearDeuda;
 import com.ceiba.manejador.ManejadorComandoRespuesta;
+import org.springframework.stereotype.Component;
 
 @Component
 public class ManejadorCrearDeuda implements ManejadorComandoRespuesta<ComandoDeuda, ComandoRespuesta<Long>>{

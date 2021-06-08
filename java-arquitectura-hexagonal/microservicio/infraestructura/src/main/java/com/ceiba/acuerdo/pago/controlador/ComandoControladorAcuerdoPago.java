@@ -1,13 +1,11 @@
 package com.ceiba.acuerdo.pago.controlador;
 
-import org.springframework.web.bind.annotation.*;
-
 import com.ceiba.ComandoRespuesta;
 import com.ceiba.acuerdo.pago.comando.ComandoAcuerdoPago;
 import com.ceiba.acuerdo.pago.comando.manejador.ManejadorCrearAcuerdoPago;
-
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/acuerdosPagos")

@@ -1,11 +1,5 @@
 package com.ceiba.usuario.servicio;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.junit.Test;
-import org.mockito.Mockito;
-
 import com.ceiba.BasePrueba;
 import com.ceiba.acuerdo.pago.modelo.entidad.AcuerdoPago;
 import com.ceiba.acuerdo.pago.puerto.repositorio.RepositorioAcuerdo;
@@ -14,6 +8,11 @@ import com.ceiba.dominio.excepcion.ExcepcionSinDatos;
 import com.ceiba.factura.modelo.entidad.Factura;
 import com.ceiba.factura.puerto.repositorio.RepositorioFactura;
 import com.ceiba.usuario.servicio.testdatabuilder.AcuerdoPagoTestDataBuilder;
+import org.junit.Test;
+import org.mockito.Mockito;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ServicioGenerarCobroJuridicoTest {
 	

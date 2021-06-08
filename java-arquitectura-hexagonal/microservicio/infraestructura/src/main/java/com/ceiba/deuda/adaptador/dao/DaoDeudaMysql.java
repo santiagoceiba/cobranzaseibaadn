@@ -1,6 +1,5 @@
 package com.ceiba.deuda.adaptador.dao;
 
-import com.ceiba.cliente.adaptador.mapeo.MapeoCliente;
 import com.ceiba.deuda.adaptador.mapeo.MapeoDeuda;
 import com.ceiba.deuda.modelo.dto.DtoDeuda;
 import com.ceiba.deuda.puerto.dao.DaoDeuda;

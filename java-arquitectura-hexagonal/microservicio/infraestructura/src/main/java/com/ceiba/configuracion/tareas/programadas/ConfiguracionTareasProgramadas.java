@@ -3,8 +3,6 @@ package com.ceiba.configuracion.tareas.programadas;
 import com.ceiba.acuerdo.pago.comando.manejador.ManejadorGenerarCobroJuridico;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.scheduling.annotation.Scheduled;
 
 import javax.annotation.PostConstruct;
 import java.time.LocalDateTime;

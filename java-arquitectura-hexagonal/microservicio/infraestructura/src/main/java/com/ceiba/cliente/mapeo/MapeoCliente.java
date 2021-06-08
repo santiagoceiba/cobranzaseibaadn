@@ -1,12 +1,11 @@
 package com.ceiba.cliente.mapeo;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
-import org.springframework.jdbc.core.RowMapper;
-
 import com.ceiba.cliente.modelo.entidad.Cliente;
 import com.ceiba.infraestructura.jdbc.MapperResult;
+import org.springframework.jdbc.core.RowMapper;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class MapeoCliente implements RowMapper<Cliente>, MapperResult{
 

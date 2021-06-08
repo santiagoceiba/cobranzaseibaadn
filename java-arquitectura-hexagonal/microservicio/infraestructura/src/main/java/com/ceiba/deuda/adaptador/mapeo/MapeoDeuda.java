@@ -1,6 +1,5 @@
 package com.ceiba.deuda.adaptador.mapeo;
 
-import com.ceiba.cliente.modelo.dto.DtoCliente;
 import com.ceiba.deuda.modelo.dto.DtoDeuda;
 import com.ceiba.infraestructura.jdbc.MapperResult;
 import org.springframework.jdbc.core.RowMapper;

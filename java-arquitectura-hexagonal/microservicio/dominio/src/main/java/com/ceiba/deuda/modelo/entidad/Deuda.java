@@ -1,13 +1,13 @@
 package com.ceiba.deuda.modelo.entidad;
 
-import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
+import com.ceiba.cliente.modelo.entidad.Cliente;
 
 import java.io.Serializable;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
 
-import com.ceiba.cliente.modelo.entidad.Cliente;
+import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
 
 public class Deuda implements Serializable {
 

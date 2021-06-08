@@ -1,8 +1,8 @@
 package com.ceiba.cliente.modelo.entidad;
 
-import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
-
 import java.io.Serializable;
+
+import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
 
 public class Cliente implements Serializable {
 

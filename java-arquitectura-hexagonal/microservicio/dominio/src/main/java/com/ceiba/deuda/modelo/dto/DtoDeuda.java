@@ -1,7 +1,5 @@
 package com.ceiba.deuda.modelo.dto;
 
-import com.ceiba.cliente.modelo.entidad.Cliente;
-
 import java.time.LocalDateTime;
 
 public class DtoDeuda {
