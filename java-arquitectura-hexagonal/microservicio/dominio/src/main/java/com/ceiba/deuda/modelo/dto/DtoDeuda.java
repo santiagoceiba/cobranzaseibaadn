@@ -1,5 +1,6 @@
 package com.ceiba.deuda.modelo.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,6 +8,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
+@AllArgsConstructor
 public class DtoDeuda {
 
     private Long idDeuda;
@@ -16,12 +18,4 @@ public class DtoDeuda {
     private String conceptoDeuda;
     private Long idCliente;
 
-    public DtoDeuda(Long idDeuda, Double monto, LocalDateTime fechaInicialDeudaCliente, String nombreEntidadDeuda, String conceptoDeuda, Long idCliente) {
-        this.idDeuda = idDeuda;
-        this.monto = monto;
-        this.fechaInicialDeudaCliente = fechaInicialDeudaCliente;
-        this.nombreEntidadDeuda = nombreEntidadDeuda;
-        this.conceptoDeuda = conceptoDeuda;
-        this.idCliente = idCliente;
-    }
 }
