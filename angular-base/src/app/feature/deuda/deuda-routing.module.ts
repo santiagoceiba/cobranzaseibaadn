@@ -13,6 +13,10 @@ const routes: Routes = [
     component: DeudaComponent,
     children: [
       {
+        path: '',
+        component: CrearDeudaComponent
+        },
+      {
         path: 'crear',
         component: CrearDeudaComponent
       },

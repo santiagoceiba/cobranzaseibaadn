@@ -6,10 +6,27 @@ import { CrearAcuerdosPagosComponent } from './components/crear-acuerdos-pagos/c
 import { ListarAcuerdosComponent } from './components/listar-acuerdos/listar-acuerdos.component';
 
 const routes: Routes = [
-  { path: '', component: AcuerdoComponent },
-  { path: 'crear', component: CrearAcuerdosPagosComponent  },
-  { path: 'cerrar', component: CerrarAcuerdosPagosComponent  },
-  { path: 'listar', component: ListarAcuerdosComponent }];
+  {
+    path: '', component: AcuerdoComponent,
+    children: [
+      {
+        path: '',
+        component: CrearAcuerdosPagosComponent
+      },
+      {
+        path: 'crear',
+        component: CrearAcuerdosPagosComponent
+      },
+      {
+        path: 'cerrar',
+        component: CerrarAcuerdosPagosComponent
+      },
+      {
+        path: 'listar',
+        component: ListarAcuerdosComponent
+      }]
+  }];
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

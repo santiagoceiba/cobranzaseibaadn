@@ -12,6 +12,10 @@ const routes: Routes = [
     component: ProductoComponent,
     children: [
       {
+      path: '',
+      component: CrearProductoComponent
+      },
+      {
         path: 'crear',
         component: CrearProductoComponent
       },

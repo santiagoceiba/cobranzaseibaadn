@@ -25,7 +25,5 @@ public class ComandoControladorAcuerdoPago {
 
 	       return manejadorListaAcuerdosPagos.ejecutar(comandoAcuerdo);
 	    }
-	
-	
-
 }
+//investigar proxy reverse angular

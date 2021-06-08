@@ -35,7 +35,8 @@ public class ComandoControladorClienteTest {
     public void crear() throws Exception{
         // arrange
         ComandoCliente cliente = new ComandoClienteTestDataBuilder().build();
-
+        //inyectar repositorio - obtener el acuerdo 2 y validar que haya quedado con los datos correctos
+        // La importancia de las pruebas están en los assert
         // act - assert
         mocMvc.perform(post("/clientes/crear")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -43,7 +44,6 @@ public class ComandoControladorClienteTest {
                 .andExpect(status().isOk())
                 .andExpect(content().json("{'valor': 2}"));
     }
-    
     
     @Test
     public void actualizar() throws Exception{

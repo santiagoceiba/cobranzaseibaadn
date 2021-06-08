@@ -4,8 +4,11 @@ import com.ceiba.acuerdo.pago.modelo.entidad.AcuerdoPago;
 import com.ceiba.acuerdopago.utilidades.enumeracion.EstadoAcuerdo;
 import com.ceiba.cliente.modelo.entidad.Cliente;
 import com.ceiba.deuda.modelo.entidad.Deuda;
+import com.ceiba.factura.modelo.entidad.Factura;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AcuerdoPagoTestDataBuilder {
 	
@@ -17,6 +20,7 @@ public class AcuerdoPagoTestDataBuilder {
 	private EstadoAcuerdo estado;
 	private Integer cantidadCuotas;
 	private Long numeroReferencia;
+	private List<Factura> listaFacturas;
 	
 	public AcuerdoPagoTestDataBuilder() {
 		
@@ -38,6 +42,16 @@ public class AcuerdoPagoTestDataBuilder {
         return this;
     }
 
+    public AcuerdoPagoTestDataBuilder conListaFacturas(List<Factura> listaFacturas) {
+		this.listaFacturas = new ArrayList<Factura>(listaFacturas);
+		return this;
+	}
+	public  AcuerdoPago buildConFactura() {
+		AcuerdoPago acuerdoPago = new AcuerdoPago(idAcuerdoPago, fechaAcuerdo, montoCuota, idCliente, idDeuda, estado, cantidadCuotas, numeroReferencia);
+		acuerdoPago.agregarListaFacturas(this.listaFacturas);
+		return acuerdoPago;
+
+	}
     public AcuerdoPago build() {
         return new AcuerdoPago(idAcuerdoPago, fechaAcuerdo, montoCuota, idCliente, idDeuda, estado, cantidadCuotas, numeroReferencia);
     }

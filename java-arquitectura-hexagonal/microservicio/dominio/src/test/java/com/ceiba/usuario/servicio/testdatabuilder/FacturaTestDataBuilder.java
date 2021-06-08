@@ -16,13 +16,18 @@ public class FacturaTestDataBuilder {
     public FacturaTestDataBuilder() {
         AcuerdoPago acuerdoPago = new AcuerdoPagoTestDataBuilder().build() ;
         montoCuota = 10.0;
-        fechaCaducidad = LocalDateTime.now();
+        fechaCaducidad = LocalDateTime.of(2020,05,05, 00,01);
         this.acuerdoPago = acuerdoPago;
         estado = true;
     }
 
     public FacturaTestDataBuilder conId(Long idFactura) {
         this.idFactura = idFactura;
+        return this;
+    }
+
+    public FacturaTestDataBuilder conEstado(Boolean estado) {
+        this.estado = estado;
         return this;
     }
 

@@ -25,21 +25,21 @@ public class ConfiguracionTareasProgramadas {
 			@Override
 			public void run() {
 				// Obtenga la hora de inicio esperada de la tarea para esta ejecución
-				System.out.println("expect start time: " + new Date(scheduledExecutionTime()));
-				System.out.println("task1 start: " + new Date());
+				System.out.println("inicio tarea programada: " + new Date(scheduledExecutionTime()));
+				System.out.println("Tarea 1: " + new Date());
 				manejadorGenerarCobroJuridico.ejecutarTareaJuridicos();
 				try {
 					Thread.sleep(5000);
 				} catch (InterruptedException e) {
 				}
-				System.out.println("task1 end: " + new Date());
+				System.out.println("tarea 1 terminada: " + new Date());
 			}
 		};
 		LocalDateTime localDateTime1 = LocalDateTime.now().plusSeconds(-11);
 		Date date = Date.from(localDateTime1.atZone(ZoneId.systemDefault()).toInstant());
 
-		System.out.println("now: " + new Date());
-		System.out.println("timer start: " + date);
+		System.out.println("fecha actual: " + new Date());
+		System.out.println("Hora inicio: " + date);
 		// Establece la hora de inicio programada en 11s
 		timer.schedule(task1, date, 5000);
 	}
