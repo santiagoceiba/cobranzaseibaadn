@@ -1,7 +1,12 @@
 package com.ceiba.factura.modelo.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
 public class DtoFactura {
 
 	private Long idFactura;
@@ -22,56 +27,5 @@ public class DtoFactura {
 	
 
 	public DtoFactura() {
-	}
-
-
-
-	public Long getIdFactura() {
-		return idFactura;
-	}
-
-
-	public void setIdFactura(Long idFactura) {
-		this.idFactura = idFactura;
-	}
-
-
-	public Double getMontoCuota() {
-		return montoCuota;
-	}
-
-
-	public void setMontoCuota(Double montoCuota) {
-		this.montoCuota = montoCuota;
-	}
-
-
-	public LocalDateTime getFechaCaducidad() {
-		return fechaCaducidad;
-	}
-
-
-	public void setFechaCaducidad(LocalDateTime fechaCaducidad) {
-		this.fechaCaducidad = fechaCaducidad;
-	}
-
-
-	public Long getAcuerdoPago() {
-		return acuerdoPago;
-	}
-
-
-	public void setAcuerdoPago(Long acuerdoPago) {
-		this.acuerdoPago = acuerdoPago;
-	}
-
-
-	public Boolean getEstado() {
-		return estado;
-	}
-
-
-	public void setEstado(Boolean estado) {
-		this.estado = estado;
 	}
 }

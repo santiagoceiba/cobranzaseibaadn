@@ -1,5 +1,10 @@
 package com.ceiba.cliente.modelo.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class DtoCliente {
 
     private Long idCliente;
@@ -9,30 +14,6 @@ public class DtoCliente {
     public DtoCliente(Long idCliente, String nombre, String cedula) {
         this.idCliente = idCliente;
         this.nombre = nombre;
-        this.cedula = cedula;
-    }
-
-    public Long getIdCliente() {
-        return idCliente;
-    }
-
-    public void setIdCliente(Long idCliente) {
-        this.idCliente = idCliente;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
 }
