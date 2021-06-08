@@ -8,4 +8,6 @@ import java.util.List;
 public interface DaoDeuda {
 
     List<DtoDeuda> listar();
+
+    List<DtoDeuda> listarPorIdCliente(Long idCliente);
 }

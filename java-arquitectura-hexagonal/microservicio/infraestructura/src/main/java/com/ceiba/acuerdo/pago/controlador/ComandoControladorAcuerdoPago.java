@@ -1,9 +1,6 @@
 package com.ceiba.acuerdo.pago.controlador;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.ceiba.ComandoRespuesta;
 import com.ceiba.acuerdo.pago.comando.ComandoAcuerdoPago;
@@ -14,6 +11,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/acuerdosPagos")
+@CrossOrigin(origins = "http://localhost:4200")
 @Api(tags = { "Controlador comando para la inserción de los acuerdos de pagos"})
 public class ComandoControladorAcuerdoPago {
 	

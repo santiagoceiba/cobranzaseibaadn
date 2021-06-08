@@ -1,0 +1,31 @@
+<br>
+<h5 class="card-title">Acuerdos registrados</h5>
+<h6 class="card-subtitle mb-2 text-muted">Lista de acuerdos registrados en el sistema</h6>
+<br>
+
+<table class="table">
+  <thead class = "table-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre cliente</th>
+      <th scope="col">Cedula cliente</th>
+      <th scope="col">Fecha deuda</th>
+      <th scope="col">Estado deuda</th>
+      <th scope="col">Cantidad cuotas</th>
+      <th scope="col">Monto cuota</th>
+
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let item of listaAcuerdos; let indice=index">
+      <th scope="row">{{indice + 1}}</th>
+      <td>{{item.cliente.nombre}}</td>
+      <td>{{item.cliente.cedula}}</td>
+      <td>{{item.fechaAcuerdo}}</td>
+      <td>{{item.estado}}</td>
+      <td>{{item.cantidadCuotas}}</td>
+      <td>{{item.numeroReferencia}}</td>
+    </tr>
+  </tbody>
+</table>
+

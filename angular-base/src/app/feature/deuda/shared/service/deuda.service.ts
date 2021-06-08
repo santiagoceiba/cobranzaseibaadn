@@ -3,6 +3,7 @@ import { HttpService } from '@core/services/http.service';
 import { Producto } from '@producto/shared/model/producto';
 import { DtoDeuda } from '../model/dto/Dtodeuda';
 import { environment } from 'src/environments/environment';
+import { HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,12 @@ export class DeudaService {
 
   public consultar() {
     return this.http.doGet<DtoDeuda[]>(`${environment.endpoint}/deudas/listar`);
+  }
+
+  public consultarDeudaPorIdCliente(idCliente: number) {
+ 
+    const params = new HttpParams().append('idCliente', idCliente.toString());
+    return this.http.doGetParameters<DtoDeuda[]>(`${environment.endpoint}/deudas/listarPorId`, params);
   }
 
   public guardar(deuda: DtoDeuda) {
