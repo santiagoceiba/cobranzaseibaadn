@@ -25,12 +25,20 @@ public class ServicioGenerarCobroJuridicoTest {
         RepositorioAcuerdo repositorioAcuerdo = Mockito.mock(RepositorioAcuerdo.class);
         RepositorioFactura repositorioFactura = Mockito.mock(RepositorioFactura.class);
         Mockito.when(repositorioFactura.obtenerListaFacturas(Mockito.anyLong())).thenReturn(listaFacturasMock());
+        Mockito.when(repositorioAcuerdo.listarAcuerdosPago()).thenReturn(listaAcuerdosMock());
         ServicioGenerarCobroJuridico servicioGenerarCobroJuridico = new ServicioGenerarCobroJuridico(repositorioAcuerdo, repositorioFactura);
         // act - assert
         BasePrueba.assertThrows(() -> servicioGenerarCobroJuridico.ejecutarTareaJuridicos(), ExcepcionSinDatos.class,"El acuerdo no contiene ninguna factura");
     }
 
-	private List<Factura> listaFacturasMock() {
+    private List<AcuerdoPago> listaAcuerdosMock() {
+        List<AcuerdoPago> listaAcuerdos = new ArrayList<>();
+        AcuerdoPagoTestDataBuilder acuerdoPagoTestDataBuilder = new AcuerdoPagoTestDataBuilder();
+        listaAcuerdos.add(acuerdoPagoTestDataBuilder.build());
+        return listaAcuerdos;
+    }
+
+    private List<Factura> listaFacturasMock() {
 		List<Factura> listaFacturas = new ArrayList<>();
 		
 		return listaFacturas;
