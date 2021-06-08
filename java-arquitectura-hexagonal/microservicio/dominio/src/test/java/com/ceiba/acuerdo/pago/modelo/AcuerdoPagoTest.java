@@ -8,8 +8,7 @@ import com.ceiba.usuario.servicio.testdatabuilder.FacturaTestDataBuilder;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.mockito.Mockito;
-
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -23,6 +22,42 @@ public class AcuerdoPagoTest {
         Assert.assertTrue(acuerdoPago.getEstado() == EstadoAcuerdo.COBRO_JURIDICO);
     }
 
+    @Test
+    public void modificarCuotasAcuerdoPago(){
+        AcuerdoPago acuerdoPago = new AcuerdoPagoTestDataBuilder().build();
+        Double nuevoMontoCuota = 200.0;
+        Integer cantidadCuotas = 4;
+        acuerdoPago.modificarCuotasAcuerdoPago(nuevoMontoCuota, cantidadCuotas);
+        Assert.assertTrue((acuerdoPago.getMontoCuota() == nuevoMontoCuota)&&(acuerdoPago.getCantidadCuotas() == cantidadCuotas));
+    }
+
+    @Test
+    public void validarFecha() {
+        AcuerdoPago acuerdoPago = new AcuerdoPagoTestDataBuilder().build();
+        LocalDateTime fechaAcuerdo = acuerdoPago.getFechaAcuerdo();
+        Assert.assertNotNull(fechaAcuerdo);
+    }
+
+    @Test
+    public void validarCampoCuota() {
+        AcuerdoPago acuerdoPago = new AcuerdoPagoTestDataBuilder().build();
+        Double montoCuota = acuerdoPago.getMontoCuota();
+        Assert.assertNotNull(montoCuota);
+    }
+
+    @Test
+    public void validarCampoCantidadCuotas() {
+        AcuerdoPago acuerdoPago = new AcuerdoPagoTestDataBuilder().build();
+        Integer cantidadCuotas = acuerdoPago.getCantidadCuotas();
+        Assert.assertNotNull(cantidadCuotas);
+    }
+
+    @Test
+    public void validarCampoNumeroReferencia (){
+        AcuerdoPago acuerdoPago = new AcuerdoPagoTestDataBuilder().build();
+        Long numeroReferencia = acuerdoPago.getNumeroReferencia();
+        Assert.assertNotNull(numeroReferencia);
+    }
     private List<Factura> simularListaFacturas() {
         List<Factura> listaFacturas = new ArrayList<>();
         Factura factura1 = new FacturaTestDataBuilder().conEstado(false).build();

@@ -48,10 +48,6 @@ public class Factura implements Serializable {
 		return fechaCaducidad;
 	}
 
-	public void setFechaCaducidad(LocalDateTime fechaCaducidad) {
-		this.fechaCaducidad = fechaCaducidad;
-	}
-
 	public AcuerdoPago getAcuerdoPago() {
 		return acuerdoPago;
 	}

@@ -8,6 +8,7 @@ import com.ceiba.factura.modelo.entidad.Factura;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
@@ -75,20 +76,21 @@ public class AcuerdoPago implements Serializable {
 		return contarFacturasVencidas.intValue();
 	}
 
+	/**
+	 * metodo que permite modificar los estados de una cuota
+	 * @param montoCuota
+	 * @param cantidadCuotas
+	 */
+	public void modificarCuotasAcuerdoPago(Double montoCuota, Integer cantidadCuotas){
+		this.cantidadCuotas = cantidadCuotas;
+		this.montoCuota = montoCuota;
+	}
 	public Double getMontoCuota() {
 		return montoCuota;
 	}
 
-	public void setMontoCuota(Double montoCuota) {
-		this.montoCuota = montoCuota;
-	}
-
 	public Integer getCantidadCuotas() {
 		return cantidadCuotas;
-	}
-
-	public void setCantidadCuotas(Integer cantidadCuotas) {
-		this.cantidadCuotas = cantidadCuotas;
 	}
 
 	public LocalDateTime getFechaAcuerdo() {
@@ -98,7 +100,6 @@ public class AcuerdoPago implements Serializable {
 	public Long getNumeroReferencia() {
 		return numeroReferencia;
 	}
-
 
 	public Long getIdAcuerdoPago() {
 		return idAcuerdoPago;
@@ -120,11 +121,8 @@ public class AcuerdoPago implements Serializable {
 		this.estado = estado;
 	}
 
-	public List<Factura> getListaFacturas() {
-		return listaFacturas;
-	}
 
 	public void agregarListaFacturas(List<Factura> listaFacturas) {
-		this.listaFacturas = listaFacturas;
+		this.listaFacturas = new ArrayList<Factura>(listaFacturas);
 	}
 }
