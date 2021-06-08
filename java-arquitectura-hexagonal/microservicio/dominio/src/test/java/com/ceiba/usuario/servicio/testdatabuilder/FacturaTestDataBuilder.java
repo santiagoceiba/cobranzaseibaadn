@@ -26,6 +26,11 @@ public class FacturaTestDataBuilder {
         return this;
     }
 
+    public FacturaTestDataBuilder conFecha(LocalDateTime fechaFacturaCaducidad) {
+        this.fechaCaducidad = fechaFacturaCaducidad;
+        return this;
+    }
+
     public FacturaTestDataBuilder conEstado(Boolean estado) {
         this.estado = estado;
         return this;

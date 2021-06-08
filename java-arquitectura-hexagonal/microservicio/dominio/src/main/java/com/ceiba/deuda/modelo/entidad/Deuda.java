@@ -16,7 +16,8 @@ public class Deuda implements Serializable {
 	private static final String SE_DEBE_INGRESAR_FECHA_DEUDA = "Se debe ingresar la fecha en la que el cliente inicio la deuda";
 	private static final String SE_DEBE_INGRESAR_NOMBRE_ENTIDAD_DEUDA = "Se debe ingresar el  nombre de la entidad a la que se debe la mora";
 	private static final String SE_DEBE_INGRESAR_CONCEPTO_CUOTA = "Se debe ingresar el concepto por el cual se debe la mora";
-
+	private static Integer DIAS_ANIO = 365;
+	private static Double PORCENTAJE_AUMENTO = 1.01;
 	private Long idDeuda;
 	private Double monto;
 	private LocalDateTime fechaInicialDeudaCliente;
@@ -48,47 +49,31 @@ public class Deuda implements Serializable {
 		return monto;
 	}
 
-	public void setMonto(Double monto) {
-		this.monto = monto;
-	}
-
 	public LocalDateTime getFechaInicialDeudaCliente() {
 		return fechaInicialDeudaCliente;
-	}
-
-	public void setFechaInicialDeudaCliente(LocalDateTime fechaInicialDeudaCliente) {
-		this.fechaInicialDeudaCliente = fechaInicialDeudaCliente;
 	}
 
 	public String getNombreEntidadDeuda() {
 		return nombreEntidadDeuda;
 	}
 
-	public void setNombreEntidadDeuda(String nombreEntidadDeuda) {
-		this.nombreEntidadDeuda = nombreEntidadDeuda;
-	}
-
 	public String getConceptoDeuda() {
 		return conceptoDeuda;
-	}
-
-	public void setConceptoDeuda(String conceptoDeuda) {
-		this.conceptoDeuda = conceptoDeuda;
 	}
 
 	public Cliente getIdCliente() {
 		return idCliente;
 	}
 
-	public void setIdCliente(Cliente idCliente) {
-		this.idCliente = idCliente;
+	public void setMonto(Double monto) {
+		this.monto = monto;
 	}
 
 	private void validarAumentoPorAntiguedadDeuda() {
 		Long diferenciaDias = encontrarDiferenciaFechas(this.fechaInicialDeudaCliente, LocalDateTime.now());
 
-		if (diferenciaDias > 365) {
-			this.setMonto(this.monto * (1.01));
+		if (diferenciaDias > DIAS_ANIO) {
+			this.setMonto(this.monto * (PORCENTAJE_AUMENTO));
 		}
 
 	}

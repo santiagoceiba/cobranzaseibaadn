@@ -31,6 +31,15 @@ public class DeudaTestDataBuilder {
         return this;
     }
 
+    public DeudaTestDataBuilder conFecha(LocalDateTime fechaInicialDeudaCliente){
+    	this.fechaInicialDeudaCliente = fechaInicialDeudaCliente;
+    	return this;
+	}
+	public DeudaTestDataBuilder conMonto(Double monto) {
+    	this.monto = monto;
+    	return this;
+	}
+
     public Deuda build() {
         return new Deuda(monto, fechaInicialDeudaCliente, nombreEntidadDeuda, conceptoDeuda, idCliente, idDeuda);
     }
