@@ -18,18 +18,15 @@ public class ManejadorActualizarAcuerdo implements ManejadorComando<ComandoAcuer
 	private final FabricaAcuerdoPago fabricaAcuerdoPago;
 
 	private final ServicioActualizarAcuerdoPago servicioActualizarAcuerdoPago;
-	private final ServicioGenerarCobroJuridico servicioGenerarCobroJuridico;
 	private final DaoAcuerdoPago daoAcuerdoPago;
 	
 	public ManejadorActualizarAcuerdo(FabricaAcuerdoPago fabricaAcuerdoPago,
 			ServicioActualizarAcuerdoPago servicioActualizarAcuerdoPago,
-			 DaoAcuerdoPago daoAcuerdoPago,
-			 ServicioGenerarCobroJuridico servicioGenerarCobroJuridico) {
+			 DaoAcuerdoPago daoAcuerdoPago) {
 
 		this.fabricaAcuerdoPago = fabricaAcuerdoPago;
 		this.servicioActualizarAcuerdoPago = servicioActualizarAcuerdoPago;
 		this.daoAcuerdoPago = daoAcuerdoPago;
-		this.servicioGenerarCobroJuridico = servicioGenerarCobroJuridico;
 	}
 	
 	  public void ejecutar(ComandoAcuerdoPago comandoAcuerdoPago) {

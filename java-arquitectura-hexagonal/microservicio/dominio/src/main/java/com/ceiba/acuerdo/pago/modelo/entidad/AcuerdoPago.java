@@ -71,7 +71,7 @@ public class AcuerdoPago implements Serializable {
 	 */
 	private int obtenerNumeroAcuerdosVencidos(List<Factura> listaFacturas) {
 
-		Long contarFacturasVencidas = listaFacturas.stream().filter(factura -> factura.getEstado() == true).count();
+		Long contarFacturasVencidas = listaFacturas.stream().filter(factura -> factura.esFacturaAlDia() == false).count();
 		return contarFacturasVencidas.intValue();
 	}
 

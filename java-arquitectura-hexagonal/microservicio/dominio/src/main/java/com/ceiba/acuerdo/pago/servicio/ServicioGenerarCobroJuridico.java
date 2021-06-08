@@ -31,15 +31,6 @@ public class ServicioGenerarCobroJuridico {
 			if(acuerdoPago.getEstado() == EstadoAcuerdo.COBRO_JURIDICO){
 				this.repositorioAcuerdo.actualizar(acuerdoPago);
 			}
-			actualizarEstadoComponentes(listaFacturas);
-		}
-	}
-
-	private void actualizarEstadoComponentes( List<Factura> listaFacturas) {
-
-
-		for (Factura factura : listaFacturas) {
-			if(!factura.getEstado()) this.repositorioFactura.actualizar(factura);
 		}
 	}
 

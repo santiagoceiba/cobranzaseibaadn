@@ -13,7 +13,6 @@ public class ManejadorGenerarCobroJuridico {
     }
 
     public void ejecutarTareaJuridicos() {
-        System.out.println("------------------------------------>ejecutar cobros");
         this.servicioGenerarCobroJuridico.ejecutarTareaJuridicos();
     }
 }

@@ -29,7 +29,6 @@ public class Factura implements Serializable {
 		this.fechaCaducidad = fechaCaducidad;
 		this.acuerdoPago = acuerdoPago;
 		this.estado = false;
-		esFacturaVencida();
 	}
 
 	public Long getIdFactura() {
@@ -69,9 +68,8 @@ public class Factura implements Serializable {
 	private Long encontrarDiferenciaFechas(LocalDateTime fechaInicialDeuda, LocalDateTime fechaActual) {
 
 		long diferenciaMiliSegundos = Duration.between(fechaInicialDeuda, fechaActual).toMillis();
-		//long diferenciaHoras = TimeUnit.MILLISECONDS.toHours(diferenciaMiliSegundos);
-		//return diferenciaHoras / 24;
-		return diferenciaMiliSegundos;
+		long diferenciaHoras = TimeUnit.MILLISECONDS.toHours(diferenciaMiliSegundos);
+		return diferenciaHoras / 24;
 
 	}
 
@@ -79,13 +77,12 @@ public class Factura implements Serializable {
 	 * método que permite definir si una factura se encuentra vencida por un número
 	 * > a 5
 	 */
-	private void esFacturaVencida() {
+	public Boolean esFacturaAlDia() {
 		LocalDateTime fechaActual = LocalDateTime.now();
 		Long diferenciaDiasFechas = encontrarDiferenciaFechas(this.fechaCaducidad, fechaActual);
-		System.out.println("diferencia de días :::::::::::"+diferenciaDiasFechas);
 		if (diferenciaDiasFechas > NUMERO_DIAS_CADUCIDAD && this.estado == Boolean.FALSE) {
-			this.estado = Boolean.TRUE;
-			System.out.println("estado :::::::::::"+this.estado);
+			return Boolean.FALSE;
 		}
+		return Boolean.TRUE;
 	}
 }
