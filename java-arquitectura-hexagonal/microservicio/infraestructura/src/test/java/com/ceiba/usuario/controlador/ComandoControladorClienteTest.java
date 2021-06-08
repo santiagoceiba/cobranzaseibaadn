@@ -58,15 +58,4 @@ public class ComandoControladorClienteTest {
                 .andExpect(status().isOk());
     }
     
-    @Test
-    public void eliminar() throws Exception {
-        // arrange
-        Long id = 2L;
-
-        // act - assert
-        mocMvc.perform(delete("/clientes/{id}",id)
-                .contentType(MediaType.APPLICATION_JSON)
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk());
-    }
 }
