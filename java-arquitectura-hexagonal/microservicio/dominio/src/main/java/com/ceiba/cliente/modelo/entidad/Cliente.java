@@ -20,7 +20,6 @@ public class Cliente implements Serializable {
 
 		this.cedula = cedula;
 		this.nombre = nombre;
-
 		this.idCliente = idCliente;
 	}
 
