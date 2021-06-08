@@ -99,10 +99,6 @@ public class RepositorioAcuerdoMysql implements RepositorioAcuerdo {
 
 
 	@Override
-	public void eliminar(Long idAcuerdoPago) {
-	}
-
-	@Override
 	public AcuerdoPago consultarAcuerdoPorId(Long idAcuerdoPago) {
 		MapSqlParameterSource paramSource = new MapSqlParameterSource();
 		paramSource.addValue("idAcuerdoPago", idAcuerdoPago);

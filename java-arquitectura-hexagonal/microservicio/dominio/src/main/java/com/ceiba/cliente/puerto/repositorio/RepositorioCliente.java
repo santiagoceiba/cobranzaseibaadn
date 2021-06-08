@@ -16,12 +16,7 @@ public interface RepositorioCliente {
 	 * @param cliente
 	 */
     void actualizar(Cliente cliente);
-    
-    /**
-     * Permite eliminar un cliente
-     * @param id
-     */
-    void eliminar(Long idCliente);
+
     
     /**
      * Permite validar si existe un cliente con un nombre

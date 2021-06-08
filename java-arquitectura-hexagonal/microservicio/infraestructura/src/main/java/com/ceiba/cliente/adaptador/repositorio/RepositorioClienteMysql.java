@@ -19,8 +19,6 @@ public class RepositorioClienteMysql implements RepositorioCliente {
 	@SqlStatement(namespace = "cliente", value = "actualizar")
 	private static String sqlActualizar;
 
-	@SqlStatement(namespace = "cliente", value = "eliminar")
-	private static String sqlEliminar;
 
 	@SqlStatement(namespace = "cliente", value = "existe")
 	private static String sqlExiste;
@@ -37,13 +35,6 @@ public class RepositorioClienteMysql implements RepositorioCliente {
 		return this.customNamedParameterJdbcTemplate.crear(cliente, sqlCrear);
 	}
 
-	@Override
-	public void eliminar(Long id) {
-		MapSqlParameterSource paramSource = new MapSqlParameterSource();
-		paramSource.addValue("idCliente", id);
-
-		this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlEliminar, paramSource);
-	}
 
 	@Override
 	public void actualizar(Cliente cliente) {

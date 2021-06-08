@@ -7,7 +7,6 @@ import com.ceiba.acuerdo.pago.servicio.ServicioGenerarCobroJuridico;
 import com.ceiba.cliente.puerto.repositorio.RepositorioCliente;
 import com.ceiba.cliente.servicio.ServicioActualizacionCliente;
 import com.ceiba.cliente.servicio.ServicioCrearCliente;
-import com.ceiba.cliente.servicio.ServicioEliminarCliente;
 import com.ceiba.deuda.puerto.repositorio.RepositorioDeuda;
 import com.ceiba.deuda.servicio.ServicioCrearDeuda;
 import com.ceiba.factura.puerto.repositorio.RepositorioFactura;
@@ -25,10 +24,7 @@ public class BeanServicio {
 		return new ServicioCrearCliente(repositorioCliente);
 	}
 
-	@Bean
-	public ServicioEliminarCliente servicioEliminarCliente(RepositorioCliente repositorioCliente) {
-		return new ServicioEliminarCliente(repositorioCliente);
-	}
+
 
 	@Bean
 	public ServicioActualizacionCliente servicioActualizacionCliente(RepositorioCliente repositorioCliente) {

@@ -1,5 +1,0 @@
-package com.ceiba.deuda.comando.manejador;
-
-public class ManejadorEliminarDeuda {
-
-}

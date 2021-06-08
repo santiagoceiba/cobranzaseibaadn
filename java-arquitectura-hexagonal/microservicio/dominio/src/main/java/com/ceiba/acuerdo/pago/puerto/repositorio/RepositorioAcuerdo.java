@@ -20,12 +20,7 @@ public interface RepositorioAcuerdo {
     void actualizar(AcuerdoPago acuerdoPago);
 
     List<AcuerdoPago> listarAcuerdosPago();
-   
-    /**
-     * Permite eliminar un AcuerdoPago
-     * @param idAcuerdoPago
-     */
-    void eliminar(Long idAcuerdoPago);
+
     
     /**
      * Permite validar si existe una AcuerdoPago con id
