@@ -27,7 +27,7 @@ exports.config = {
     showColors: true,
     defaultTimeoutInterval: 30000,
     print: function() {
-      console.log('prueba');
+  
     }
   },
   onPrepare() {

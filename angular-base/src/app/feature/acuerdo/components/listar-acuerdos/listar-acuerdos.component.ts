@@ -43,7 +43,7 @@ export class ListarAcuerdosComponent implements OnInit {
       let listaAcuerdoDto: Array<AcuerdoPago> = data;
       listaAcuerdoDto.forEach(element => {
         let acuerdo = new AcuerdoPago();
-        console.log('element',element);
+
         acuerdo.idAcuerdoPago = element.idAcuerdoPago;
         acuerdo.cantidadCuotas = element.cantidadCuotas;
         acuerdo.estado = element.estado;
@@ -53,7 +53,7 @@ export class ListarAcuerdosComponent implements OnInit {
         acuerdo.cliente  = element.cliente;
         acuerdo.deuda  = element.deuda;
         this.listaAcuerdos.push(acuerdo);
-        console.log(this.listaAcuerdos)
+  
       });
     });
   }

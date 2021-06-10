@@ -20,6 +20,8 @@ export class CrearAcuerdosPagosComponent implements OnInit {
   listaDeudas: Array<DtoDeuda>;
   estados =  ['ACTIVO', 'INACTIVO', 'COBRO_JURIDICO'];
   cargarListaDeudas = false;
+  estadoCreacionAcuerdo = '';
+  respuestaCreacionAcuerdo = false
 
   constructor(private productoServices: ProductoService,
               private deudaServices: DeudaService, 
@@ -70,7 +72,14 @@ export class CrearAcuerdosPagosComponent implements OnInit {
 
     let acuerdoPago = this.armarAcuerdo();
     this.acuerdoServices.guardar(acuerdoPago).subscribe ( data => {
-      console.log(data, 'dataAcuerdo');
+      if(data !== 0){
+        this.estadoCreacionAcuerdo = 'Acuerdo Creada con éxito';
+        this.respuestaCreacionAcuerdo = true;
+
+      } else {
+        this.estadoCreacionAcuerdo = 'No se pudo crear el acuerdo';
+        this.respuestaCreacionAcuerdo = false;
+      }
     });
   }
 
@@ -89,6 +98,29 @@ export class CrearAcuerdosPagosComponent implements OnInit {
     acuerdoPago.fechaAcuerdo = formattedDate;
 
     return acuerdoPago;
+  }
+
+
+  get estadoAcuerdo() {
+    return this.acuerdoForm.get('estadoAcuerdo');
+  }
+  get deuda(){
+    return this.acuerdoForm.get('deuda');
+  }
+  get montoCuota (){
+    return this.acuerdoForm.get('montoCuota');
+  }
+  get fechaDeuda (){
+    return this.acuerdoForm.get('fechaDeuda');
+  }
+  get clienteDeuda (){
+    return this.acuerdoForm.get('clienteDeuda');
+  }
+  get cantidadCuotas() {
+    return this.acuerdoForm.get('cantidadCuotas');
+  }
+  get numeroReferencia (){
+    return this.acuerdoForm.get('numeroReferencia');
   }
 
 }

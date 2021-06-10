@@ -16,6 +16,8 @@ export class CrearDeudaComponent implements OnInit {
   deudaForm: FormGroup;
   listaCliente: Array<Cliente>;
   mapaClientes =new  Map<string,string>();
+  estadoCreacionDeuda = '';
+  respuestaCreacionDeuda = false
 
   constructor(private productService: ProductoService,
               private deudaService: DeudaService) { }
@@ -46,9 +48,15 @@ export class CrearDeudaComponent implements OnInit {
   crear() {
     let deuda: DtoDeuda  = this.armarDeuda();;
     this.deudaService.guardar(deuda).subscribe(data => {
-      console.log(data);
+      if(data !== 0){
+        this.estadoCreacionDeuda = 'Deuda Creada con éxito';
+        this.respuestaCreacionDeuda = true;
+      } else {
+        this.estadoCreacionDeuda = 'No se pudo crear la deuda';
+        this.respuestaCreacionDeuda = false;
+      }
     })
-    console.log(deuda);
+    
   }
 
 
@@ -63,7 +71,7 @@ export class CrearDeudaComponent implements OnInit {
     const formattedDate = formatDate(this.deudaForm.get('fechaDeuda').value, format, locale);
     deuda.fechaInicialDeudaCliente = formattedDate;
    
-    deuda.idCliente = this.encontrarCliente();
+    deuda.idCliente = this.deudaForm.get('clienteDeuda').value;
     return deuda;
   }
 
@@ -74,5 +82,23 @@ export class CrearDeudaComponent implements OnInit {
     let posicionCliente = this.listaCliente.indexOf(this.listaCliente.find(x => x.cedula == cedula));
     return this.listaCliente[posicionCliente].idCliente;
   }
+
+  get nombreEntidad(){
+    return this.deudaForm.get('nombreEntidad')
+  }
+  get conceptoDeuda() {
+    return this.deudaForm.get('conceptoDeuda')
+  }
+  get montoDeuda() {
+    return  this.deudaForm.get('montoDeuda')
+  }
+  get fechaDeuda() {
+    return this.deudaForm.get('fechaDeuda')
+  }
+  get clienteDeuda() {
+    return this.deudaForm.get('clienteDeuda')
+  }
+
+
 
 }

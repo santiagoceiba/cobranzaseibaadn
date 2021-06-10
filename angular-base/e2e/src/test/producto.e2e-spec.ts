@@ -16,15 +16,14 @@ describe('workspace-project Producto', () => {
     it('Deberia crear cliente', () => {
         const NOMBRE = 'Santiago';
         const CEDULA = '1';
+        const MENSAJE_EXITO_ = 'Cliente creado con éxito';
 
         page.navigateTo();
         navBar.NavegarSeccionClientes();
         cliente.CrearClientes();
         cliente.ingresarNombre(NOMBRE);
         cliente.ingresarCedula(CEDULA);
-
-        // Adicionamos las validaciones despues de la creación
-        // expect(<>).toEqual(<>);
+        expect(cliente.obtenerMensajeExito()).toEqual(MENSAJE_EXITO_)
     });
 
     it('Deberia listar clientes', () => {

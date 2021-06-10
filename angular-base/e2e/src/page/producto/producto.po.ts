@@ -5,6 +5,7 @@ export class ClientePage {
     private linkListarClientes = element(by.id('linkListarCliente'));
     private inputNombre = element(by.id('inputnombre'));
     private inputCedula = element(by.id('inputcedula'));
+    private exitoCreacion = element(by.id('mensajecreacionexito'));
     private listaClientes = element.all(by.css('tbody.clientes tr'));
 
     async CrearClientes() {
@@ -27,7 +28,8 @@ export class ClientePage {
         return this.listaClientes.count();
     }
 
-    async obtenerMensajeErrorCampoNombre() {
-        return element(by.id("errorCampoInvalidoNombre")).getText();
-    }
+
+    obtenerMensajeExito() {
+        return this.exitoCreacion.element(by.css('span')).getText() as Promise<string>;
+      }
 }
