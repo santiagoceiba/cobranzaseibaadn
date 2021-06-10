@@ -1,38 +1,37 @@
-import { browser, logging } from 'protractor';
 import { NavbarPage } from '../page/navbar/navbar.po';
 import { AppPage } from '../app.po';
-import { ProductoPage } from '../page/producto/producto.po';
+import { ClientePage } from '../page/producto/producto.po';
 
 describe('workspace-project Producto', () => {
     let page: AppPage;
     let navBar: NavbarPage;
-    let producto: ProductoPage;
+    let cliente: ClientePage;
 
     beforeEach(() => {
         page = new AppPage();
         navBar = new NavbarPage();
-        producto = new ProductoPage();
+        cliente = new ClientePage();
     });
 
-    it('Deberia crear producto', () => {
-        const ID_PRODUCTO = '001';
-        const DESCRIPCION_PRODUCTO = 'Producto de pruebas';
+    it('Deberia crear cliente', () => {
+        const NOMBRE = 'Santiago';
+        const CEDULA = '1';
 
         page.navigateTo();
-        navBar.clickBotonProductos();
-        producto.clickBotonCrearProductos();
-        producto.ingresarId(ID_PRODUCTO);
-        producto.ingresarDescripcion(DESCRIPCION_PRODUCTO);
+        navBar.NavegarSeccionClientes();
+        cliente.CrearClientes();
+        cliente.ingresarNombre(NOMBRE);
+        cliente.ingresarCedula(CEDULA);
 
         // Adicionamos las validaciones despues de la creación
         // expect(<>).toEqual(<>);
     });
 
-    it('Deberia listar productos', () => {
+    it('Deberia listar clientes', () => {
         page.navigateTo();
-        navBar.clickBotonProductos();
-        producto.clickBotonListarProductos();
+        navBar.NavegarSeccionClientes();
+        cliente.ListarClientes();
 
-        expect(4).toBe(producto.contarProductos());
+        expect(4).toBe(cliente.contarClientes());
     });
 });

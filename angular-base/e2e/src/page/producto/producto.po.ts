@@ -1,29 +1,33 @@
 import { by, element } from 'protractor';
 
-export class ProductoPage {
-    private linkCrearProducto = element(by.id('linkCrearProducto'));
-    private linkListarProductos = element(by.id('linkListarProducto'));
-    private inputIdProducto = element(by.id('idProducto'));
-    private inputDescripcionProducto = element(by.id('descripcionProducto'));
-    private listaProductos = element.all(by.css('ul.productos li'));
+export class ClientePage {
+    private linkCrearCliente = element(by.id('linkCrearCliente'));
+    private linkListarClientes = element(by.id('linkListarCliente'));
+    private inputNombre = element(by.id('inputnombre'));
+    private inputCedula = element(by.id('inputcedula'));
+    private listaClientes = element.all(by.css('tbody.clientes tr'));
 
-    async clickBotonCrearProductos() {
-        await this.linkCrearProducto.click();
+    async CrearClientes() {
+        await this.linkCrearCliente.click();
     }
 
-    async clickBotonListarProductos() {
-        await this.linkListarProductos.click();
+    async ListarClientes() {
+        await this.linkListarClientes.click();
     }
 
-    async ingresarId(idProducto) {
-        await this.inputIdProducto.sendKeys(idProducto);
+    async ingresarNombre(idNombre) {
+        await this.inputNombre.sendKeys(idNombre);
     }
 
-    async ingresarDescripcion(descripcionProducto) {
-        await this.inputDescripcionProducto.sendKeys(descripcionProducto);
+    async ingresarCedula(cedula) {
+        await this.inputCedula.sendKeys(cedula);
     }
 
-    async contarProductos() {
-        return this.listaProductos.count();
+    async contarClientes() {
+        return this.listaClientes.count();
+    }
+
+    async obtenerMensajeErrorCampoNombre() {
+        return element(by.id("errorCampoInvalidoNombre")).getText();
     }
 }

@@ -27,7 +27,6 @@ public class ServicioGenerarCobroJuridico {
 			acuerdoPago.agregarListaFacturas(listaFacturas);
 			validarContenidoListas(listaFacturas);
 			acuerdoPago.cambiarAEstadoJuridico();
-			System.out.println("estado"+ acuerdoPago.getEstado());
 			if(acuerdoPago.getEstado() == EstadoAcuerdo.COBRO_JURIDICO){
 				this.repositorioAcuerdo.actualizar(acuerdoPago);
 			}

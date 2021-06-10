@@ -11,10 +11,14 @@ var HtmlReporter = require('protractor-beautiful-reporter');
 exports.config = {
   allScriptsTimeout: 11000,
   specs: [
-    './src/**/*.e2e-spec.ts'
+    './src/**/*.e2e-spec.ts',
+    './src/test/producto.e2e-spec.ts',
+    './src/test/deuda/deuda.e2e-spec.ts',
+    './src/test/acuerdo/acuerdo.e2e-spec.ts'
   ],
+  SELENIUM_PROMISE_MANAGER: false,
   capabilities: {
-    'browserName': 'chrome'
+    'browserName': 'chrome',
   },
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
@@ -22,7 +26,9 @@ exports.config = {
   jasmineNodeOpts: {
     showColors: true,
     defaultTimeoutInterval: 30000,
-    print: function() {}
+    print: function() {
+      console.log('prueba');
+    }
   },
   onPrepare() {
     require('ts-node').register({

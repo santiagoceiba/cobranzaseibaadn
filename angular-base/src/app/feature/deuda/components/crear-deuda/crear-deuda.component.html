@@ -23,7 +23,7 @@
         <div class="input-group mb-3">
           <span class="input-group-text">Ingrese el monto de la deuda $</span>
           <input type="text" formControlName="montoDeuda" class="form-control"
-            aria-label="Ingrese el monto de la deuda">
+            aria-label="Ingrese el monto de la deuda" id="montodeuda">
           <span class="input-group-text">.00</span>
         </div>
         <div class="col-12">
@@ -36,14 +36,14 @@
           <label for="example-datetime-local-input" class="col-3 col-form-label">Fecha deuda</label>
           <div class="col-9">
             <input class="form-control" formControlName="fechaDeuda" type="datetime-local" value="2011-08-19T13:45:00"
-              id="example-datetime-local-input">
+              id="inputfecha">
           </div>
         </div>
         <div class="row mb-3">
           <label for="inputState" class="col-sm-3 col-form-label">Cliente</label>
           <div class="col-sm-9">
-            <select id="inputState" class="form-select" formControlName="clienteDeuda">
-              <option *ngFor="let item of listaCliente">{{item.nombre}}-{{item.cedula}}</option>
+            <select id="inputState" ng-model="cliente"  class="form-select" formControlName="clienteDeuda">
+              <option *ngFor="let item of listaCliente" id="selectcliente">{{item.nombre}}-{{item.cedula}}</option>
             </select>
           </div>
         </div>
