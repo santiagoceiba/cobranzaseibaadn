@@ -4,7 +4,7 @@ import { EstadoAcuerdo } from "./enumeraciones/estadoAcuerdo";
 
 export class AcuerdoPago {
     idAcuerdoPago: number;
-    fechaAcuerdo;
+    fechaAcuerdo:Date;
     montoCuota: number;
     cliente: Cliente;
     deuda: Deuda;

@@ -1,0 +1,21 @@
+<div class="container mx-auto">
+<table class="table table-bordered">
+    <thead class="table-secondary">
+        <tr  scope="col">
+            <th scope="col">#</th>
+            <th scope="col">montoCuota</th>
+            <th scope="col">fechaCaducidad</th>
+            <th scope="col">estado</th>
+        </tr>
+
+    </thead>
+    <tbody >
+    <tr *ngFor="let item of listaFacturas; let indice=index">
+        <th scope="row">{{indice + 1}}</th>
+        <td>{{item.montoCuota}}</td>
+        <td>{{item.fechaCaducidad}}</td>
+        <td>{{item.estado}}</td>
+    </tr>
+    </tbody>
+</table>
+</div>

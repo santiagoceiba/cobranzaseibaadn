@@ -7,6 +7,7 @@ import { ListarAcuerdosComponent } from './components/listar-acuerdos/listar-acu
 import { CrearAcuerdosPagosComponent } from './components/crear-acuerdos-pagos/crear-acuerdos-pagos.component';
 import { CerrarAcuerdosPagosComponent } from './components/cerrar-acuerdos-pagos/cerrar-acuerdos-pagos.component';
 import { SharedModule } from '@shared/shared.module';
+import { FacturasComponent } from './components/facturas/facturas.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { SharedModule } from '@shared/shared.module';
     AcuerdoComponent,
     ListarAcuerdosComponent,
     CrearAcuerdosPagosComponent,
-    CerrarAcuerdosPagosComponent
+    CerrarAcuerdosPagosComponent,
+    FacturasComponent
   ],
   imports: [
     CommonModule,

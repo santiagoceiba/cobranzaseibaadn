@@ -16,6 +16,7 @@ export class ListarAcuerdosComponent implements OnInit {
   listaDeudas = new Array<DtoDeuda>();
   listaClientes = new Array<Cliente>();
   listaAcuerdos = new  Array<AcuerdoPago>();
+  mostrarListaFacturas = false;
 
   constructor(private productoServices: ProductoService,
               private deudaServices: DeudaService, 
@@ -58,6 +59,9 @@ export class ListarAcuerdosComponent implements OnInit {
     });
   }
 
-
+  listarFacturas() {
+    console.log('estoy aca')
+    this.mostrarListaFacturas = true;
+  }
 
 }
