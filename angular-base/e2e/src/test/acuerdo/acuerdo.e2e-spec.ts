@@ -1,20 +1,22 @@
 
-import { AppPage } from "../../../src/app.po";
+
 import { AcuerdoPage } from "../../../src/page/acuerdo/acuerdo.po";
 import { NavbarPage } from "../../page/navbar/navbar.po";
+import { browser } from 'protractor';
 
 describe('workspace-acuerdo acuerdo', () => {
-    let page: AppPage;
+ 
     let navBar: NavbarPage;
     let acuerdo: AcuerdoPage;
 
-    beforeEach(() => {
-        page = new AppPage();
+    beforeEach(async () => {
+     
         navBar = new NavbarPage();
+        await browser.get(browser.baseUrl);
         acuerdo = new AcuerdoPage();
     });
 
-    it('Deberia crear la acuerdo', () => {
+    it('Deberia crear la acuerdo', async () => {
 
         const SELECT_CLIENTE  =  "option[value]='1'";
         const SELECT_DEUDA = "option[value]='1'";
@@ -24,26 +26,25 @@ describe('workspace-acuerdo acuerdo', () => {
         const INPUT_REFERENCIA = 333
         const INPUT_CANTIDADCUOTAS = 2;
 
-        page.navigateTo();
-        navBar.NavegarSeccionAcuerdo();
+        await navBar.NavegarSeccionAcuerdo();
+        await acuerdo.ingresarInputMontoDeuda(INPUT_MONTODEUDA);
+        await acuerdo.ingresarInputReferencia(INPUT_REFERENCIA);
+        await acuerdo.ingresarSelectCliente(SELECT_CLIENTE);
+        await acuerdo.ingresarSelectDeuda(SELECT_DEUDA);
+        await acuerdo.ingresarinputFecha(INPUT_FECHA);
+        await acuerdo.ingresarinputcantidadcuotas(INPUT_CANTIDADCUOTAS);
+        await acuerdo.ingresarselectEstado(SELECT_ESTADO);
         acuerdo.crearAcuerdo();
-        acuerdo.ingresarInputMontoDeuda(INPUT_MONTODEUDA);
-        acuerdo.ingresarInputReferencia(INPUT_REFERENCIA);
-        acuerdo.ingresarSelectCliente(SELECT_CLIENTE);
-        acuerdo.ingresarSelectDeuda(SELECT_DEUDA);
-        acuerdo.ingresarinputFecha(INPUT_FECHA);
-        acuerdo.ingresarinputcantidadcuotas(INPUT_CANTIDADCUOTAS);
-        acuerdo.ingresarselectEstado(SELECT_ESTADO);
+       
 
         // Adicionamos las validaciones despues de la creación
         // expect(<>).toEqual(<>);
     });
 
-    it('Deberia listar acuerdos', () => {
-        page.navigateTo();
-        navBar.NavegarSeccionClientes();
-        acuerdo.ListarAcuerdos();
-
+    it('Deberia listar acuerdos', async () => {
+        await browser.get(browser.baseUrl + '/acuerdos');
+        await acuerdo.ListarAcuerdos();
+        
         expect(4).toBe(acuerdo.contarAcuerdos());
     });
 });

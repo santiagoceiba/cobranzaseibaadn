@@ -53,7 +53,7 @@
         </div>
         <div class="col-12">
           <button type="submit" class="btn btn-primary" [disabled]="!deudaForm.valid"
-          data-bs-toggle="modal" data-bs-target="#exampleModal">Registrar Deuda</button>
+          data-bs-toggle="modal" data-bs-target="#exampleModal" id="registrarDeuda">Registrar Deuda</button>
         </div>
       </div>
       <!--Division formulario-->
@@ -61,7 +61,7 @@
         <div class="form-group row mb-2">
           <label for="example-datetime-local-input" class="col-3 col-form-label">Fecha deuda</label>
           <div class="col-9">
-            <input class="form-control" formControlName="fechaDeuda" type="datetime-local"
+            <input class="form-control" ng-model="fechadeuda" formControlName="fechaDeuda" type="datetime-local"
               aria-label="2011-08-19T13:45:00" id="inputfecha" [ngClass]="{'is-invalid': fechaDeuda.invalid && (fechaDeuda.dirty || fechaDeuda.touched), 
               'is-valid': !fechaDeuda.invalid && (fechaDeuda.dirty || fechaDeuda.touched)}"
               aria-describedby="inputfecha mensajeerrorfechadeuda">

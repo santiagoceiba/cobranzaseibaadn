@@ -1,7 +1,8 @@
 import { by, element } from 'protractor';
 
 export class ClientePage {
-    private linkCrearCliente = element(by.id('linkCrearCliente'));
+    //private linkCrearCliente = element(by.id('linkCrearCliente'));
+    private linkCrearCliente = element(by.id('registrarCliente'));
     private linkListarClientes = element(by.id('linkListarCliente'));
     private inputNombre = element(by.id('inputnombre'));
     private inputCedula = element(by.id('inputcedula'));
@@ -9,19 +10,19 @@ export class ClientePage {
     private listaClientes = element.all(by.css('tbody.clientes tr'));
 
     async CrearClientes() {
-        await this.linkCrearCliente.click();
+         this.linkCrearCliente.click();
     }
 
     async ListarClientes() {
-        await this.linkListarClientes.click();
+         this.linkListarClientes.click();
     }
 
     async ingresarNombre(idNombre) {
-        await this.inputNombre.sendKeys(idNombre);
+         this.inputNombre.sendKeys(idNombre);
     }
 
     async ingresarCedula(cedula) {
-        await this.inputCedula.sendKeys(cedula);
+         this.inputCedula.sendKeys(cedula);
     }
 
     async contarClientes() {
@@ -29,7 +30,7 @@ export class ClientePage {
     }
 
 
-    obtenerMensajeExito() {
-        return this.exitoCreacion.element(by.css('span')).getText() as Promise<string>;
+   async  obtenerMensajeExito() {
+        await this.exitoCreacion.getText();
       }
 }

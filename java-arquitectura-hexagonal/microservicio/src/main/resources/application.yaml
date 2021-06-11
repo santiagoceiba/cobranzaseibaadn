@@ -15,7 +15,7 @@ spring:
    datasource:
       driver-class-name: com.mysql.jdbc.Driver
       type: com.zaxxer.hikari.HikariDataSource
-      jdbcUrl: jdbc:mysql://localhost:3308/cobros_adn_ceiba?useSSL=false
+      jdbcUrl: jdbc:mysql://localhost:3308/cobranzas_adn_ceiba_bd?useSSL=false
       username: admin
       password: admin
       hikari:

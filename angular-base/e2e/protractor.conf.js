@@ -11,9 +11,9 @@ var HtmlReporter = require('protractor-beautiful-reporter');
 exports.config = {
   allScriptsTimeout: 11000,
   specs: [
-    './src/**/*.e2e-spec.ts',
-    './src/test/producto.e2e-spec.ts',
-    './src/test/deuda/deuda.e2e-spec.ts',
+    //'./src/**/*.e2e-spec.ts',
+    //'./src/test/producto.e2e-spec.ts',
+    //'./src/test/deuda/deuda.e2e-spec.ts',
     './src/test/acuerdo/acuerdo.e2e-spec.ts'
   ],
   SELENIUM_PROMISE_MANAGER: false,

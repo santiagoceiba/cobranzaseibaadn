@@ -37,12 +37,11 @@
         </div>
     </div>
   </div>
-
+  
 
   <button type="submit" class="btn btn-primary" [disabled]="!clienteForm.valid"
-  data-bs-toggle="modal" data-bs-target="#exampleModal">Registrar cliente</button>
+  data-bs-toggle="modal" data-bs-target="#exampleModal" id="registrarCliente">Registrar cliente</button>
 </form>
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -65,8 +64,8 @@
         </svg>
         <div class="alert alert-success d-flex align-items-center" *ngIf = "respuestaCreacionCliente" role="alert">
           <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-          <div id = "mensajecreacionexito">
-            <span>{{estadoCreacionCliente}}</span>
+          <div id = "mensajecreacionexito" class ="mensajeexitocreacioncliente">
+            {{estadoCreacionCliente}}
           </div>
         </div>
         <div class="alert alert-danger d-flex align-items-center" *ngIf = "!respuestaCreacionCliente" role="alert">
