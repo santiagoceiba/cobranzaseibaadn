@@ -6,6 +6,7 @@
             <th scope="col">montoCuota</th>
             <th scope="col">fechaCaducidad</th>
             <th scope="col">estado</th>
+            <th scope="col">Acciones</th>
         </tr>
 
     </thead>
@@ -15,6 +16,7 @@
         <td>{{item.montoCuota}}</td>
         <td>{{item.fechaCaducidad}}</td>
         <td>{{item.estado}}</td>
+        <td><a (click)="pagar(item)" class="link-info"><b>Pagar Factura</b></a></td>
     </tr>
     </tbody>
 </table>

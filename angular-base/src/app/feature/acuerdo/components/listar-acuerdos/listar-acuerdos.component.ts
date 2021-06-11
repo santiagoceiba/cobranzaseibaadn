@@ -17,6 +17,7 @@ export class ListarAcuerdosComponent implements OnInit {
   listaClientes = new Array<Cliente>();
   listaAcuerdos = new  Array<AcuerdoPago>();
   mostrarListaFacturas = false;
+  idAcuerdoPago: number;
 
   constructor(private productoServices: ProductoService,
               private deudaServices: DeudaService, 
@@ -59,9 +60,9 @@ export class ListarAcuerdosComponent implements OnInit {
     });
   }
 
-  listarFacturas() {
-    console.log('estoy aca')
+  listarFacturas(idAcuerdoPago: any) {
     this.mostrarListaFacturas = true;
+    this.idAcuerdoPago = idAcuerdoPago;
   }
 
 }

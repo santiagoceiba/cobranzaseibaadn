@@ -26,10 +26,10 @@
       <td>{{item.cantidadCuotas}}</td>
       <td>{{item.numeroReferencia}}</td>
       <td>
-        <a (click)="listarFacturas({{item.idCliente}})" class="link-info"><b>Ver facturas</b></a>
+        <a (click)="listarFacturas(item.idAcuerdoPago)" class="link-info"><b>Ver facturas</b></a>
       </td>
       
     </tr>
   </tbody>
 </table>
-<app-facturas *ngIf="mostrarListaFacturas" [item]="currentItem"></app-facturas>
+<app-facturas *ngIf="mostrarListaFacturas" [idAcuerdo]="idAcuerdoPago"></app-facturas>

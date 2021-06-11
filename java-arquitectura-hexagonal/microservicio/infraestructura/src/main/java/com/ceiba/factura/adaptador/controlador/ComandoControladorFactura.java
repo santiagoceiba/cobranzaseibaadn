@@ -18,10 +18,10 @@ public class ComandoControladorFactura {
         this.manejadorActualizarFactura = manejadorActualizarFactura;
     }
 
-    @PutMapping(value="/{id}")
+    @PutMapping(value="/{idFactura}")
     @ApiOperation("Actualizar Factura")
-    public void actualizar(@RequestBody ComandoFactura comandoFActura, @PathVariable Long id) {
-        comandoFActura.setIdFactura(id);
-        manejadorActualizarFactura.ejecutar(comandoFActura);
+    public void actualizar(@RequestBody ComandoFactura comandoFactura, @PathVariable Long idFactura) {
+        comandoFactura.setIdFactura(idFactura);
+        manejadorActualizarFactura.ejecutar(comandoFactura);
     }
 }

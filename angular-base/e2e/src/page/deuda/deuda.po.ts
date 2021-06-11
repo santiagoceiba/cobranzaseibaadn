@@ -1,4 +1,4 @@
-import { by, element } from 'protractor';
+import { by, element, protractor } from 'protractor';
 
 export class DeudaPage {
     private linkcrearDeuda = element(by.id('registrarDeuda'));
@@ -7,7 +7,8 @@ export class DeudaPage {
     private inputConceptoDeuda = element(by.id('inputconceptodeuda'));
     private inputmontodeuda = element(by.id('montodeuda'));
     private inputFecha = element(by.id('inputfecha'));
-    private inputselectcliente = element(by.model('cliente'));
+    private inputselectcliente = element(by.tagName("select#inputState"));
+    private exitoCreacion = element(by.id('mensajecreaciodeudaexito'));
     private listaDeudas = element.all(by.css('tbody.deudas tr'));
 
     async crearDeuda() {
@@ -31,15 +32,20 @@ export class DeudaPage {
         this.inputmontodeuda.sendKeys(montoDeuda);
     }
 
-    async ingresarFecha(fecha) {
-        this.inputFecha.click();
-        this.inputFecha.sendKeys(fecha);
+    async ingresarFecha() {
+        //this.inputFecha.click();
+        let tab = protractor.Key.ARROW_RIGHT;
+        this.inputFecha.sendKeys(('1'+ tab +'1'+tab + '2021' +tab + '1' + tab +'1' + tab + '1'));
     }
 
-    async seleccionarCliente(valor) {
-        this.inputselectcliente.element(by.css(valor));
-        //
+    async seleccionarCliente() {
+        await this.inputselectcliente.click();
+        await element(by.css('#inputState [value="2"]')).click();
     }
+
+    async  obtenerMensajeExito() {
+        await this.exitoCreacion.getText();
+      }
 
     async contarDeudas() {
         return this.listaDeudas.count();
